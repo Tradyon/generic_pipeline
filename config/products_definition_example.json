@@ -1,0 +1,22 @@
+{
+  "hs_code": "9011",
+  "product_categories": [
+    "Bulk Commodity Green Coffee",
+    "Specialty Green Coffee",
+    "Finished Coffee Products",
+    "Not a Coffee/Bean Product"
+  ],
+  "category_descriptions": {
+    "Bulk Commodity Green Coffee": "Raw, unroasted coffee beans traded in large quantities, typically used as raw materials for major coffee brands and manufacturers (default even if you know this is a coffee related product and not into the other categories)",
+    "Specialty Green Coffee": "Unroasted beans from specific farms, producers, or unique lots, often with special processing methods (like anaerobic fermentation). Sold in smaller quantities at a premium to specialty roasters",
+    "Finished Coffee Products": "Processed and packaged items for direct sale to consumers like roasted coffee, instant coffee, etc",
+    "Not a Coffee/Bean Product": "Product is unrelated to coffee"
+  },
+  "_comment": "This is an example products definition file. Customize for your product domain.",
+  "_instructions": {
+    "hs_code": "The HS code for this product category (4-digit string)",
+    "product_categories": "List of product category names that goods can be classified into",
+    "category_descriptions": "Optional descriptions for each category to guide LLM classification"
+  }
+}
+

@@ -147,5 +147,3 @@ Thumbs.db
 # Project specific
 pipeline.log
 output/
-*.csv
-*.json

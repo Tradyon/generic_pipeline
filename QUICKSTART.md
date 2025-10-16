@@ -1,6 +1,5 @@
 # Quick Start Guide
 
-Get started with the Generic Product Classification Pipeline in 5 minutes.
 
 ## Prerequisites
 

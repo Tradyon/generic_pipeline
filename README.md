@@ -1,43 +1,15 @@
 # Generic Product Classification Pipeline
 
-A reusable, product-agnostic pipeline for classifying shipment data through product categorization and attribute extraction using Large Language Models.
 
 ## Overview
 
 This pipeline processes trade shipment data through multiple stages:
 
-1. **Data Loading**: Load and prepare shipment data
+1. **Data Loading**: Load and prepare shipment data (We need to edit this for our pipeline)
 2. **Product Classification**: Classify goods into product categories
 3. **Attribute Classification**: Extract and classify product-specific attributes
 4. **Output Generation**: Generate structured outputs and summaries
 
-```
-┌─────────────────┐
-│  Data Loading   │
-│  (Custom)       │
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│    Products     │
-│ Classification  │
-│   (LLM-based)   │
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│   Attributes    │
-│ Classification  │
-│ (Deterministic  │
-│   + LLM)        │
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│     Outputs     │
-│ (JSON, CSV)     │
-└─────────────────┘
-```
 
 ## Features
 
@@ -452,25 +424,4 @@ Monitor usage in pipeline output:
 ```
 Token Usage: 1,500,000 (remaining 18,500,000)
 ```
-
-## License
-
-Internal use only. See main repository license.
-
-## Support
-
-For questions or issues:
-1. Check this README
-2. Review example configurations in `config/`
-3. Check pipeline logs (`pipeline.log`)
-4. Contact the development team
-
-## Version History
-
-- **v1.0.0** (2025-01-16): Initial release
-  - Product classification module
-  - Attribute classification with deterministic matching
-  - Pipeline orchestration
-  - Checkpoint support
-  - Example configurations
 

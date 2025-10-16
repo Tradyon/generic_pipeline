@@ -1,0 +1,133 @@
+{
+  "9011": {
+    "version": "2025-01-01T00:00:00Z",
+    "products": {
+      "Bulk Commodity Green Coffee": {
+        "attributes": {
+          "Coffee_Variety": [
+            "Arabica",
+            "Robusta",
+            "Liberica",
+            "Excelsa"
+          ],
+          "Processing_Method": [
+            "Washed",
+            "Natural",
+            "Honey",
+            "Semi-washed",
+            "Wet Hulled",
+            "Pulp Natural"
+          ],
+          "Origin_Country": [
+            "Brazil",
+            "Colombia",
+            "Ethiopia",
+            "Vietnam",
+            "Indonesia",
+            "Honduras",
+            "Peru",
+            "India",
+            "Guatemala",
+            "Mexico"
+          ],
+          "Quality_Grade": [
+            "Grade 1",
+            "Grade 2",
+            "Grade 3",
+            "Premium",
+            "Supremo",
+            "Excelso",
+            "Strictly High Grown",
+            "Strictly Hard Bean"
+          ],
+          "Screen_Size": [
+            "Screen 12",
+            "Screen 13",
+            "Screen 14",
+            "Screen 15",
+            "Screen 16",
+            "Screen 17",
+            "Screen 18"
+          ]
+        }
+      },
+      "Specialty Green Coffee": {
+        "attributes": {
+          "Coffee_Variety": [
+            "Arabica",
+            "Geisha",
+            "Bourbon",
+            "Typica",
+            "Caturra",
+            "Catuai"
+          ],
+          "Processing_Method": [
+            "Washed",
+            "Natural",
+            "Honey",
+            "Anaerobic Fermentation",
+            "Carbonic Maceration"
+          ],
+          "Origin_Country": [
+            "Ethiopia",
+            "Colombia",
+            "Panama",
+            "Costa Rica",
+            "Kenya",
+            "Rwanda"
+          ],
+          "Quality_Grade": [
+            "Specialty Grade",
+            "Cup Score 85+",
+            "Cup Score 90+",
+            "Premium Lot"
+          ],
+          "Farm_Estate": [
+            "Single Origin",
+            "Single Estate",
+            "Micro Lot",
+            "Cooperative"
+          ]
+        }
+      },
+      "Finished Coffee Products": {
+        "attributes": {
+          "Coffee_Variety": [
+            "Arabica",
+            "Robusta",
+            "Blend"
+          ],
+          "Physical_Form": [
+            "Whole Bean",
+            "Ground",
+            "Instant",
+            "Capsule",
+            "Pod"
+          ],
+          "Roast_Level": [
+            "Light Roast",
+            "Medium Roast",
+            "Dark Roast",
+            "Espresso Roast"
+          ],
+          "Packaging_Type": [
+            "Bag",
+            "Can",
+            "Jar",
+            "Box",
+            "Capsule"
+          ]
+        }
+      }
+    },
+    "_comment": "This is an example product attributes schema for coffee (HS code 9011)",
+    "_instructions": {
+      "structure": "HS code -> version + products -> product name -> attributes -> attribute type -> [list of values]",
+      "version": "ISO 8601 timestamp for schema version tracking",
+      "products": "Each product category from products_definition should have an entry",
+      "attributes": "Attribute types and their allowed values for classification"
+    }
+  },
+  "_global_comment": "Customize this schema for your product domain. Add your HS codes and product attributes."
+}
+

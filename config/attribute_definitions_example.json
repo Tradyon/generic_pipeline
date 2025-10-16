@@ -1,0 +1,35 @@
+{
+  "_comment": "Attribute definitions help guide the LLM in understanding what each attribute represents",
+  "_instructions": "Keys should be prefixed with 'attr_' followed by the attribute name (matching your schema)",
+  
+  "attr_Coffee_Variety": "The specific variety or species of coffee bean (e.g., Arabica, Robusta, Geisha)",
+  "attr_Processing_Method": "The method used to process coffee cherries into green beans (e.g., Washed, Natural, Honey, Anaerobic)",
+  "attr_Origin_Country": "Country where the coffee was grown and harvested",
+  "attr_Quality_Grade": "Commercial or specialty quality grade assigned to the coffee (e.g., Grade 1, Specialty Grade, Cup Score)",
+  "attr_Screen_Size": "The size classification of green coffee beans based on screen mesh (e.g., Screen 15, Screen 16)",
+  "attr_Farm_Estate": "Designation of farm or production source (e.g., Single Origin, Single Estate, Micro Lot)",
+  "attr_Physical_Form": "The physical form of the finished product (e.g., Whole Bean, Ground, Instant, Capsule)",
+  "attr_Roast_Level": "The degree of roasting applied to the coffee beans (e.g., Light, Medium, Dark, Espresso)",
+  "attr_Packaging_Type": "Type of packaging used for the product (e.g., Bag, Can, Jar, Box)",
+  
+  "attr_Origin_Country_Generic": "Country of origin or production for any commodity",
+  "attr_Physical_Form_Generic": "Form of the product such as whole, crushed, ground, paste, extract",
+  "attr_Quality_Grade_Generic": "Commercial or trade quality grade (e.g., Grade A, Premium, FAQ)",
+  "attr_Density": "Bulk or true density of the product (g/cm³, kg/m³, G/L)",
+  "attr_Processing_Method_Generic": "Processing treatment applied (dried, frozen, roasted, sterilized)",
+  "attr_Size": "Physical size or particle dimension (e.g., 5-7 cm pods)",
+  "attr_Mesh_Size": "Mesh number if sieved or powdered (e.g., 40 mesh)",
+  "attr_Moisture_Content": "Moisture percentage by weight",
+  "attr_Variety": "Specific variety or cultivar of the product",
+  "attr_Packaging_Type_Generic": "Packaging type (e.g., PP bag, carton, container, vacuum pack)",
+  "attr_Color": "Color description or standardized value (e.g., bright red, ASTA color)",
+  "attr_Organic": "Boolean or flag for organic certification",
+  "attr_Sterilization_Method": "Sterilization method used (steam, irradiation, fumigation)",
+  "attr_Product_Type": "Broad classification such as spice, herb, extract, oil",
+  "attr_Intended_Use": "Target application (food, pharma, industrial, feed)",
+  "attr_Purity": "Purity percentage of main substance",
+  "attr_Botanical_Name": "Scientific binomial name (e.g., Coffea arabica)",
+  
+  "_usage_note": "Add attribute definitions specific to your domain. These definitions are included in prompts to guide LLM classification."
+}
+
