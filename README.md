@@ -15,7 +15,7 @@ LLM workflow to classify shipments into products and extract attributes.
 ```bash
 uv run python tradyon_load.py \
   --input <raw.csv> \            # required
-  --output <shipment_master.csv> \# required
+  --output <shipment_master.csv> \ # required
   [--low-memory]                 # optional: pandas low_memory
 ```
 
@@ -24,7 +24,7 @@ uv run python tradyon_load.py \
 ```bash
 uv run python tradyon_generate_schema.py product-definition \
   --hs-code <HS4> \              # required
-  --input <shipment_master.csv> \# required
+  --input <shipment_master.csv> \ # required
   --output-dir <config_dir> \    # required
   [--model <llm_model>] \        # optional, default gemini-2.0-flash
   [--max-products <int>]         # optional: cap categories (recommended)
@@ -36,7 +36,7 @@ uv run python tradyon_generate_schema.py product-definition \
 uv run python tradyon_classify_products.py \
   --input <shipment_master.csv> \                 # required
   --output <shipment_master_classified.csv> \     # required
-  --products-definition <products_definition.json> \# required
+  --products-definition <products_definition.json> \ # required
   [--model <llm_model>] \                         # optional, default gemini-2.0-flash
   [--batch-size <int>] \                          # optional, default 10
   [--max-workers <int>] \                         # optional, default 5
@@ -88,7 +88,7 @@ uv run python tradyon_post_process.py \
 
 ## Examples
 
-Coffee sample (Gemini/default models):
+Coffee sample (Gemini flash 2.0):
 
 ```bash
 uv run python tradyon_load.py --input ./sample_coffee_shipment_master.csv --output ./output/coffee/shipment_master.csv
@@ -99,7 +99,7 @@ uv run python tradyon_classify_attributes.py --input ./output/coffee/shipment_ma
 uv run python tradyon_post_process.py --input-dir ./output/coffee/per_product_classifications --output-dir ./output/coffee
 ```
 
-Coffee sample (Deepseek/any OpenRouter model):
+Coffee sample (Deepseek / any OpenRouter model):
 
 ```bash
 uv run python tradyon_load.py --input ./sample_coffee_shipment_master.csv --output ./output/coffee/shipment_master.csv
