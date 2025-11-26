@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 class LLMClient:
     def __init__(self, model_name: str, api_key: Optional[str] = None, base_url: Optional[str] = None, request_timeout: Optional[float] = 120.0):
         self.model_name = model_name
-        self.base_url = base_url or os.getenv("OPENROUTER_BASE_URL")
+        self.base_url = base_url
         self.request_timeout = request_timeout
         model_lower = self.model_name.lower()
 
@@ -24,24 +24,25 @@ class LLMClient:
             else:
                 dotenv.load_dotenv()
 
-        # Prefer OpenRouter/OpenAI unless explicitly using Gemini without a base_url
-        self.provider = "google" if (not self.base_url and model_lower.startswith("gemini")) else "openai"
-
-        if self.provider == "google":
+        # Strict env handling per request:
+        # - Gemini models: use GOOGLE_API_KEY and Google OpenAI-compatible endpoint
+        # - Others: use OPENROUTER_API_KEY and OpenRouter endpoint (or provided base_url)
+        default_gemini_base = "https://generativelanguage.googleapis.com/v1beta/openai/"
+        if model_lower.startswith("gemini"):
+            self.provider = "openai"
+            self.base_url = self.base_url or default_gemini_base
             self.api_key = api_key or os.getenv("GOOGLE_API_KEY")
             if not self.api_key:
-                raise ValueError("Google API Key not found. Set GOOGLE_API_KEY.")
-            genai.configure(api_key=self.api_key)
-            self.client = genai.GenerativeModel(self.model_name)
+                raise ValueError("GOOGLE_API_KEY not found for Gemini model.")
         else:
-            self.api_key = api_key or os.getenv("OPENROUTER_API_KEY") or os.getenv("OPENAI_API_KEY")
+            self.provider = "openai"
+            self.base_url = self.base_url or "https://openrouter.ai/api/v1"
+            self.api_key = api_key or os.getenv("OPENROUTER_API_KEY")
             if not self.api_key:
-                raise ValueError("OpenAI/OpenRouter API Key not found. Set OPENROUTER_API_KEY or OPENAI_API_KEY.")
-            if not self.base_url:
-                self.base_url = "https://openrouter.ai/api/v1"
-            self.client = OpenAI(base_url=self.base_url, api_key=self.api_key)
+                raise ValueError("OPENROUTER_API_KEY not found for non-Gemini model.")
 
-        logger.info(f"Initialized LLMClient with provider={self.provider}, model={self.model_name}")
+        self.client = OpenAI(base_url=self.base_url, api_key=self.api_key)
+        logger.info(f"Initialized LLMClient with provider=openai, model={self.model_name}, base_url={self.base_url}")
 
     def generate(self, prompt: str, schema: Optional[Dict[str, Any]] = None, temperature: float = 0.0) -> Any:
         """
@@ -73,7 +74,11 @@ class LLMClient:
                 generation_config["response_schema"] = schema
             
             try:
-                response = self.client.generate_content(prompt, generation_config=generation_config)
+                response = self.client.generate_content(
+                    prompt,
+                    generation_config=generation_config,
+                    request_options={"timeout": self.request_timeout} if self.request_timeout else None,
+                )
                 return response
             except Exception as e:
                 logger.error(f"Gemini generation error: {e}")

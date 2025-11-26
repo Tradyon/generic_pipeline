@@ -11,9 +11,10 @@ import os
 import threading
 import pickle
 import logging
+import time
 from typing import List, Dict, Any, Optional, Union
 from tqdm import tqdm
-from concurrent.futures import ThreadPoolExecutor, wait, ALL_COMPLETED
+from concurrent.futures import ThreadPoolExecutor, wait, FIRST_COMPLETED
 from datetime import datetime
 
 from src.utils.config_models import ProductDefinition, load_product_definition
@@ -37,6 +38,9 @@ def create_classification_schema(product_categories: List[str]) -> Dict[str, Any
     Dict[str, Any]
         JSON schema for batch classification
     """
+    enum_values = list(product_categories)
+    if "Unclassified" not in enum_values:
+        enum_values.append("Unclassified")
     return {
         "type": "object",
         "properties": {
@@ -44,7 +48,7 @@ def create_classification_schema(product_categories: List[str]) -> Dict[str, Any
                 "type": "array",
                 "items": {
                     "type": "string",
-                    "enum": product_categories
+                    "enum": enum_values
                 }
             }
         },
@@ -62,6 +66,7 @@ class ProductClassifier:
         checkpoint_file: Optional[str] = None,
         batch_size: int = 10,
         max_workers: int = 8,
+        batch_timeout: int = 300,
         api_key: Optional[str] = None
     ):
         """
@@ -119,6 +124,7 @@ class ProductClassifier:
         self.total_tokens_used = 0
         self.start_time = None
         self.lock = threading.Lock()
+        self.batch_timeout = batch_timeout
     
     def build_prompt(self, goods_descriptions: List[str]) -> str:
         """Build classification prompt from product definition."""
@@ -275,7 +281,7 @@ class ProductClassifier:
         
         if resume:
             result = self.load_checkpoint()
-            if result:
+            if result[0] is not None:
                 df_checkpoint, start_index, processed_goods = result
         
         if df_checkpoint is not None:
@@ -320,38 +326,49 @@ class ProductClassifier:
         
         with tqdm(total=len(remaining_goods), desc="Classifying unique goods") as pbar:
             with ThreadPoolExecutor(max_workers=self.max_workers) as executor:
-                future_to_batch = {
-                    executor.submit(self.process_batch_with_results, batch_goods, batch_index): (batch_index, batch_goods)
-                    for batch_index, batch_goods in batches
-                }
+                future_to_batch = {}
+                start_times = {}
+                for batch_index, batch_goods in batches:
+                    fut = executor.submit(self.process_batch_with_results, batch_goods, batch_index)
+                    future_to_batch[fut] = (batch_index, batch_goods)
+                    start_times[fut] = time.time()
+
                 pending = set(future_to_batch.keys())
-
                 while pending:
-                    done, pending = wait(pending, timeout=300, return_when=ALL_COMPLETED)
+                    done, pending = wait(pending, timeout=5, return_when=FIRST_COMPLETED)
 
-                    # Handle timeouts: if wait timed out, pending still non-empty and done empty
-                    if not done and pending:
-                        for fut in list(pending):
-                            batch_index, batch_goods = future_to_batch[fut]
-                            logger.warning(f"Batch {batch_index} timed out; marking {len(batch_goods)} goods as Unclassified.")
-                            fut.cancel()
+                    # Handle timeouts individually
+                    now = time.time()
+                    to_cancel = [f for f in pending if now - start_times.get(f, now) > self.batch_timeout]
+                    for fut in to_cancel:
+                        batch_index, batch_goods = future_to_batch.get(fut, (-1, []))
+                        logger.warning(f"Batch {batch_index} exceeded timeout; marking {len(batch_goods)} goods as Unclassified.")
+                        fut.cancel()
+                        for goods in batch_goods:
+                            for idx in goods_to_indices.get(goods, []):
+                                df.at[idx, 'category'] = "Unclassified"
+                            processed_goods.add(goods)
+                        pbar.update(len(batch_goods))
+                        pending.discard(fut)
+
+                    for future in done:
+                        batch_index, batch_goods = future_to_batch.get(future, (-1, []))
+                        try:
+                            batch_index, batch_goods, batch_results, error = future.result()
+                        except Exception as exc:
+                            logger.warning(f"Batch {batch_index} raised exception; marking goods as Unclassified. error={exc}")
                             for goods in batch_goods:
-                                for idx in goods_to_indices[goods]:
+                                for idx in goods_to_indices.get(goods, []):
                                     df.at[idx, 'category'] = "Unclassified"
                                 processed_goods.add(goods)
                             pbar.update(len(batch_goods))
-                        pending.clear()
-                        break
-
-                    for future in done:
-                        batch_index, batch_goods, batch_results, error = future.result()
+                            continue
 
                         logger.info(f"Completed batch {batch_index + 1}/{total_batches} ({len(batch_goods)} goods)")
 
                         if error:
                             logger.warning(f"Batch {batch_index} had errors but was processed: {error}")
 
-                        # Apply results to all instances of each goods description
                         for goods, category in zip(batch_goods, batch_results):
                             indices = goods_to_indices[goods]
                             for idx in indices:
@@ -360,9 +377,12 @@ class ProductClassifier:
 
                         pbar.update(len(batch_goods))
 
-                        # Save checkpoint every 50 unique goods processed
                         if len(processed_goods) % 50 == 0:
                             self.save_checkpoint(df, len(processed_goods), processed_goods)
+
+                    # If no futures are done and none pending, break to avoid infinite loop
+                    if not pending and not done:
+                        break
         
         # Final checkpoint cleanup
         if os.path.exists(self.checkpoint_file):
@@ -403,6 +423,7 @@ def classify_products(
     model_name: str = "gemini-2.0-flash",
     batch_size: int = 10,
     max_workers: int = 8,
+    batch_timeout: int = 300,
     resume: bool = True,
     low_memory: bool = False,
     **kwargs
@@ -454,6 +475,7 @@ def classify_products(
         checkpoint_file=checkpoint_file,
         batch_size=batch_size,
         max_workers=max_workers,
+        batch_timeout=batch_timeout,
         api_key=kwargs.get("api_key")
     )
     classified_df = classifier.classify_dataframe(df, resume=resume)

@@ -467,7 +467,7 @@ class SchemaGenerator:
         attribute_schema = AttributeSchema(
             entries={
                 normalized_hs: HSAttributeSchema(
-                    version=datetime.utcnow().isoformat() + "Z",
+                    version=datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
                     products=products_map,
                     metadata=attribute_entry_metadata,
                 )

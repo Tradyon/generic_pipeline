@@ -1,43 +1,42 @@
 {
   "hs_code": "0712",
   "product_categories": [
-    "Granulated Onion",
-    "Toasted And Roasted Onion Products",
-    "Chopped And Minced Onion",
-    "Onion Powder"
+    "Dehydrated Onion Powder",
+    "Dehydrated Onion, Minced or Chopped",
+    "Toasted Dehydrated Onion Products",
+    "Frozen Sliced Onions"
   ],
   "category_descriptions": {
-    "Granulated Onion": "Coarsely ground dehydrated onion products with specific mesh sizes, often used as intermediate processing forms.",
-    "Toasted And Roasted Onion Products": "Dehydrated onion products that have undergone additional thermal processing for enhanced flavor.",
-    "Chopped And Minced Onion": "Dehydrated onion pieces in chopped, minced, or flaked form, typically used in food preparation.",
-    "Onion Powder": "Finely ground dehydrated onion products used as a seasoning or ingredient base."
+    "Dehydrated Onion Powder": "This category includes ground, pulverized, or powdered dehydrated onions used as a food ingredient or seasoning.",
+    "Dehydrated Onion, Minced or Chopped": "This category includes dehydrated onions that have been reduced to small pieces, flakes, or granules.",
+    "Toasted Dehydrated Onion Products": "This category includes dehydrated onion products that have undergone a toasting or roasting process.",
+    "Frozen Sliced Onions": "This category includes onions that have been sliced and preserved by freezing."
   },
-  "_generated_at": "2025-11-26T08:50:55.042771Z",
+  "_generated_at": "2025-11-26T13:31:54.873234Z",
   "_source": "auto_inference",
   "_representative_goods": {
-    "Granulated Onion": [
-      "ONION GRANULATED 40-80 MESH",
-      "DEHYDRATED WHITE ONION GRANULES",
-      "GRANULATED ONION",
-      "ONION GRANULE"
-    ],
-    "Toasted And Roasted Onion Products": [
-      "TOASTED ONION POWDER",
-      "ROASTED ONION GRANULES",
-      "TOASTED ONION MINCED",
-      "TOASTED ONION CHOPPED"
-    ],
-    "Chopped And Minced Onion": [
-      "ONION MINCED",
-      "ONION CHOPPED",
-      "ONION GRANULATED",
-      "DEHYDRATED ONION FLAKES"
-    ],
-    "Onion Powder": [
+    "Dehydrated Onion Powder": [
       "ONION POWDER",
       "DEHYDRATED WHITE ONION POWDER",
-      "ONION POWDER IRRADIATED",
-      "ONION POWDER WHITE"
+      "CEBOLLA ROJA EN POLVO",
+      "Onion powder"
+    ],
+    "Dehydrated Onion, Minced or Chopped": [
+      "ONION MINCED",
+      "ONION CHOPPED",
+      "Onion Granule",
+      "Sliced onion"
+    ],
+    "Toasted Dehydrated Onion Products": [
+      "TOASTED ONION",
+      "TOASTED GARLIC MINCED",
+      "TOASTED WHITE ONION GRANULES",
+      "ROASTED ONION"
+    ],
+    "Frozen Sliced Onions": [
+      "FROZEN SLICED ONIONS",
+      "IQF DICED ONION",
+      "IQF SLICED WHITE"
     ]
   }
 }

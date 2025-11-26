@@ -63,7 +63,7 @@ def load_product_definition(path: str) -> ProductDefinition:
 
 def dump_product_definition(definition: ProductDefinition, path: str) -> None:
     payload = definition.to_dict()
-    os.makedirs(os.path.dirname(path), exist_ok=True)
+    ensure_output_dir(path)
     with open(path, "w", encoding="utf-8") as handle:
         json.dump(payload, handle, indent=2, ensure_ascii=False)
 
@@ -137,7 +137,7 @@ def load_attribute_schema(path: str) -> AttributeSchema:
             metadata[hs_code] = block
             continue
 
-        version = str(block.get("version", "")).strip() or datetime.utcnow().isoformat() + "Z"
+        version = str(block.get("version", "")).strip() or datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
         products_raw = block.get("products", {}) or {}
 
         products: Dict[str, AttributeSet] = {}
@@ -167,7 +167,7 @@ def load_attribute_schema(path: str) -> AttributeSchema:
 
 def dump_attribute_schema(schema: AttributeSchema, path: str) -> None:
     payload = schema.to_dict()
-    os.makedirs(os.path.dirname(path), exist_ok=True)
+    ensure_output_dir(path)
     with open(path, "w", encoding="utf-8") as handle:
         json.dump(payload, handle, indent=2, ensure_ascii=False)
 
@@ -209,7 +209,7 @@ def load_attribute_definitions(path: str) -> AttributeDefinitions:
 
 def dump_attribute_definitions(definitions: AttributeDefinitions, path: str) -> None:
     payload = definitions.to_dict()
-    os.makedirs(os.path.dirname(path), exist_ok=True)
+    ensure_output_dir(path)
     with open(path, "w", encoding="utf-8") as handle:
         json.dump(payload, handle, indent=2, ensure_ascii=False)
 
@@ -221,5 +221,3 @@ def ensure_output_dir(path: str) -> None:
     directory = os.path.dirname(path)
     if directory:
         os.makedirs(directory, exist_ok=True)
-
-

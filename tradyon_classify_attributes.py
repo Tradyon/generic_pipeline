@@ -35,9 +35,15 @@ def main():
     args = parser.parse_args()
     
     if not os.path.exists(args.input):
-        print(f"Error: Input file not found: {args.input}")
+        logging.error(f"Input file not found: {args.input}")
         sys.exit(1)
-        
+    if not os.path.exists(args.product_attributes_schema):
+        logging.error(f"Product attributes schema not found: {args.product_attributes_schema}")
+        sys.exit(1)
+    if not os.path.exists(args.attribute_definitions):
+        logging.error(f"Attribute definitions not found: {args.attribute_definitions}")
+        sys.exit(1)
+    
     os.makedirs(args.output_dir, exist_ok=True)
     
     # Config overrides
