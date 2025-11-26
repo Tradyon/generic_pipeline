@@ -202,12 +202,12 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "google-generativeai", specifier = ">=0.3.0" },
-    { name = "openai", specifier = ">=1.42.0" },
-    { name = "pandas", specifier = ">=2.0.0" },
-    { name = "pydantic", specifier = ">=2.0.0" },
-    { name = "python-dotenv", specifier = ">=1.0.0" },
-    { name = "tqdm", specifier = ">=4.65.0" },
+    { name = "google-generativeai" },
+    { name = "openai" },
+    { name = "pandas" },
+    { name = "pydantic" },
+    { name = "python-dotenv" },
+    { name = "tqdm" },
 ]
 
 [[package]]
