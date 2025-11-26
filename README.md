@@ -85,3 +85,27 @@ uv run python tradyon_post_process.py \
 
 - Product inference uses multiple rounds over up to 1,000 samples and honors `is_multi_product_shipment` to drop mixed rows.
 - Override `--model` with OpenRouter IDs like `deepseek/deepseek-v3.2-exp`; the client enforces JSON where supported.
+
+## Examples
+
+Coffee sample (Gemini/default models):
+
+```bash
+uv run python tradyon_load.py --input ./sample_coffee_shipment_master.csv --output ./output/coffee/shipment_master.csv
+uv run python tradyon_generate_schema.py product-definition --hs-code 0901 --input ./output/coffee/shipment_master.csv --output-dir ./config
+uv run python tradyon_classify_products.py --input ./output/coffee/shipment_master.csv --output ./output/coffee/shipment_master_classified.csv --products-definition config/products_definition_example.json --batch-size 5 --max-workers 5
+uv run python tradyon_generate_schema.py attribute-schema --hs-code 0901 --input ./output/coffee/shipment_master_classified.csv --products-definition config/products_definition_example.json --output-dir ./config
+uv run python tradyon_classify_attributes.py --input ./output/coffee/shipment_master_classified.csv --output-dir ./output/coffee --product-attributes-schema config/product_attributes_schema_example.json --attribute-definitions config/attribute_definitions_example.json --items-per-call 5 --max-workers 10
+uv run python tradyon_post_process.py --input-dir ./output/coffee/per_product_classifications --output-dir ./output/coffee
+```
+
+Coffee sample (Deepseek/any OpenRouter model):
+
+```bash
+uv run python tradyon_load.py --input ./sample_coffee_shipment_master.csv --output ./output/coffee/shipment_master.csv
+uv run python tradyon_generate_schema.py product-definition --hs-code 0901 --input ./output/coffee/shipment_master.csv --output-dir ./config --model deepseek/deepseek-v3.2-exp
+uv run python tradyon_classify_products.py --input ./output/coffee/shipment_master.csv --output ./output/coffee/shipment_master_classified.csv --products-definition config/products_definition_example.json --batch-size 5 --max-workers 5 --model deepseek/deepseek-v3.2-exp
+uv run python tradyon_generate_schema.py attribute-schema --hs-code 0901 --input ./output/coffee/shipment_master_classified.csv --products-definition config/products_definition_example.json --output-dir ./config --model deepseek/deepseek-v3.2-exp
+uv run python tradyon_classify_attributes.py --input ./output/coffee/shipment_master_classified.csv --output-dir ./output/coffee --product-attributes-schema config/product_attributes_schema_example.json --attribute-definitions config/attribute_definitions_example.json --items-per-call 5 --max-workers 10 --model deepseek/deepseek-v3.2-exp
+uv run python tradyon_post_process.py --input-dir ./output/coffee/per_product_classifications --output-dir ./output/coffee
+```
