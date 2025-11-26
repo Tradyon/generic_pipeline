@@ -3,6 +3,7 @@
 LLM workflow to classify shipments into products and extract attributes.
 
 ## Setup
+
 - Python >= 3.9
 - Install deps: `uv sync` (or `pip install -r requirements.txt`)
 - Keys: set `OPENROUTER_API_KEY` (OpenRouter/OpenAI) or `GOOGLE_API_KEY` (Gemini). Optional `OPENROUTER_BASE_URL`.
@@ -26,7 +27,7 @@ uv run python tradyon_generate_schema.py product-definition \
   --input <shipment_master.csv> \# required
   --output-dir <config_dir> \    # required
   [--model <llm_model>] \        # optional, default gemini-2.0-flash
-  [--max-products <int>]         # optional: cap categories
+  [--max-products <int>]         # optional: cap categories (recommended)
 ```
 
 ### 3) Classify products

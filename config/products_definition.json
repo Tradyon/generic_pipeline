@@ -1,42 +1,46 @@
 {
-  "hs_code": "0712",
+  "hs_code": "0901",
   "product_categories": [
-    "Dehydrated Onion Powder",
-    "Dehydrated Onion, Minced or Chopped",
-    "Toasted Dehydrated Onion Products",
-    "Frozen Sliced Onions"
+    "Natural Robusta Coffee",
+    "Natural Arabica Coffee",
+    "Washed Arabica Coffee",
+    "Screened/Graded Coffee Beans",
+    "Screened Green Coffee"
   ],
   "category_descriptions": {
-    "Dehydrated Onion Powder": "This category includes ground, pulverized, or powdered dehydrated onions used as a food ingredient or seasoning.",
-    "Dehydrated Onion, Minced or Chopped": "This category includes dehydrated onions that have been reduced to small pieces, flakes, or granules.",
-    "Toasted Dehydrated Onion Products": "This category includes dehydrated onion products that have undergone a toasting or roasting process.",
-    "Frozen Sliced Onions": "This category includes onions that have been sliced and preserved by freezing."
+    "Natural Robusta Coffee": "Unwashed/dry-processed Robusta coffee beans, typically from Uganda, often with screen size specifications.",
+    "Natural Arabica Coffee": "Unroasted Arabica coffee beans processed using the natural/dry method, often specifying origin like Uganda or DRUGAR grade.",
+    "Washed Arabica Coffee": "Unroasted Arabica coffee beans processed using the washed/wet method, often with specific regional or grade designations like RFA or Bugisu.",
+    "Screened/Graded Coffee Beans": "Coffee beans sorted by screen size (e.g., SC 12, SC 15, SC 18) indicating bean size and quality grading.",
+    "Screened Green Coffee": "Green coffee beans sorted by screen size (e.g., SC 15, SC 18, SC 1500), applicable to both Robusta and Arabica types."
   },
-  "_generated_at": "2025-11-26T13:31:54.873234Z",
+  "_generated_at": "2025-11-26T14:30:29.403375Z",
   "_source": "auto_inference",
   "_representative_goods": {
-    "Dehydrated Onion Powder": [
-      "ONION POWDER",
-      "DEHYDRATED WHITE ONION POWDER",
-      "CEBOLLA ROJA EN POLVO",
-      "Onion powder"
+    "Natural Robusta Coffee": [
+      "NATURAL UGANDA ROBUSTA COFFEE",
+      "NATURAL ROBUSTA COFFEE SCREEN 15",
+      "UGANDA ROBUSTA COFFEE BLACK BEANS"
     ],
-    "Dehydrated Onion, Minced or Chopped": [
-      "ONION MINCED",
-      "ONION CHOPPED",
-      "Onion Granule",
-      "Sliced onion"
+    "Natural Arabica Coffee": [
+      "NATURAL UGANDA ARABICA COFFEE",
+      "UGANDA NATURAL DRIED ARABICA GREEN COFFEE",
+      "NATURAL ARABICA COFFEE DRUGAR"
     ],
-    "Toasted Dehydrated Onion Products": [
-      "TOASTED ONION",
-      "TOASTED GARLIC MINCED",
-      "TOASTED WHITE ONION GRANULES",
-      "ROASTED ONION"
+    "Washed Arabica Coffee": [
+      "WASHED RWENZORI ARABICA COFFE RFA",
+      "WASHED UGANDA ARABICA COFFEE",
+      "RWENZORI WASHED ARABICA COFFEE RFA"
     ],
-    "Frozen Sliced Onions": [
-      "FROZEN SLICED ONIONS",
-      "IQF DICED ONION",
-      "IQF SLICED WHITE"
+    "Screened/Graded Coffee Beans": [
+      "UGANDA ROBUSTA COFFEE SCREEN 15",
+      "NATURAL UGANDA ROBUSTA COFFEE SC 1800",
+      "ROBUSTA COFFEE BEANS SC 1500"
+    ],
+    "Screened Green Coffee": [
+      "UGANDA ROBUSTA COFFE SCREEN 15",
+      "NATURAL UGANDA ROBUSTA COFFEE SC 18",
+      "ROBUSTA COFFEE BEANS SC 1500"
     ]
   }
 }
