@@ -16,7 +16,7 @@ LLM workflow to classify shipments into products and extract attributes.
 uv run python tradyon_load.py \
   --input <raw.csv> \            # required
   --output <shipment_master.csv> \ # required
-  [--low-memory]                 # optional: pandas low_memory
+  [--low-memory]                  # optional: pandas low_memory
 ```
 
 ### 2) Generate product definition
