@@ -1,39 +1,53 @@
 {
-  "hs_code": "9011",
+  "hs_code": "0712",
   "product_categories": [
-    "Unroasted Coffee Beans",
-    "Washed Arabica Coffee",
-    "Flavored Coffee Products",
-    "Packaged Coffee Gifts"
+    "Dehydrated Onion Powder",
+    "Dehydrated Onion Granules",
+    "Dehydrated Minced Onion",
+    "Toasted Dehydrated Onion Products",
+    "Dehydrated Onion Flakes and Slices",
+    "Organic Dehydrated Onion"
   ],
   "category_descriptions": {
-    "Unroasted Coffee Beans": "Raw coffee beans that have not yet been roasted, often intended for industrial processing or roasting.",
-    "Washed Arabica Coffee": "Processed Arabica coffee beans that have undergone a washing process to remove the outer layers.",
-    "Flavored Coffee Products": "Coffee products that have been enhanced with additional flavors, often sold in retail packaging.",
-    "Packaged Coffee Gifts": "Coffee products packaged as gifts, often including additional items or special packaging."
+    "Dehydrated Onion Powder": "Includes ground, milled, and pulverized dehydrated onions for use as a seasoning or ingredient.",
+    "Dehydrated Onion Granules": "Includes dehydrated onion in granular form, typically sized between powder and minced.",
+    "Dehydrated Minced Onion": "Includes dehydrated onion that has been chopped or diced into small pieces.",
+    "Toasted Dehydrated Onion Products": "Includes dehydrated onion products that have undergone a toasting or roasting process.",
+    "Dehydrated Onion Flakes and Slices": "Includes dehydrated onion that has been sliced or made into flakes.",
+    "Organic Dehydrated Onion": "Includes dehydrated onion products that are certified organic."
   },
-  "_generated_at": "2025-11-06T12:52:33.063996Z",
+  "_generated_at": "2025-11-17T11:23:40.340661Z",
   "_source": "auto_inference",
   "_representative_goods": {
-    "Unroasted Coffee Beans": [
-      "COFFEE ,  UNROASTED",
-      "ARABICA GREEN COFFEE BEANS",
-      "GREEN COFFEE ARABICA TANZANIA"
+    "Dehydrated Onion Powder": [
+      "ONION POWDER",
+      "DEHYDRATED WHITE ONION POWDER",
+      "CEBOLLA EN POLVO"
     ],
-    "Washed Arabica Coffee": [
-      "TANZANIA WASHED ARABICA COFFEE",
-      "WASHED TANZANIA ARABICA COFFEE",
-      "WASHED TANZANIA ARABICA LOW GRADE"
+    "Dehydrated Onion Granules": [
+      "ONION GRANULE 40-80 mesh",
+      "GOLD GARLIC GRANULES IRRADIATED",
+      "GRANULATED ONION"
     ],
-    "Flavored Coffee Products": [
-      "Black raspberry coffee",
-      "COFFEE BEANS OF ASSORTED FLAVOR",
-      "coffee almonds"
+    "Dehydrated Minced Onion": [
+      "ONION MINCED",
+      "IQF DICED ONION",
+      "ONION CHOPPED"
     ],
-    "Packaged Coffee Gifts": [
-      "Phu Quy Tet gift box",
-      "gift item",
-      "100 grams/box"
+    "Toasted Dehydrated Onion Products": [
+      "TOASTED WHITE ONION GRANULES",
+      "TOASTED ONION POWDER",
+      "TOASTED ONION CHOPPED"
+    ],
+    "Dehydrated Onion Flakes and Slices": [
+      "DEHYDRATED WHITE ONION FLAKES",
+      "Sliced onion",
+      "TOASTED ONION SLICED"
+    ],
+    "Organic Dehydrated Onion": [
+      "CEBOLLA GRANULADA ORGANICA",
+      "ORGANIC DEHYDRATED ONION MINCED",
+      "ORGANIC ONION POWDER"
     ]
   }
 }

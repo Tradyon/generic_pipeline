@@ -6,12 +6,12 @@ definitions in the config format expected by the generic pipeline.
 
 Usage example:
 
-    generator = SchemaGenerator()
-    products_result = generator.generate_product_definition(
-        hs_code="0904",
-        shipment_csv="./output/shipment_master.csv",
-        output_dir="./output/generated_schema"
-    )
+        generator = SchemaGenerator()
+        products_result = generator.generate_product_definition(
+            hs_code="0904",
+            shipment_csv="./output/shipment_master.csv",
+            output_dir="./output/generated_schema"
+        )
 
     attrs_result = generator.generate_attribute_configs_from_classifications(
         hs_code="0904",
@@ -29,18 +29,23 @@ from __future__ import annotations
 
 import json
 import logging
+import math
 import os
 import random
 import time
+from collections import OrderedDict
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from typing import Dict, List, Optional, Sequence, Tuple, Set
 
-import dotenv
-import google.generativeai as genai
-import pandas as pd
+from concurrent.futures import ThreadPoolExecutor, as_completed, wait, ALL_COMPLETED
 
-from config_models import (
+import dotenv
+import pandas as pd
+from tqdm import tqdm
+
+from src.utils.llm_client import LLMClient
+from src.utils.config_models import (
     AttributeDefinitions,
     AttributeSchema,
     AttributeSet,
@@ -58,14 +63,20 @@ logger = logging.getLogger(__name__)
 DEFAULT_GENERATION_CONFIG = {
     "model_name": "gemini-2.0-flash",
     "temperature": 0.0,
-    "max_total_samples": 120,
-    "max_categories": 6,
+    "max_total_samples": 1000,
+    "attribute_goods_per_call": 250,
+    "max_categories": None,  # auto-estimate from sample size when None/invalid
+    "category_ratio": 0.10,  # percentage-based cap when max_categories not set
     "max_attributes_per_category": 10,
     "max_values_per_attribute": 30,
     "max_retries": 3,
     "retry_delay": 3,
     "random_seed": 42,
     "use_response_schema": False,
+    "product_refinement_rounds": 3,
+    "attribute_max_workers": 8,
+    "request_timeout": 120.0,
+    "attribute_wait_timeout": 120.0,
 }
 
 MIN_ATTRIBUTES_PER_PRODUCT = 3
@@ -137,21 +148,28 @@ class SchemaGenerator:
             config.update(generation_config)
         self.config = config
 
-        if not api_key and not os.getenv("GOOGLE_API_KEY"):
+        # Load environment variables if no explicit key was provided
+        if not api_key:
             dotenv_path = dotenv.find_dotenv(usecwd=True)
             if dotenv_path:
                 dotenv.load_dotenv(dotenv_path)
             else:
                 dotenv.load_dotenv()
 
-        key = api_key or os.getenv("GOOGLE_API_KEY")
-        if not key:
-            raise ValueError(
-                "Google API key must be provided via api_key or GOOGLE_API_KEY environment variable"
-            )
+        # Resolve key based on provider heuristic (Gemini vs OpenRouter/OpenAI)
+        model_lower = self.config["model_name"].lower()
+        if api_key:
+            key = api_key
+        elif model_lower.startswith("gemini"):
+            key = os.getenv("GOOGLE_API_KEY")
+        else:
+            key = os.getenv("OPENROUTER_API_KEY") or os.getenv("OPENAI_API_KEY")
 
-        genai.configure(api_key=key)
-        self.model = genai.GenerativeModel(self.config["model_name"])
+        self.model = LLMClient(
+            model_name=self.config["model_name"],
+            api_key=key,
+            request_timeout=self.config.get("request_timeout", 120.0),
+        )
 
     # ------------------------------------------------------------------
     # Public API
@@ -186,26 +204,66 @@ class SchemaGenerator:
                 f"Product definition already exists: {products_path}. Pass overwrite=True to replace it."
             )
 
-        response = self._call_model_for_products(normalized_hs, goods_samples)
+        max_categories = self._resolve_max_categories(len(goods_samples))
+        rounds = max(1, int(self.config.get("product_refinement_rounds", 1)))
 
-        categories_payload = response.get("product_categories", [])
+        combined: OrderedDict[str, Dict[str, object]] = OrderedDict()
+        for round_idx in range(rounds):
+            round_goods = self._select_round_goods(goods_samples, round_idx)
+            response = self._call_model_for_products(
+                normalized_hs,
+                round_goods,
+                max_categories=max_categories,
+            )
+
+            categories_payload = response.get("product_categories", [])
+            for entry in categories_payload:
+                if not isinstance(entry, dict):
+                    continue
+                raw_name = entry.get("name", "")
+                name = str(raw_name).strip()
+                if not name:
+                    continue
+                description = str(entry.get("description", "")).strip()
+                reps = entry.get("representative_goods") or []
+                cleaned_reps = [str(value).strip() for value in reps if str(value).strip()]
+                payload = {
+                    "description": description,
+                    "representative_goods": cleaned_reps[:4],
+                }
+
+                if name not in combined:
+                    combined[name] = payload
+                else:
+                    # If we already have the name, keep the richer description/representatives
+                    existing = combined[name]
+                    if len(cleaned_reps) > len(existing.get("representative_goods") or []):
+                        existing["representative_goods"] = cleaned_reps[:4]
+                    if len(description) > len(existing.get("description", "")):
+                        existing["description"] = description
+
+        # If we gathered more than the cap, keep the best-scoring ones
+        if len(combined) > max_categories:
+            scored: List[Tuple[str, Dict[str, object], float, int]] = []
+            for idx, (name, meta) in enumerate(combined.items()):
+                reps_len = len(meta.get("representative_goods") or [])
+                desc_len = len(meta.get("description") or "")
+                score = reps_len * 2 + min(desc_len, 200) / 100.0
+                scored.append((name, meta, score, idx))
+            scored.sort(key=lambda x: (-x[2], x[3]))
+            combined = OrderedDict((name, meta) for name, meta, _s, _i in scored[:max_categories])
+
         category_names: List[str] = []
         category_descriptions: Dict[str, str] = {}
         representative_goods: Dict[str, List[str]] = {}
 
-        for entry in categories_payload:
-            if not isinstance(entry, dict):
-                continue
-            raw_name = entry.get("name", "")
-            name = str(raw_name).strip()
-            if not name or name in category_names:
-                continue
+        for name, meta in combined.items():
             category_names.append(name)
-            description = str(entry.get("description", "")).strip()
-            if description:
-                category_descriptions[name] = description
-            reps = entry.get("representative_goods") or []
-            cleaned = [str(value).strip() for value in reps if str(value).strip()]
+            desc = str(meta.get("description", "")).strip()
+            reps_list = meta.get("representative_goods") or []
+            if desc:
+                category_descriptions[name] = desc
+            cleaned = [str(value).strip() for value in reps_list if str(value).strip()]
             if cleaned:
                 representative_goods[name] = cleaned[:4]
 
@@ -233,6 +291,27 @@ class SchemaGenerator:
             products_definition_path=products_path,
             product_definition=product_definition,
         )
+
+    def _resolve_max_categories(self, sample_count: int) -> int:
+        """Estimate a sensible upper bound for categories based on sample size."""
+        cfg_val = self.config.get("max_categories")
+        if isinstance(cfg_val, int) and cfg_val > 0:
+            return cfg_val
+        ratio = self.config.get("category_ratio", 0.10)
+        try:
+            ratio = float(ratio)
+        except Exception:
+            ratio = 0.10
+        ratio = max(0.01, min(0.35, ratio))  # clamp to sane range for higher coverage
+        estimate = int(math.ceil(max(1, sample_count) * ratio))
+        return max(3, min(30, estimate))
+
+    def _select_round_goods(self, goods: Sequence[str], round_idx: int) -> List[str]:
+        """Sample goods for a refinement round."""
+        if len(goods) <= self.config["max_total_samples"]:
+            return list(goods)
+        rnd = random.Random(self.config.get("random_seed", 42) + round_idx)
+        return rnd.sample(goods, self.config["max_total_samples"])
 
     def generate_attribute_configs_from_classifications(
         self,
@@ -280,19 +359,20 @@ class SchemaGenerator:
         df["category"] = df["category"].astype(str).str.strip()
         if "goods_shipped" in df.columns:
             df["goods_shipped"] = df["goods_shipped"].astype(str).str.strip()
+        df = self._filter_multi_product(df)
 
         products_map: Dict[str, AttributeSet] = {}
         definitions_map: Dict[str, str] = {}
         generation_notes: Dict[str, object] = {}
 
-        for category in categories:
-            subset = df[df["category"] == category]
+        def process_category(cat: str) -> Tuple[str, Dict[str, List[str]], Dict[str, str], Dict[str, object]]:
+            subset = df[df["category"] == cat]
             if subset.empty:
                 logger.warning(
                     "No classified shipments found for category '%s'; skipping attribute inference.",
-                    category,
+                    cat,
                 )
-                continue
+                return cat, {}, {}, {}
 
             goods_samples = self._collect_category_goods(
                 subset,
@@ -300,30 +380,80 @@ class SchemaGenerator:
             )
             summary_text = self._summarize_category_rows(subset)
 
-            response = self._call_model_for_attributes(
-                hs_code=normalized_hs,
-                category=category,
-                goods=goods_samples,
-                summary_text=summary_text,
-            )
+            per_call = max(1, int(self.config.get("attribute_goods_per_call", 250)))
+            chunks = [goods_samples[i : i + per_call] for i in range(0, len(goods_samples), per_call)]
+            merged_attrs: Dict[str, List[str]] = {}
+            merged_defs: Dict[str, str] = {}
+            telemetry_notes: Dict[str, object] = {"calls": len(chunks)}
 
-            attr_map, def_map, telemetry = self._process_attribute_response(
-                category=category,
-                raw_attributes=response.get("attributes"),
-                category_df=subset,
-            )
+            logger.info("Attribute inference start -> hs=%s category=%s goods=%s calls=%s", normalized_hs, cat, len(goods_samples), len(chunks))
+            try:
+                for idx, chunk in enumerate(chunks, start=1):
+                    response = self._call_model_for_attributes(
+                        hs_code=normalized_hs,
+                        category=cat,
+                        goods=chunk,
+                        summary_text=summary_text,
+                        prior_attributes=merged_attrs if merged_attrs else None,
+                    )
 
-            if not attr_map:
-                logger.warning(
-                    "No attributes inferred for category '%s' even after fallback; skipping.",
-                    category,
-                )
-                continue
+                    attr_map, def_map, telemetry = self._process_attribute_response(
+                        category=cat,
+                        raw_attributes=response.get("attributes"),
+                        category_df=subset,
+                    )
+                    for name, vals in attr_map.items():
+                        existing = merged_attrs.setdefault(name, [])
+                        for v in vals:
+                            if v not in existing:
+                                existing.append(v)
+                    merged_defs.update(def_map)
+                    if telemetry:
+                        telemetry_notes.setdefault("calls_meta", {})[f"call_{idx}"] = telemetry
 
-            products_map[category] = AttributeSet(attr_map)
-            definitions_map.update(def_map)
-            if telemetry:
-                generation_notes[category] = telemetry
+                logger.info("Attribute inference done -> category=%s attrs=%s", cat, len(merged_attrs))
+                return cat, merged_attrs, merged_defs, telemetry_notes
+            except Exception as exc:
+                logger.warning("Attribute inference failed -> category=%s error=%s", cat, exc)
+                return cat, {}, {}, {"error": str(exc)}
+
+        max_workers = max(1, int(self.config.get("attribute_max_workers", 1)))
+        with tqdm(total=len(categories), desc="Attribute schema") as pbar:
+            with ThreadPoolExecutor(max_workers=max_workers) as executor:
+                future_to_cat = {executor.submit(process_category, cat): cat for cat in categories}
+                pending = set(future_to_cat.keys())
+
+                wait_timeout = float(self.config.get("attribute_wait_timeout", 120.0))
+                while pending:
+                    done, pending = wait(pending, timeout=wait_timeout, return_when=ALL_COMPLETED)
+
+                    if not done and pending:
+                        for fut in list(pending):
+                            cat = future_to_cat[fut]
+                            logger.warning("Category '%s' timed out; marking as skipped.", cat)
+                            fut.cancel()
+                            generation_notes[cat] = {"error": "timeout"}
+                            pbar.update(1)
+                        pending.clear()
+                        break
+
+                    for future in done:
+                        try:
+                            cat, attr_map, def_map, telemetry = future.result()
+                        except Exception as exc:  # defensive
+                            cat = future_to_cat.get(future, "unknown")
+                            logger.warning("Category '%s' raised exception; skipped. error=%s", cat, exc)
+                            generation_notes[cat] = {"error": str(exc)}
+                            pbar.update(1)
+                            continue
+                        if attr_map:
+                            products_map[cat] = AttributeSet(attr_map)
+                            definitions_map.update(def_map)
+                            if telemetry:
+                                generation_notes[cat] = telemetry
+                        else:
+                            logger.warning("Category '%s' produced no attributes; skipped.", cat)
+                        pbar.update(1)
 
         if not products_map:
             raise RuntimeError(
@@ -408,6 +538,8 @@ class SchemaGenerator:
         self,
         hs_code: str,
         goods: Sequence[str],
+        *,
+        max_categories: int,
     ) -> Dict[str, object]:
         """Ask Gemini to infer product categories for an HS-4 code."""
 
@@ -429,8 +561,9 @@ Return a JSON object with a single key "product_categories" (array). Each item M
 - "representative_goods": Array of 2-4 short substrings copied verbatim from the samples that support the category.
 
 3) RULES
-- Propose between 2 and {self.config['max_categories']} categories rooted in the evidence (processing stage, form, grading, packaging, destination usage, etc.).
-- Avoid vague buckets such as "General" unless absolutely required; be specific and mutually exclusive.
+- Propose between 1 and {max_categories} categories rooted in the evidence (processing stage, form, grading, packaging, destination usage, etc.).
+- Keep categories broad and reusable; combine mesh/size/packaging variants into a single category when they are the same fundamental product form.
+- Avoid over-splitting by fine specs (mesh size, minor granularity, pack weight) and avoid vague buckets like "General". Aim for mutually exclusive, widely applicable groupings.
 - Do not invent categories unsupported by the text.
 
 4) SAMPLED GOODS (DO NOT IGNORE)
@@ -458,6 +591,8 @@ Return a JSON object with a single key "product_categories" (array). Each item M
                         },
                         "required": ["name", "description"],
                     },
+                    "minItems": 1,
+                    "maxItems": max_categories,
                 }
             },
             "required": ["product_categories"],
@@ -471,6 +606,7 @@ Return a JSON object with a single key "product_categories" (array). Each item M
         category: str,
         goods: Sequence[str],
         summary_text: str,
+        prior_attributes: Optional[Dict[str, List[str]]] = None,
     ) -> Dict[str, object]:
         """Ask Gemini to infer attribute schema for a specific product category."""
 
@@ -478,6 +614,14 @@ Return a JSON object with a single key "product_categories" (array). Each item M
             f"{idx + 1}. {text}" for idx, text in enumerate(goods[: self.config["max_total_samples"]])
         ) or "1. No direct goods descriptions available"
         summary_section = summary_text.strip() or "No structured column summary available."
+        prior_block = ""
+        if prior_attributes:
+            lines = []
+            for name, vals in prior_attributes.items():
+                preview = ", ".join(vals[:8]) + (" ..." if len(vals) > 8 else "")
+                lines.append(f"- {name}: {preview}")
+            if lines:
+                prior_block = "\nEXISTING ATTRIBUTES (carry forward and expand, do not duplicate):\n" + "\n".join(lines)
 
         prompt = f"""
 1) ROLE & GOAL
@@ -498,6 +642,7 @@ Return an object with key "attributes" (array). Each attribute object MUST inclu
 4) EVIDENCE TO USE (DO NOT IGNORE)
 - GOODS SAMPLES:\n{goods_section}
 - STRUCTURED SUMMARY:\n{summary_section}
+{prior_block}
 
 5) FORMAT
 - JSON only; no markdown or commentary.
@@ -539,17 +684,14 @@ Return an object with key "attributes" (array). Each attribute object MUST inclu
 
         while retries <= self.config["max_retries"]:
             try:
-                gen_kwargs = dict(
-                    temperature=self.config["temperature"],
-                    response_mime_type="application/json",
+                response = self.model.generate(
+                    prompt,
+                    schema=response_schema if supports_schema else None,
+                    temperature=self.config["temperature"]
                 )
-                if supports_schema and response_schema:
-                    gen_kwargs["response_schema"] = response_schema
-                generation_config = genai.types.GenerationConfig(**gen_kwargs)
-                response = self.model.generate_content(prompt, generation_config=generation_config)
                 text = getattr(response, "text", "")
                 if not text:
-                    raise RuntimeError("Empty response from Gemini model")
+                    raise RuntimeError("Empty response from model")
                 start = text.find("{")
                 end = text.rfind("}")
                 if start == -1 or end == -1 or end <= start:
@@ -568,7 +710,7 @@ Return an object with key "attributes" (array). Each attribute object MUST inclu
                 last_exception = exc
                 if supports_schema and "Unknown field for Schema" in str(exc):
                     logger.info(
-                        "Gemini rejected response schema; retrying with plain JSON parsing."
+                        "Model rejected response schema; retrying with plain JSON parsing."
                     )
                     supports_schema = False
                     retries += 1
@@ -576,7 +718,7 @@ Return an object with key "attributes" (array). Each attribute object MUST inclu
                     continue
                 retries += 1
                 logger.warning(
-                    "Gemini invocation attempt %s/%s failed: %s",
+                    "Invocation attempt %s/%s failed: %s",
                     retries,
                     self.config["max_retries"],
                     exc,
@@ -584,9 +726,9 @@ Return an object with key "attributes" (array). Each attribute object MUST inclu
                 time.sleep(self.config["retry_delay"] * max(1, retries))
 
         if last_exception:
-            logger.error("Gemini invocation failed after retries: %s", last_exception)
-            raise RuntimeError("Gemini call failed") from last_exception
-        raise RuntimeError("Gemini invocation failed without explicit exception")
+            logger.error("Invocation failed after retries: %s", last_exception)
+            raise RuntimeError("LLM call failed") from last_exception
+        raise RuntimeError("Invocation failed without explicit exception")
 
     def _collect_goods_samples(
         self,
@@ -603,6 +745,7 @@ Return an object with key "attributes" (array). Each attribute object MUST inclu
         df["hs_code"] = df["hs_code"].astype(str).str.strip()
         df["hs4"] = df["hs_code"].map(self._extract_hs4)
         df["goods_shipped"] = df["goods_shipped"].astype(str).str.strip()
+        df = self._filter_multi_product(df)
 
         filtered = df[df["hs4"] == hs_code]
         if filtered.empty:
@@ -881,6 +1024,26 @@ Return an object with key "attributes" (array). Each attribute object MUST inclu
             cleaned.append(title_case)
         return cleaned
 
+    @staticmethod
+    def _filter_multi_product(df: pd.DataFrame) -> pd.DataFrame:
+        """
+        Drop rows flagged as multi-product shipments using 'is_multi_product_shipment' column when present.
+        Treats common truthy strings/ints as True.
+        """
+        if "is_multi_product_shipment" not in df.columns:
+            return df
+
+        col = df["is_multi_product_shipment"]
+
+        def to_bool(val: object) -> bool:
+            if isinstance(val, bool):
+                return val
+            if val is None or (isinstance(val, float) and pd.isna(val)):
+                return False
+            s = str(val).strip().lower()
+            return s in {"true", "1", "yes", "y", "t"}
+
+        mask = col.apply(to_bool)
+        return df[~mask].copy()
+
 __all__ = ["SchemaGenerator", "SchemaGenerationResult"]
-
-

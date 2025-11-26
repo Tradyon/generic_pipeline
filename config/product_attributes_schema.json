@@ -1,0 +1,729 @@
+{
+  "0712": {
+    "version": "2025-11-26T10:09:07.480625Z",
+    "products": {
+      "Toasted And Roasted Onion Products": {
+        "attributes": {
+          "Product_Form": [
+            "Powder",
+            "Granules",
+            "Granulated",
+            "Chopped",
+            "Minced",
+            "Flakes",
+            "Flake",
+            "Diced",
+            "Sliced",
+            "Ground",
+            "Kibbled",
+            "Seasoning_blend",
+            "Dried",
+            "Dehydrated"
+          ],
+          "Mesh_Size": [
+            "40-80_mesh",
+            "80-100_mesh",
+            "1-3_mm",
+            "3-5_mm",
+            "5-8_mm",
+            "8-16_mesh",
+            "16-40_mesh",
+            "100-120_mesh",
+            "30-60_mesh",
+            "40-60_mesh",
+            "0.2-0.5_mm",
+            "8-26_mesh",
+            "60-80_mesh",
+            "0.5-1_mm",
+            "40-80 Mesh",
+            "80-100 Mesh",
+            "100-120 Mesh",
+            "1-3 Mm",
+            "3-5 Mm",
+            "5-8 Mesh",
+            "8-16 Mesh",
+            "16-40 Mesh",
+            "20-40 Mesh",
+            "40-60 Mesh"
+          ],
+          "Processing_Method": [
+            "Toasted",
+            "Roasted",
+            "Irradiated",
+            "Dehydrated",
+            "Fried",
+            "Treated",
+            "Eto_treated",
+            "Non_irradiated",
+            "Eto Treated",
+            "Non Irradiated"
+          ],
+          "Organic_Status": [
+            "Organic",
+            "Non_organic",
+            "Non Organic"
+          ],
+          "Origin_Country": [
+            "Pakistan",
+            "Egypt",
+            "United_states",
+            "Vietnam",
+            "Taiwan",
+            "Italy",
+            "South_korea",
+            "Singapore",
+            "China",
+            "Spain",
+            "Ghana",
+            "Morocco",
+            "Belgium",
+            "Bahamas",
+            "United States",
+            "South Korea"
+          ],
+          "Packaging_Type": [
+            "Poly_bag",
+            "Double_poly_bag",
+            "Carton",
+            "Kraft_paper_bag",
+            "Plastic_bag",
+            "Aluminum_foil_bag",
+            "50lb_carton",
+            "55lb_carton",
+            "55lb_kraft_bag",
+            "20kg_bag",
+            "20kg_carton",
+            "25kg_carton",
+            "Paper_bag",
+            "Corrugated_box",
+            "Foil_bag",
+            "Kraft_bag",
+            "20kg_carton_box",
+            "40lb_carton",
+            "20lb_carton",
+            "25kg_carton_box",
+            "Poly Bag",
+            "Double Poly Bag",
+            "Kraft Paper Bag",
+            "Plastic Bag",
+            "Aluminum Foil Bag",
+            "50lb Carton",
+            "55lb Carton",
+            "Paper Bag",
+            "Box"
+          ],
+          "Grade": [
+            "A_grade",
+            "Premium_grade",
+            "First_quality",
+            "A Grade",
+            "Premium Grade",
+            "First Quality"
+          ],
+          "Allergen_Status": [
+            "Contains_no_allergens",
+            "Contains_allergens"
+          ],
+          "FDA_Registration_Number": [
+            "18284166622",
+            "13851504236",
+            "11329801210",
+            "11259477686",
+            "10082767532",
+            "10168787220",
+            "19545407540",
+            "13834426"
+          ],
+          "Irradiation_Status": [
+            "Irradiated",
+            "Non_irradiated",
+            "Non Irradiated"
+          ],
+          "Storage_Temperature_Celsius": [
+            "15",
+            "20",
+            "25",
+            "-22"
+          ],
+          "Expiry_Date": [
+            "2023",
+            "2024",
+            "2025",
+            "2026"
+          ]
+        }
+      },
+      "Granulated Onion": {
+        "attributes": {
+          "Origin_Country": [
+            "China",
+            "India",
+            "United States",
+            "Singapore",
+            "Belgium",
+            "Germany",
+            "Dominican Republic",
+            "Spain",
+            "Hong Kong",
+            "Italy",
+            "Egypt",
+            "Indonesia",
+            "Vietnam",
+            "Brazil",
+            "Colombia",
+            "Panama",
+            "Chile",
+            "Sri Lanka",
+            "Pakistan",
+            "Paraguay",
+            "Mexico",
+            "Peru"
+          ],
+          "Processing_Method": [
+            "Granulated",
+            "Dehydrated",
+            "Minced",
+            "Kibbled",
+            "Flaked",
+            "Powder",
+            "Ground",
+            "Sliced",
+            "Toasted",
+            "Irradiated",
+            "Rehydrated",
+            "Blended",
+            "Chopped",
+            "Powdered"
+          ],
+          "Mesh_Size": [
+            "40-80 Mesh",
+            "8-16 Mesh",
+            "5-13 Mesh",
+            "4-8 Mesh",
+            "5-8 Mesh",
+            "1-3 Mm",
+            "2-5 Mm",
+            "3-5 Mm",
+            "0.2-0.7 Mm",
+            "0.5-1 Mm",
+            "0.5-0.7 Mm",
+            "0.6-1.2 Mm",
+            "40-60 Mesh",
+            "16-26 Mesh",
+            "0.2-0.5 Mm",
+            "30-60 Mesh",
+            "20-40 Mesh",
+            "5-10 Mm"
+          ],
+          "Packaging_Type": [
+            "Carton",
+            "Drum",
+            "Bag",
+            "Box",
+            "Pallet",
+            "Package",
+            "Plastic_bag",
+            "Aluminum_foil_bag",
+            "Poly_bag",
+            "Corrugated_box",
+            "Wooden_pallet",
+            "Bulk_container",
+            "20kg_carton",
+            "25kg_carton",
+            "50lb_bag",
+            "5kg_bag",
+            "20kg_bag",
+            "25kg_bag",
+            "Plastic Bag",
+            "Aluminum Foil Bag",
+            "Double Poly Bag",
+            "Poly Bag"
+          ],
+          "Net_Weight_Per_Package": [
+            "12.5 Kg",
+            "20 Kg",
+            "25 Kg",
+            "100 Kg",
+            "125 Kg",
+            "1 Kg",
+            "5 Kg",
+            "10 Kg",
+            "15 Kg",
+            "30 Kg",
+            "22.68 Kg",
+            "40 Kg",
+            "50 Kg",
+            "2 Kg",
+            "3 Kg",
+            "23 Kg",
+            "25.06 Kg",
+            "0.5 Kg"
+          ],
+          "Organic_Status": [
+            "Organic",
+            "Non_organic"
+          ],
+          "Irradiated_Status": [
+            "Irradiated",
+            "Non_irradiated"
+          ],
+          "Grade": [
+            "A_grade",
+            "B_grade",
+            "C_grade",
+            "Premium_grade",
+            "Standard_grade",
+            "1st_quality",
+            "2nd_quality",
+            "3rd_quality"
+          ],
+          "Product_Use": [
+            "Ingredient",
+            "Food_additive",
+            "Seasoning",
+            "Flavoring",
+            "Soup_base",
+            "Snack_ingredient",
+            "Sauce_component",
+            "Prepared_meal_mix"
+          ],
+          "Treatment_Type": [
+            "Toasted",
+            "Untoasted",
+            "Dehydrated",
+            "Irradiated",
+            "Blended",
+            "Fermented"
+          ],
+          "Product_Form": [
+            "Granules",
+            "Powder"
+          ],
+          "Color": [
+            "White"
+          ]
+        }
+      },
+      "Chopped And Minced Onion": {
+        "attributes": {
+          "Origin_Country": [
+            "China",
+            "India",
+            "United States",
+            "Egypt",
+            "Australia",
+            "Vietnam",
+            "Japan",
+            "Greece",
+            "Iran",
+            "Pakistan",
+            "Peru",
+            "Brazil",
+            "Colombia",
+            "Panama",
+            "Uruguay",
+            "Chile",
+            "Paraguay"
+          ],
+          "Processing_Method": [
+            "Dehydrated",
+            "Toasted",
+            "Irradiated",
+            "Air Dried",
+            "Freeze Dried",
+            "Sun Dried",
+            "Frozen",
+            "Iqf"
+          ],
+          "Form": [
+            "Chopped",
+            "Minced",
+            "Flaked",
+            "Powder",
+            "Granulated",
+            "Kibbled",
+            "Granules",
+            "Sliced",
+            "Diced",
+            "Crumbled",
+            "Blend",
+            "Mini Rings"
+          ],
+          "Particle_Size_Range": [
+            "1-3 Mm",
+            "3-5 Mm",
+            "4-12 Mm",
+            "5-8 Mm",
+            "8-16 Mm",
+            "10-12 Mm",
+            "12-16 Mm",
+            "14 Mm",
+            "16-40 Mm",
+            "0.2-0.5 Mm",
+            "0.2-0.7 Mm",
+            "5-13 Mm"
+          ],
+          "Packaging_Type": [
+            "Bag",
+            "Carton",
+            "Box",
+            "Paper Bag",
+            "Poly Bag",
+            "Double Poly Bag",
+            "Barrel",
+            "Jar",
+            "Crate",
+            "Pallet",
+            "Drum",
+            "Jumbo Bag",
+            "Plastic Bag",
+            "Labeled Package",
+            "Aluminum Bag",
+            "Aluminum Inner Bag"
+          ],
+          "Grade": [
+            "A Grade",
+            "Premium Grade",
+            "Grade A",
+            "Grade B",
+            "Grade C",
+            "Comm-grade",
+            "Low Bac"
+          ],
+          "Organic_Status": [
+            "Organic",
+            "Conventional",
+            "Nop Certified"
+          ],
+          "Certification": [
+            "Fda Registered",
+            "Usda Organic",
+            "Eu Organic",
+            "Fta Certificate",
+            "Nop Certified",
+            "Fda Reg No"
+          ],
+          "Shelf_Life": [
+            "12 Months",
+            "18 Months",
+            "24 Months",
+            "30 Months",
+            "36 Months"
+          ]
+        }
+      },
+      "Onion Powder": {
+        "attributes": {
+          "Origin_Country": [
+            "India",
+            "China",
+            "United States",
+            "Egypt",
+            "Germany",
+            "Spain",
+            "Australia",
+            "Singapore",
+            "Belgium",
+            "United Kingdom",
+            "Hong Kong",
+            "Dominican Republic",
+            "Brazil",
+            "Philippines",
+            "Vietnam",
+            "Colombia",
+            "Panama",
+            "Uruguay",
+            "Peru",
+            "Chile",
+            "Pakistan",
+            "Paraguay",
+            "United_states",
+            "United_kingdom",
+            "Hong_kong",
+            "Dominican_republic"
+          ],
+          "Processing_Method": [
+            "Dehydrated",
+            "Irradiated",
+            "Toasted",
+            "Roasted",
+            "Freeze_dried",
+            "Air_dried",
+            "Low_bacteria_treated",
+            "Non_treated",
+            "Heat_treated",
+            "Sun_dried",
+            "Hot_air_dried",
+            "Standard",
+            "Premium"
+          ],
+          "Mesh_Size": [
+            "80-100 Mesh",
+            "100-120 Mesh",
+            "120-140 Mesh",
+            "40-80 Mesh",
+            "40-60 Mesh",
+            "60-80 Mesh",
+            "20-40 Mesh",
+            "8-16 Mesh",
+            "16-26 Mesh",
+            "80-100_mesh",
+            "100-120_mesh",
+            "120-140_mesh",
+            "40-80_mesh",
+            "40-60_mesh",
+            "60-80_mesh",
+            "20-40_mesh",
+            "8-16_mesh",
+            "5-8_mesh",
+            "40-50_mesh"
+          ],
+          "Grade": [
+            "A Grade",
+            "B Grade",
+            "G Grade",
+            "Premium Grade",
+            "Standard Grade",
+            "A_grade",
+            "B_grade",
+            "G_grade",
+            "Premium_grade",
+            "Standard_grade",
+            "Low_bacteria_grade",
+            "C_grade",
+            "D_grade"
+          ],
+          "Organic_Status": [
+            "Organic",
+            "Non_organic"
+          ],
+          "Packaging_Type": [
+            "25 Kg Bag",
+            "25 Kg Carton",
+            "1 Kg Bag",
+            "6 Oz Pack",
+            "8 Oz Pack",
+            "1000 Packages",
+            "1350 Packages",
+            "840 Packages",
+            "500 Grams Bottle",
+            "20 Kg Bag",
+            "20 Kg Carton",
+            "25 Kg Poly_bag",
+            "25 Kg Labeled_packaging",
+            "5 Kg Bag",
+            "100 G Jar",
+            "800 Packages",
+            "1500 Packages",
+            "2000 Packages",
+            "2500 Packages",
+            "25_kg_bag",
+            "25_kg_carton",
+            "20_kg_bag",
+            "20_kg_carton",
+            "10_kg_bag",
+            "5_kg_bag",
+            "2_kg_bag",
+            "1_kg_bag",
+            "500_gram_pack",
+            "1000_packages",
+            "1350_packages",
+            "840_packages",
+            "6_oz_pack",
+            "8_oz_pack",
+            "1_liter_jar",
+            "2_liter_jar",
+            "15_kg_bag",
+            "30_kg_bag",
+            "40_kg_bag",
+            "50_kg_bag",
+            "100_kg_bag",
+            "200_kg_bag",
+            "500_kg_bag",
+            "1_ton_bag",
+            "2_ton_bag",
+            "5_ton_bag",
+            "10_ton_bag",
+            "5_oz_pack",
+            "500_packages",
+            "800_packages",
+            "1500_kg_bulk",
+            "2500_kg_bulk",
+            "5000_kg_bulk",
+            "8000_kg_bulk",
+            "10000_kg_bulk",
+            "15000_kg_bulk"
+          ],
+          "Use_Type": [
+            "Human_consumption",
+            "Industrial_ingredient",
+            "Food_ingredient",
+            "Seasoning",
+            "Spice_mix",
+            "Sauce_ingredient",
+            "Baking_ingredient",
+            "Flavoring",
+            "Nutraceutical",
+            "Feed_additive"
+          ],
+          "Net_Weight_Per_Package_Kg": [
+            "25",
+            "20",
+            "22.68",
+            "14.5",
+            "12.5",
+            "10",
+            "5",
+            "1",
+            "0.1",
+            "0.5",
+            "0.025"
+          ],
+          "Expiration_Year_Range": [
+            "2022-2024",
+            "2023-2025",
+            "2024-2026",
+            "2025-2027",
+            "2026-2028",
+            "2027-2029",
+            "2028-2030"
+          ],
+          "Color": [
+            "White",
+            "Red",
+            "Yellow",
+            "Brown",
+            "Golden",
+            "Pink",
+            "Purple"
+          ],
+          "Physical_Form": [
+            "Powder",
+            "Granules",
+            "Kibbled",
+            "Flakes",
+            "Minced",
+            "Crushed",
+            "Dried_slices"
+          ],
+          "Moisture_Content": [
+            "Low_moisture",
+            "Medium_moisture",
+            "High_moisture"
+          ]
+        }
+      }
+    },
+    "_product_categories": [
+      "Granulated Onion",
+      "Toasted And Roasted Onion Products",
+      "Chopped And Minced Onion",
+      "Onion Powder"
+    ],
+    "_generation_notes": {
+      "Toasted And Roasted Onion Products": {
+        "calls": 4,
+        "calls_meta": {
+          "call_1": {
+            "model_attribute_count": 7,
+            "fallback_attributes": [],
+            "final_attribute_count": 7
+          },
+          "call_2": {
+            "model_attribute_count": 10,
+            "fallback_attributes": [],
+            "final_attribute_count": 10
+          },
+          "call_3": {
+            "model_attribute_count": 12,
+            "fallback_attributes": [],
+            "final_attribute_count": 12
+          },
+          "call_4": {
+            "model_attribute_count": 11,
+            "fallback_attributes": [],
+            "final_attribute_count": 11
+          }
+        }
+      },
+      "Granulated Onion": {
+        "calls": 4,
+        "calls_meta": {
+          "call_1": {
+            "model_attribute_count": 5,
+            "fallback_attributes": [],
+            "final_attribute_count": 5
+          },
+          "call_2": {
+            "model_attribute_count": 10,
+            "fallback_attributes": [],
+            "final_attribute_count": 10
+          },
+          "call_3": {
+            "model_attribute_count": 10,
+            "fallback_attributes": [],
+            "final_attribute_count": 10
+          },
+          "call_4": {
+            "model_attribute_count": 7,
+            "fallback_attributes": [],
+            "final_attribute_count": 7
+          }
+        }
+      },
+      "Chopped And Minced Onion": {
+        "calls": 4,
+        "calls_meta": {
+          "call_1": {
+            "model_attribute_count": 7,
+            "fallback_attributes": [],
+            "final_attribute_count": 7
+          },
+          "call_2": {
+            "model_attribute_count": 9,
+            "fallback_attributes": [],
+            "final_attribute_count": 9
+          },
+          "call_3": {
+            "model_attribute_count": 9,
+            "fallback_attributes": [],
+            "final_attribute_count": 9
+          },
+          "call_4": {
+            "model_attribute_count": 9,
+            "fallback_attributes": [],
+            "final_attribute_count": 9
+          }
+        }
+      },
+      "Onion Powder": {
+        "calls": 4,
+        "calls_meta": {
+          "call_1": {
+            "model_attribute_count": 6,
+            "fallback_attributes": [],
+            "final_attribute_count": 6
+          },
+          "call_2": {
+            "model_attribute_count": 9,
+            "fallback_attributes": [],
+            "final_attribute_count": 9
+          },
+          "call_3": {
+            "model_attribute_count": 11,
+            "fallback_attributes": [],
+            "final_attribute_count": 11
+          },
+          "call_4": {
+            "model_attribute_count": 12,
+            "fallback_attributes": [],
+            "final_attribute_count": 12
+          }
+        }
+      }
+    }
+  },
+  "_generated_at": "2025-11-26T10:09:07.480636Z",
+  "_source": "auto_inference",
+  "_classified_rows": 18032
+}

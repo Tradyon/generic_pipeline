@@ -1,0 +1,43 @@
+{
+  "hs_code": "0712",
+  "product_categories": [
+    "Granulated Onion",
+    "Toasted And Roasted Onion Products",
+    "Chopped And Minced Onion",
+    "Onion Powder"
+  ],
+  "category_descriptions": {
+    "Granulated Onion": "Coarsely ground dehydrated onion products with specific mesh sizes, often used as intermediate processing forms.",
+    "Toasted And Roasted Onion Products": "Dehydrated onion products that have undergone additional thermal processing for enhanced flavor.",
+    "Chopped And Minced Onion": "Dehydrated onion pieces in chopped, minced, or flaked form, typically used in food preparation.",
+    "Onion Powder": "Finely ground dehydrated onion products used as a seasoning or ingredient base."
+  },
+  "_generated_at": "2025-11-26T08:50:55.042771Z",
+  "_source": "auto_inference",
+  "_representative_goods": {
+    "Granulated Onion": [
+      "ONION GRANULATED 40-80 MESH",
+      "DEHYDRATED WHITE ONION GRANULES",
+      "GRANULATED ONION",
+      "ONION GRANULE"
+    ],
+    "Toasted And Roasted Onion Products": [
+      "TOASTED ONION POWDER",
+      "ROASTED ONION GRANULES",
+      "TOASTED ONION MINCED",
+      "TOASTED ONION CHOPPED"
+    ],
+    "Chopped And Minced Onion": [
+      "ONION MINCED",
+      "ONION CHOPPED",
+      "ONION GRANULATED",
+      "DEHYDRATED ONION FLAKES"
+    ],
+    "Onion Powder": [
+      "ONION POWDER",
+      "DEHYDRATED WHITE ONION POWDER",
+      "ONION POWDER IRRADIATED",
+      "ONION POWDER WHITE"
+    ]
+  }
+}

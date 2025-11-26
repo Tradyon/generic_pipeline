@@ -5,7 +5,6 @@ Classify shipment goods descriptions into product categories using LLM.
 """
 
 import pandas as pd
-import google.generativeai as genai
 import json
 import time
 import os
@@ -14,10 +13,11 @@ import pickle
 import logging
 from typing import List, Dict, Any, Optional, Union
 from tqdm import tqdm
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import ThreadPoolExecutor, wait, ALL_COMPLETED
 from datetime import datetime
 
-from config_models import ProductDefinition, load_product_definition
+from src.utils.config_models import ProductDefinition, load_product_definition
+from src.utils.llm_client import LLMClient
 
 
 logger = logging.getLogger(__name__)
@@ -61,7 +61,7 @@ class ProductClassifier:
         model_name: str = "gemini-2.0-flash",
         checkpoint_file: Optional[str] = None,
         batch_size: int = 10,
-        max_workers: int = 5,
+        max_workers: int = 8,
         api_key: Optional[str] = None
     ):
         """
@@ -105,23 +105,12 @@ class ProductClassifier:
         self.product_categories = definition.product_categories
         self.category_descriptions = definition.category_descriptions
         
-        # Configure API
-        if api_key:
-            genai.configure(api_key=api_key)
-        elif os.getenv('GOOGLE_API_KEY'):
-            genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
-        else:
-            raise ValueError("Google API key must be provided via api_key parameter or GOOGLE_API_KEY environment variable")
-        
         # Create dynamic schema
-        classification_schema = create_classification_schema(self.product_categories)
+        self.classification_schema = create_classification_schema(self.product_categories)
         
-        self.model = genai.GenerativeModel(
+        self.model = LLMClient(
             model_name=model_name,
-            generation_config={
-                "response_mime_type": "application/json",
-                "response_schema": classification_schema
-            }
+            api_key=api_key
         )
         
         self.batch_size = batch_size
@@ -147,14 +136,26 @@ class ProductClassifier:
         category_text = "\n".join(category_text_parts)
         
         prompt = f"""
-        Classify the following product descriptions into one of these categories:
-        
+        You are a careful classifier. Assign each goods description to exactly ONE category from the allowed list.
+
+        Allowed categories:
         {category_text}
-        
-        Product descriptions:
+
+        GOODS (preserve order):
         {descriptions_text}
-        
-        Return a list of classifications in the same order as the input descriptions.
+
+        Output JSON ONLY:
+        {{
+          "classifications": [
+            "Category for item 1",
+            "Category for item 2",
+            ...
+          ]
+        }}
+        - Length of classifications MUST equal the number of goods above.
+        - Use only category names from the allowed list.
+        - If unsure, output "Unclassified".
+        - No explanations, no extra keys, no markdown.
         """
         
         return prompt
@@ -174,9 +175,26 @@ class ProductClassifier:
             input_tokens = self.count_tokens(prompt)
             time.sleep(0.1)  # Rate limiting
             
-            response = self.model.generate_content(prompt)
-            result = json.loads(response.text)
-            categories = result['classifications']
+            response = self.model.generate(prompt, schema=self.classification_schema)
+            text = getattr(response, "text", "")
+            try:
+                result = json.loads(text)
+            except Exception:
+                start = text.find("{")
+                end = text.rfind("}")
+                if start != -1 and end != -1 and end > start:
+                    try:
+                        result = json.loads(text[start : end + 1])
+                    except Exception:
+                        result = {}
+                else:
+                    result = {}
+
+            categories = result.get("classifications") if isinstance(result, dict) else None
+            if not isinstance(categories, list):
+                categories = ["Unclassified"] * len(goods_descriptions)
+            elif len(categories) != len(goods_descriptions):
+                categories = (categories + ["Unclassified"] * len(goods_descriptions))[: len(goods_descriptions)]
             
             output_tokens = len(categories) * 3
             
@@ -256,7 +274,9 @@ class ProductClassifier:
         processed_goods = set()
         
         if resume:
-            df_checkpoint, start_index, processed_goods = self.load_checkpoint()
+            result = self.load_checkpoint()
+            if result:
+                df_checkpoint, start_index, processed_goods = result
         
         if df_checkpoint is not None:
             df = df_checkpoint
@@ -300,33 +320,49 @@ class ProductClassifier:
         
         with tqdm(total=len(remaining_goods), desc="Classifying unique goods") as pbar:
             with ThreadPoolExecutor(max_workers=self.max_workers) as executor:
-                # Submit all batches
                 future_to_batch = {
                     executor.submit(self.process_batch_with_results, batch_goods, batch_index): (batch_index, batch_goods)
                     for batch_index, batch_goods in batches
                 }
-                
-                # Process completed batches
-                for future in as_completed(future_to_batch):
-                    batch_index, batch_goods, batch_results, error = future.result()
-                    
-                    logger.info(f"Completed batch {batch_index + 1}/{total_batches} ({len(batch_goods)} goods)")
-                    
-                    if error:
-                        logger.warning(f"Batch {batch_index} had errors but was processed: {error}")
-                    
-                    # Apply results to all instances of each goods description
-                    for goods, category in zip(batch_goods, batch_results):
-                        indices = goods_to_indices[goods]
-                        for idx in indices:
-                            df.at[idx, 'category'] = category
-                        processed_goods.add(goods)
-                    
-                    pbar.update(len(batch_goods))
-                    
-                    # Save checkpoint every 50 unique goods processed
-                    if len(processed_goods) % 50 == 0:
-                        self.save_checkpoint(df, len(processed_goods), processed_goods)
+                pending = set(future_to_batch.keys())
+
+                while pending:
+                    done, pending = wait(pending, timeout=300, return_when=ALL_COMPLETED)
+
+                    # Handle timeouts: if wait timed out, pending still non-empty and done empty
+                    if not done and pending:
+                        for fut in list(pending):
+                            batch_index, batch_goods = future_to_batch[fut]
+                            logger.warning(f"Batch {batch_index} timed out; marking {len(batch_goods)} goods as Unclassified.")
+                            fut.cancel()
+                            for goods in batch_goods:
+                                for idx in goods_to_indices[goods]:
+                                    df.at[idx, 'category'] = "Unclassified"
+                                processed_goods.add(goods)
+                            pbar.update(len(batch_goods))
+                        pending.clear()
+                        break
+
+                    for future in done:
+                        batch_index, batch_goods, batch_results, error = future.result()
+
+                        logger.info(f"Completed batch {batch_index + 1}/{total_batches} ({len(batch_goods)} goods)")
+
+                        if error:
+                            logger.warning(f"Batch {batch_index} had errors but was processed: {error}")
+
+                        # Apply results to all instances of each goods description
+                        for goods, category in zip(batch_goods, batch_results):
+                            indices = goods_to_indices[goods]
+                            for idx in indices:
+                                df.at[idx, 'category'] = category
+                            processed_goods.add(goods)
+
+                        pbar.update(len(batch_goods))
+
+                        # Save checkpoint every 50 unique goods processed
+                        if len(processed_goods) % 50 == 0:
+                            self.save_checkpoint(df, len(processed_goods), processed_goods)
         
         # Final checkpoint cleanup
         if os.path.exists(self.checkpoint_file):
@@ -334,7 +370,6 @@ class ProductClassifier:
             logger.info("Checkpoint file cleaned up")
         
         self.print_summary(df)
-        
         return df
     
     def print_summary(self, df: pd.DataFrame):
@@ -367,34 +402,37 @@ def classify_products(
     checkpoint_file: Optional[str] = None,
     model_name: str = "gemini-2.0-flash",
     batch_size: int = 10,
-    max_workers: int = 5,
+    max_workers: int = 8,
     resume: bool = True,
+    low_memory: bool = False,
     **kwargs
 ) -> pd.DataFrame:
     """
-    Classify products from CSV file using LLM.
+    Classify products in a CSV file using LLM.
     
     Parameters:
     -----------
     input_csv : str
-        Path to input CSV with 'goods_shipped' column
+        Path to input CSV file
     products_definition_path : str
-        Path to JSON file with product categories and descriptions
+        Path to products definition JSON
     output_csv : str
-        Path to save classified results
+        Path to output CSV file
     checkpoint_file : str, optional
-        Path to checkpoint file (default: auto-generated)
-    model_name : str
-        Gemini model name
-    batch_size : int
-        Batch size for classification
-    max_workers : int
-        Number of parallel workers
-    resume : bool
-        Resume from checkpoint if available
-    **kwargs : dict
-        Additional parameters (api_key, etc.)
-    
+        Path to checkpoint file
+    model_name : str, optional
+        LLM model name
+    batch_size : int, optional
+        Batch size for LLM calls
+    max_workers : int, optional
+        Max workers for parallel processing
+    resume : bool, optional
+        Whether to resume from checkpoint
+    low_memory : bool, optional
+        Pandas read_csv low_memory flag
+    **kwargs
+        Additional arguments (e.g., api_key)
+        
     Returns:
     --------
     pd.DataFrame
@@ -407,26 +445,22 @@ def classify_products(
     
     # Load input data
     logger.info(f"Loading data from {input_csv}")
-    df = pd.read_csv(input_csv, low_memory=False)
+    df = pd.read_csv(input_csv, low_memory=low_memory)
     
-    # Initialize classifier
+    # Initialize classifier and run
     classifier = ProductClassifier(
         products_definition=products_definition,
         model_name=model_name,
         checkpoint_file=checkpoint_file,
         batch_size=batch_size,
         max_workers=max_workers,
-        api_key=kwargs.get('api_key')
+        api_key=kwargs.get("api_key")
     )
+    classified_df = classifier.classify_dataframe(df, resume=resume)
     
-    # Classify
-    df = classifier.classify_dataframe(df, resume=resume)
+    # Persist results
+    os.makedirs(os.path.dirname(output_csv), exist_ok=True) if os.path.dirname(output_csv) else None
+    classified_df.to_csv(output_csv, index=False)
+    logger.info(f"Saved classified data to {output_csv}")
     
-    # Save results
-    logger.info(f"Saving results to {output_csv}")
-    df.to_csv(output_csv, index=False)
-    
-    logger.info("Product classification completed successfully!")
-    
-    return df
-
+    return classified_df

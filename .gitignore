@@ -147,3 +147,4 @@ Thumbs.db
 # Project specific
 pipeline.log
 output/
+sample_onion.csv

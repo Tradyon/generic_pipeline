@@ -1,50 +1,86 @@
-# Generic Product Classification Pipeline
+# Tradyon Generic Pipeline
 
-This pipeline ingests shipment data, classifies each record into product groups, and optionally extracts attribute values per product. You can run it in two modes depending on whether you already maintain the configuration files yourself.
+LLM workflow to classify shipments into products and extract attributes.
 
-## 1. Manual Workflow (config files supplied)
-Use this when you already have:
-- `products_definition.json` – list of product categories and descriptions
-- `product_attributes_schema.json` – allowed attributes/values per product
-- `attribute_definitions.json` – analyst-friendly attribute descriptions
+## Setup
+- Python >= 3.9
+- Install deps: `uv sync` (or `pip install -r requirements.txt`)
+- Keys: set `OPENROUTER_API_KEY` (OpenRouter/OpenAI) or `GOOGLE_API_KEY` (Gemini). Optional `OPENROUTER_BASE_URL`.
 
-```bash
-python pipeline_runner.py \
-  --data-source ./shipments.csv \
-  --products-definition ./config/products_definition.json \
-  --product-attributes-schema ./config/product_attributes_schema.json \
-  --attribute-definitions ./config/attribute_definitions.json \
-  --output-dir ./output/manual_run
-```
+## Commands (all flags shown)
 
-The runner will load shipments, classify products, apply the provided attribute schema, and emit:
-- Per-product CSVs in `<output-dir>/per_product_classifications/`
-- Aggregated JSON/CSV summaries
-- Optional helper artefacts (`product_schema_master.csv`, `shipment_id_to_attr.json`)
-
-## 2. Automatic Workflow (configs inferred from data)
-Use this when you want the pipeline to design products and attribute schemas on the fly from a single HS-4 shipment dataset.
+### 1) Load & validate
 
 ```bash
-python pipeline_runner.py \
-  --data-source ./shipments.csv \
-  --products-definition ./tmp_schema/products_definition.json \
-  --product-attributes-schema ./tmp_schema/product_attributes_schema.json \
-  --attribute-definitions ./tmp_schema/attribute_definitions.json \
-  --output-dir ./output/auto_run \
-  --auto-generate-schema \
-  --hs-code 9011 \
-  --schema-output-dir ./tmp_schema
+uv run python tradyon_load.py \
+  --input <raw.csv> \            # required
+  --output <shipment_master.csv> \# required
+  [--low-memory]                 # optional: pandas low_memory
 ```
 
-This mode executes:
-1. **Product inference** – creates `products_definition.json`
-2. **Product classification** – labels each shipment using the inferred products
-3. **Attribute inference** – builds attribute schema/definitions from the classified rows
-4. **Attribute classification** – same outputs as the manual workflow
+### 2) Generate product definition
 
-## Tips
-- The shipment CSV must contain `hs_code`, `goods_shipped`, and `shipment_id` columns.
-- For automatic mode, ensure `--hs-code` matches the dominant HS-4 in your data.
-- Environment variables (e.g., `GOOGLE_API_KEY`) can be loaded from `.env` automatically.
+```bash
+uv run python tradyon_generate_schema.py product-definition \
+  --hs-code <HS4> \              # required
+  --input <shipment_master.csv> \# required
+  --output-dir <config_dir> \    # required
+  [--model <llm_model>] \        # optional, default gemini-2.0-flash
+  [--max-products <int>]         # optional: cap categories
+```
 
+### 3) Classify products
+
+```bash
+uv run python tradyon_classify_products.py \
+  --input <shipment_master.csv> \                 # required
+  --output <shipment_master_classified.csv> \     # required
+  --products-definition <products_definition.json> \# required
+  [--model <llm_model>] \                         # optional, default gemini-2.0-flash
+  [--batch-size <int>] \                          # optional, default 10
+  [--max-workers <int>] \                         # optional, default 5
+  [--checkpoint-file <path>] \                    # optional
+  [--no-resume] \                                 # optional: ignore checkpoint
+  [--low-memory]                                  # optional
+```
+
+### 4) Generate attribute schema
+
+```bash
+uv run python tradyon_generate_schema.py attribute-schema \
+  --hs-code <HS4> \                                # required
+  --input <shipment_master_classified.csv> \       # required
+  --products-definition <products_definition.json> \ # required
+  --output-dir <config_dir> \                      # required
+  [--model <llm_model>]                            # optional
+```
+
+### 5) Classify attributes
+
+```bash
+uv run python tradyon_classify_attributes.py \
+  --input <shipment_master_classified.csv> \        # required
+  --output-dir <output_dir> \                       # required
+  --product-attributes-schema <product_attributes_schema.json> \ # required
+  --attribute-definitions <attribute_definitions.json> \         # required
+  [--model <llm_model>] \                           # optional, default gemini-2.0-flash
+  [--items-per-call <int>] \                        # optional, default 10
+  [--max-workers <int>] \                           # optional, default 20 (parallel products)
+  [--token-budget <int>] \                          # optional, default 20000000
+  [--checkpoint-file <path>] \                      # optional
+  [--no-resume] \                                   # optional
+  [--low-memory]                                    # optional
+```
+
+### 6) Post-process outputs
+
+```bash
+uv run python tradyon_post_process.py \
+  --input-dir <per_product_classifications_dir> \ # required
+  --output-dir <output_dir>                       # required
+```
+
+## Notes
+
+- Product inference uses multiple rounds over up to 1,000 samples and honors `is_multi_product_shipment` to drop mixed rows.
+- Override `--model` with OpenRouter IDs like `deepseek/deepseek-v3.2-exp`; the client enforces JSON where supported.

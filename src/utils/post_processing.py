@@ -7,7 +7,9 @@ Build a schema summary from per-product classification CSV files.
 import os
 import json
 import re
-from typing import Dict, List, Optional
+import csv
+from pathlib import Path
+from typing import Dict, List, Optional, Any
 
 import pandas as pd
 
@@ -24,6 +26,11 @@ def _clean_value(val: object) -> Optional[str]:
         return None
     if s.strip().lower() in MISSING_STRINGS:
         return None
+    
+    # Reject values that are too long (likely hallucinations or raw data)
+    if len(s) > 60:
+        return None
+        
     return s
 
 
@@ -72,7 +79,7 @@ def build_schema_for_csv(csv_path: str) -> Dict[str, List[str]]:
     Build a mapping of attribute_name -> list of possible values (strings),
     considering only columns prefixed with 'attr_'.
     """
-    df = pd.read_csv(csv_path)
+    df = pd.read_csv(csv_path, low_memory=False)
     schema: Dict[str, List[str]] = {}
     attr_cols = [c for c in df.columns if c.startswith("attr_")]
     for col in attr_cols:
@@ -152,6 +159,118 @@ def build_schema_master(input_dir: str, output_csv: str, file_pattern: str = "*.
     print(f"Wrote schema for {len(rows)} products to {output_csv}")
     
     return out_df
+
+
+def find_csv_files(input_dir: Path, pattern: str) -> List[Path]:
+    """Return list of CSV files matching pattern in the input directory (non-recursive)."""
+    return sorted(input_dir.glob(pattern))
+
+
+def extract_attr_columns(header: List[str]) -> List[str]:
+    """Identify columns that start with 'attr_' (case-sensitive)."""
+    return [c for c in header if c.startswith("attr_")]
+
+
+def to_snake_case_combined(key: str) -> str:
+    """Convert arbitrary strings to lowercase snake_case suitable for JSON keys."""
+    s = key.strip()
+    # Insert underscore between camelCase and PascalCase boundaries
+    s = re.sub(r"([a-z0-9])([A-Z])", r"\1_\2", s)
+    # Replace spaces, hyphens, slashes and other non-word chars with underscores
+    s = re.sub(r"[^A-Za-z0-9]+", "_", s)
+    # Collapse multiple underscores
+    s = re.sub(r"_+", "_", s)
+    # Trim underscores and lowercase
+    return s.strip("_").lower()
+
+
+def load_attributes(files: List[Path], shipment_id_col: str = "shipment_id", product_col: str = "product") -> Dict[str, Dict[str, object]]:
+    """
+    Load and combine attributes from multiple CSV files.
+    """
+    combined: Dict[str, Dict[str, object]] = {}
+    
+    for path in files:
+        with path.open("r", encoding="utf-8", newline="") as f:
+            reader = csv.DictReader(f)
+            if not reader.fieldnames:
+                continue
+            if shipment_id_col not in reader.fieldnames:
+                # Skip files that don't have the ID column
+                continue
+            
+            attr_cols = extract_attr_columns(reader.fieldnames or [])
+            for row in reader:
+                shipment_id = (row.get(shipment_id_col) or "").strip()
+                if not shipment_id:
+                    continue
+                
+                entry = combined.setdefault(shipment_id, {"attrs": {}, "product": None})
+                attrs: Dict[str, str] = entry["attrs"]  # type: ignore[assignment]
+                
+                if product_col in (reader.fieldnames or []):
+                    prod_raw = row.get(product_col)
+                    if prod_raw is not None:
+                        prod = str(prod_raw).strip()
+                        if prod:
+                            entry["product"] = prod
+                
+                for col in attr_cols:
+                    raw_val = row.get(col)
+                    if raw_val is None:
+                        continue
+                    val = str(raw_val).strip()
+                    if val == "" or val.lower() in {"nan", "none", "null"}:
+                        continue
+                    key = col[len("attr_"):]
+                    snake_key = to_snake_case_combined(key)
+                    if not snake_key:
+                        continue
+                    attrs[snake_key] = val
+    
+    return combined
+
+
+def combine_shipment_attributes(input_dir: str, pattern: str, output_path: str, shipment_id_col: str = "shipment_id") -> Dict[str, Any]:
+    """
+    Combine shipment ID to attribute mappings from multiple CSV files.
+    """
+    input_dir_path = Path(input_dir).expanduser().resolve()
+    output_path_obj = Path(output_path)
+    if not output_path_obj.is_absolute():
+        output_path_obj = input_dir_path / output_path
+    
+    files = find_csv_files(input_dir_path, pattern)
+    if not files:
+        print(f"Warning: No files found in '{input_dir_path}' matching pattern '{pattern}'.")
+        return {}
+    
+    print(f"Found {len(files)} file(s): {[p.name for p in files]}")
+    combined = load_attributes(files, shipment_id_col=shipment_id_col)
+    
+    # Write output based on extension
+    output_path_obj.parent.mkdir(parents=True, exist_ok=True)
+    ext = output_path_obj.suffix.lower()
+    
+    if ext == ".json":
+        # Single JSON object mapping shipment_id -> { attr: value }
+        attrs_only = {sid: (entry.get("attrs") or {}) for sid, entry in combined.items()}
+        with output_path_obj.open("w", encoding="utf-8") as out_f:
+            json.dump(attrs_only, out_f, ensure_ascii=False, indent=2)
+    else:
+        # Three-column CSV: shipment_id, product, attrs_json
+        with output_path_obj.open("w", encoding="utf-8", newline="") as out_f:
+            writer = csv.writer(out_f)
+            writer.writerow(["shipment_id", "product", "attrs_json"])
+            for shipment_id in sorted(combined.keys()):
+                entry = combined[shipment_id]
+                product = entry.get("product") or ""
+                attrs_json = json.dumps(entry.get("attrs") or {}, ensure_ascii=False)
+                writer.writerow([shipment_id, product, attrs_json])
+    
+    print(f"Wrote {len(combined)} shipment(s) with attributes to '{output_path_obj}'.")
+    
+    return combined
 
 
 if __name__ == "__main__":

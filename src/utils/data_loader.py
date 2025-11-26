@@ -104,7 +104,7 @@ def load_data_from_bigquery(
     )
 
 
-def load_data(input_source: str, output_csv: str) -> pd.DataFrame:
+def load_data(input_source: str, output_csv: str, low_memory: bool = False) -> pd.DataFrame:
     """
     Load shipment data from a CSV file.
     
@@ -118,6 +118,8 @@ def load_data(input_source: str, output_csv: str) -> pd.DataFrame:
         Path to CSV file
     output_csv : str
         Path where the loaded data should be written
+    low_memory : bool, optional
+        Pandas read_csv low_memory flag. Default is False (safer for mixed types).
     
     Returns:
     --------
@@ -147,7 +149,7 @@ def load_data(input_source: str, output_csv: str) -> pd.DataFrame:
     Additional columns are preserved but not required.
     """
     # Load CSV
-    df = pd.read_csv(input_source, low_memory=False)
+    df = pd.read_csv(input_source, low_memory=low_memory)
     
     # Verify required columns
     required_cols = ['hs_code', 'goods_shipped', 'shipment_id']

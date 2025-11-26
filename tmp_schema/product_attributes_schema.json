@@ -1,130 +1,302 @@
 {
-  "9011": {
-    "version": "2025-11-06T12:52:46.069718Z",
+  "0712": {
+    "version": "2025-11-17T11:33:10.934171Z",
     "products": {
-      "Unroasted Coffee Beans": {
+      "Dehydrated Onion Powder": {
         "attributes": {
-          "Coffee_Type": [
-            "Arabica",
-            "Robusta"
+          "Processing_Method": [
+            "Dehydrated",
+            "Dried",
+            "Air Dried",
+            "Toasted",
+            "Irradiated"
+          ],
+          "Color": [
+            "White",
+            "Pink"
+          ],
+          "Grade": [
+            "A Grade",
+            "Commercial Grade",
+            "Fancy",
+            "Premium",
+            "Standard"
+          ],
+          "Mesh_Size": [
+            "80-100 Mesh",
+            "100-120 Mesh"
           ],
           "Origin_Country": [
-            "Uganda",
-            "Vietnam",
-            "Brazil",
-            "Colombia",
-            "Tanzania",
+            "California",
+            "China",
+            "Nepal"
+          ],
+          "Packaging": [
+            "Bag",
+            "Carton",
+            "Drum",
+            "Box",
+            "Poly Bag",
+            "Paper Bag With Inner Liner",
+            "Boxes With Inner Aluminium Foil Bag"
+          ]
+        }
+      },
+      "Dehydrated Onion Granules": {
+        "attributes": {
+          "Mesh_Size": [
+            "40-60 Mesh",
+            "40-80 Mesh",
+            "16-26 Mesh",
+            "8-20 Mesh",
+            "100-120 Mesh"
+          ],
+          "Onion_Type": [
+            "White Onion",
+            "Red Onion"
+          ],
+          "Processing_Method": [
+            "Dehydrated",
+            "Dried",
+            "Irradiated",
+            "Air Dried"
+          ],
+          "Granule_Size_Mm": [
+            "2-5 Mm",
+            "1-3 Mm",
+            "0.2-0.5 Mm",
+            "3-5 Mm"
+          ],
+          "Origin_Country": [
+            "China",
+            "Egypt",
             "India",
-            "Ethiopia",
-            "Guinea"
+            "California"
           ],
-          "Processing_Method": [
-            "Natural",
-            "Natural Dried"
-          ],
-          "Screen_Size": [
-            "Screen 12",
-            "Screen 15",
-            "Screen 18",
-            "Screen 1500",
-            "Screen 1700",
-            "Screen 1800",
-            "Sc 12",
-            "Sc 15",
-            "Sc 1500",
-            "Sc 18",
-            "Sc 1800"
+          "Grade": [
+            "A Grade",
+            "Premium"
           ]
         }
       },
-      "Washed Arabica Coffee": {
+      "Dehydrated Minced Onion": {
         "attributes": {
-          "Origin_Country": [
-            "Tanzania",
-            "Uganda"
+          "Onion_Type": [
+            "White Onion",
+            "Red Onion",
+            "Pink Onion",
+            "Yellow Onion"
           ],
           "Processing_Method": [
-            "Washed",
-            "Natural",
-            "Fully Washed"
+            "Air Dried",
+            "Dehydrated",
+            "Dried",
+            "Freeze Dried",
+            "Eto Treated",
+            "Steam Treated"
           ],
-          "Coffee_Grade": [
-            "Aa-ab Plus",
-            "Ab",
-            "Low Grade"
+          "Granule_Size_Mm": [
+            "1-3 Mm",
+            "3-5 Mm",
+            "0.2-0.5 Mm",
+            "5-7mm",
+            "5-8 Mesh",
+            "40-80 Mesh",
+            "8-16"
           ],
-          "Certifications": [
-            "Rfa"
-          ],
-          "Coffee_Variety": [
-            "Bugisu"
-          ]
-        }
-      },
-      "Flavored Coffee Products": {
-        "attributes": {
-          "Flavor": [
-            "Black Raspberry",
-            "Assorted"
-          ],
-          "Package_Weight": [
-            "300 Gr",
-            "700 Gr",
-            "60 Kgs"
+          "Quality_Grade": [
+            "A Grade",
+            "Premium Grade",
+            "C Grade",
+            "Std"
           ],
           "Origin_Country": [
+            "India",
+            "China",
+            "Pakistan",
+            "United States",
+            "Egypt",
+            "Australia",
             "Vietnam",
-            "United Kingdom"
+            "Greece",
+            "Kenya"
           ]
         }
       },
-      "Packaged Coffee Gifts": {
+      "Toasted Dehydrated Onion Products": {
         "attributes": {
-          "Brand": [
-            "Maison Gourmet"
+          "Product_Form": [
+            "Powder",
+            "Granules",
+            "Minced",
+            "Chopped",
+            "Sliced",
+            "Ground",
+            "Diced"
           ],
-          "Coffee_Type": [
-            "Coffee Almonds"
+          "Onion_Type": [
+            "White Onion",
+            "Red Onion",
+            "Yellow Onion",
+            "Special Large"
           ],
-          "Package_Type": [
-            "Gift Box"
+          "Mesh_Size": [
+            "40-60 Mesh",
+            "8-16 Mesh",
+            "80-100 Mesh",
+            "100-120 Mesh",
+            "16-26 Mesh",
+            "5-8 Mesh",
+            "40-80 Mesh",
+            "8-20 Mesh"
+          ],
+          "Quality_Grade": [
+            "A Grade",
+            "Premium Grade",
+            "1st Quality",
+            "Standard"
+          ],
+          "Processing_Method": [
+            "Toasted",
+            "Dehydrated",
+            "Eto Treated",
+            "Irradiated",
+            "Fried",
+            "Roasted"
+          ]
+        }
+      },
+      "Dehydrated Onion Flakes and Slices": {
+        "attributes": {
+          "Onion_Variety": [
+            "White Onion",
+            "Red Onion",
+            "Pink Onion",
+            "Purple Onion",
+            "Green Onion",
+            "Shallots",
+            "Spring Onion"
+          ],
+          "Processing_Method": [
+            "Dehydrated",
+            "Dried",
+            "Air Dried",
+            "Sliced",
+            "Chopped",
+            "Kibbled",
+            "Granulated",
+            "Powder"
+          ],
+          "Product_Form": [
+            "Flakes",
+            "Sliced",
+            "Chopped",
+            "Granules",
+            "Powder",
+            "Rings",
+            "Rolls",
+            "Kibbled"
+          ],
+          "Grade": [
+            "A Grade",
+            "Grade A",
+            "First Grade"
+          ],
+          "Packaging_Type": [
+            "Bag",
+            "Carton",
+            "Package",
+            "Barrel",
+            "Box",
+            "Tub"
+          ],
+          "Cut_Size": [
+            "1/2\"",
+            "3-5 Mm",
+            "4*4",
+            "5mm Ring",
+            "1/4\""
+          ],
+          "Organic_Certification": [
+            "Organic",
+            "Not Organic"
+          ]
+        }
+      },
+      "Organic Dehydrated Onion": {
+        "attributes": {
+          "Processing_Method": [
+            "Chopped",
+            "Granulated",
+            "Minced",
+            "Powder",
+            "Pulverized",
+            "Kibbled"
           ],
           "Origin_Country": [
-            "Vietnam"
+            "China",
+            "Egypt",
+            "India"
+          ],
+          "Mesh_Size": [
+            "1-3 Mm",
+            "6 Mesh",
+            "8-16 Mesh",
+            "40-80 Mesh",
+            "80-100 Mesh"
+          ],
+          "Packaging_Type": [
+            "Bag",
+            "Box",
+            "Carton",
+            "Drums",
+            "Kraft Bag"
           ]
         }
       }
     },
     "_product_categories": [
-      "Unroasted Coffee Beans",
-      "Washed Arabica Coffee",
-      "Flavored Coffee Products",
-      "Packaged Coffee Gifts"
+      "Dehydrated Onion Powder",
+      "Dehydrated Onion Granules",
+      "Dehydrated Minced Onion",
+      "Toasted Dehydrated Onion Products",
+      "Dehydrated Onion Flakes and Slices",
+      "Organic Dehydrated Onion"
     ],
     "_generation_notes": {
-      "Unroasted Coffee Beans": {
-        "model_attribute_count": 4,
+      "Dehydrated Onion Powder": {
+        "model_attribute_count": 6,
         "fallback_attributes": [],
-        "final_attribute_count": 4
+        "final_attribute_count": 6
       },
-      "Washed Arabica Coffee": {
+      "Dehydrated Onion Granules": {
+        "model_attribute_count": 6,
+        "fallback_attributes": [],
+        "final_attribute_count": 6
+      },
+      "Dehydrated Minced Onion": {
         "model_attribute_count": 5,
         "fallback_attributes": [],
         "final_attribute_count": 5
       },
-      "Flavored Coffee Products": {
-        "model_attribute_count": 3,
+      "Toasted Dehydrated Onion Products": {
+        "model_attribute_count": 5,
         "fallback_attributes": [],
-        "final_attribute_count": 3
+        "final_attribute_count": 5
       },
-      "Packaged Coffee Gifts": {
+      "Dehydrated Onion Flakes and Slices": {
+        "model_attribute_count": 7,
+        "fallback_attributes": [],
+        "final_attribute_count": 7
+      },
+      "Organic Dehydrated Onion": {
         "model_attribute_count": 4,
         "fallback_attributes": [],
         "final_attribute_count": 4
       }
     }
   },
-  "_generated_at": "2025-11-06T12:52:46.069731Z",
+  "_generated_at": "2025-11-17T11:33:10.934185Z",
   "_source": "auto_inference",
-  "_classified_rows": 229
+  "_classified_rows": 24737
 }

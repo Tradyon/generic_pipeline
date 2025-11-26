@@ -1,14 +1,17 @@
 {
   "_source": "auto_inference",
-  "attr_Coffee_Type": "Type of coffee included in the gift.",
-  "attr_Origin_Country": "Country where the packaged coffee gift originated.",
-  "attr_Processing_Method": "The method used to process the Arabica coffee beans after harvesting.",
-  "attr_Screen_Size": "The screen size used to grade the unroasted coffee beans based on their size.",
-  "attr_Coffee_Grade": "The grade or classification of the Arabica coffee based on bean size, quality, and defects.",
-  "attr_Certifications": "Certifications associated with the coffee, indicating adherence to specific standards.",
-  "attr_Coffee_Variety": "Specific variety of Arabica coffee.",
-  "attr_Flavor": "Specific added flavor or flavoring agent used in the flavored coffee product.",
-  "attr_Package_Weight": "Net weight of the flavored coffee product per package.",
-  "attr_Brand": "Brand name of the packaged coffee gift.",
-  "attr_Package_Type": "Type of packaging for the coffee gift."
+  "attr_Processing_Method": "The method used to process the organic dehydrated onion.",
+  "attr_Color": "Color of the dehydrated onion powder.",
+  "attr_Grade": "Quality classification assigned to the dehydrated onion flakes or slices.",
+  "attr_Mesh_Size": "The mesh size of the organic dehydrated onion, indicating particle size.",
+  "attr_Origin_Country": "The country where the organic dehydrated onion was originally produced.",
+  "attr_Packaging": "Type of packaging used for the onion powder.",
+  "attr_Onion_Type": "Variety or color of onion used in the toasted dehydrated product.",
+  "attr_Granule_Size_Mm": "Size range of the minced onion granules in millimeters.",
+  "attr_Quality_Grade": "Grading or quality level assigned to the toasted dehydrated onion product.",
+  "attr_Product_Form": "The physical shape and size of the dehydrated onion product.",
+  "attr_Onion_Variety": "The specific type or color of onion used to make the dehydrated product.",
+  "attr_Packaging_Type": "The type of packaging used for the organic dehydrated onion.",
+  "attr_Cut_Size": "The size of the cut of the dehydrated onion.",
+  "attr_Organic_Certification": "Indicates whether the dehydrated onion flakes or slices are certified organic."
 }
