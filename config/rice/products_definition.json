@@ -1,0 +1,43 @@
+{
+  "hs_code": "1006",
+  "product_categories": [
+    "Basmati Rice",
+    "Aromatic Long Grain Rice (Non-Basmati)",
+    "Short and Medium Grain Rice",
+    "Other Milled Rice"
+  ],
+  "category_descriptions": {
+    "Basmati Rice": "This category includes all varieties of Basmati rice, known for its long grain and aroma, regardless of processing (e.g., parboiled, brown).",
+    "Aromatic Long Grain Rice (Non-Basmati)": "This category covers other fragrant long-grain rice varieties, such as Jasmine and Hom Mali, distinct from Basmati.",
+    "Short and Medium Grain Rice": "This category includes rice varieties characterized by their shorter, plumper grain shape, such as Japonica, Calrose, and general short/medium grain types.",
+    "Other Milled Rice": "This broad category encompasses all other types of milled rice not covered above, including standard long-grain white rice, parboiled rice (non-Basmati/non-Jasmine), glutinous rice, and other specialty colored rices (e.g., black, red)."
+  },
+  "_generated_at": "2025-12-03T10:14:16.480858Z",
+  "_source": "auto_inference",
+  "_representative_goods": {
+    "Basmati Rice": [
+      "BASMATI RICE,BASMATI RICE",
+      "INDIAN BASAMTI RICE 100% SORTEX CLEANED, EXTRA WELL MILLED DOUBLE POLISHED PREMIUM QUALITY RICE, CROP 2024-2025",
+      "KOHINOOR EXTRA FLAVOUR PLATINUM BLUE BASMATI RICE",
+      "BROWN BASMATI RICE"
+    ],
+    "Aromatic Long Grain Rice (Non-Basmati)": [
+      "THAI HOM MALI RICE NEW CROP 2024/2025",
+      "Vietnamese fragrant rice 5% broken (DT8)",
+      "THAI WHITE JASMINE RICE NEW CROP",
+      "ST25 rice (5% broken)"
+    ],
+    "Short and Medium Grain Rice": [
+      "Short grain rice (Utage)  5% broken",
+      "RICE PREMIUM SHORT GRAIN KOSHIHIKARI HANAYAGI",
+      "Japonica rice 5% broken",
+      "MEDIUM GRAIN CALROSE RICE"
+    ],
+    "Other Milled Rice": [
+      "Vietnamese white rice 15% broken",
+      "PARBOILED RICE   (NON BASMOTI)",
+      "Vietnamese Glutinous Rice 10% Broken",
+      "THAI BLACK CARGO RICE"
+    ]
+  }
+}

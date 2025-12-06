@@ -1,302 +1,147 @@
 {
   "0712": {
-    "version": "2025-11-17T11:33:10.934171Z",
+    "version": "2025-11-29T16:24:07.910810Z",
     "products": {
-      "Dehydrated Onion Powder": {
+      "Dehydrated Onion Products": {
         "attributes": {
-          "Processing_Method": [
-            "Dehydrated",
-            "Dried",
-            "Air Dried",
-            "Toasted",
-            "Irradiated"
-          ],
-          "Color": [
-            "White",
-            "Pink"
-          ],
-          "Grade": [
-            "A Grade",
-            "Commercial Grade",
-            "Fancy",
-            "Premium",
-            "Standard"
-          ],
-          "Mesh_Size": [
-            "80-100 Mesh",
-            "100-120 Mesh"
-          ],
-          "Origin_Country": [
-            "California",
-            "China",
-            "Nepal"
-          ],
-          "Packaging": [
-            "Bag",
-            "Carton",
-            "Drum",
-            "Box",
-            "Poly Bag",
-            "Paper Bag With Inner Liner",
-            "Boxes With Inner Aluminium Foil Bag"
-          ]
-        }
-      },
-      "Dehydrated Onion Granules": {
-        "attributes": {
-          "Mesh_Size": [
-            "40-60 Mesh",
-            "40-80 Mesh",
-            "16-26 Mesh",
-            "8-20 Mesh",
-            "100-120 Mesh"
-          ],
-          "Onion_Type": [
-            "White Onion",
-            "Red Onion"
-          ],
-          "Processing_Method": [
-            "Dehydrated",
-            "Dried",
-            "Irradiated",
-            "Air Dried"
-          ],
-          "Granule_Size_Mm": [
-            "2-5 Mm",
-            "1-3 Mm",
-            "0.2-0.5 Mm",
-            "3-5 Mm"
-          ],
-          "Origin_Country": [
-            "China",
-            "Egypt",
-            "India",
-            "California"
-          ],
-          "Grade": [
-            "A Grade",
-            "Premium"
-          ]
-        }
-      },
-      "Dehydrated Minced Onion": {
-        "attributes": {
-          "Onion_Type": [
-            "White Onion",
-            "Red Onion",
-            "Pink Onion",
-            "Yellow Onion"
-          ],
-          "Processing_Method": [
-            "Air Dried",
-            "Dehydrated",
-            "Dried",
-            "Freeze Dried",
-            "Eto Treated",
-            "Steam Treated"
-          ],
-          "Granule_Size_Mm": [
-            "1-3 Mm",
-            "3-5 Mm",
-            "0.2-0.5 Mm",
-            "5-7mm",
-            "5-8 Mesh",
-            "40-80 Mesh",
-            "8-16"
-          ],
-          "Quality_Grade": [
-            "A Grade",
-            "Premium Grade",
-            "C Grade",
-            "Std"
-          ],
-          "Origin_Country": [
-            "India",
-            "China",
-            "Pakistan",
-            "United States",
-            "Egypt",
-            "Australia",
-            "Vietnam",
-            "Greece",
-            "Kenya"
-          ]
-        }
-      },
-      "Toasted Dehydrated Onion Products": {
-        "attributes": {
-          "Product_Form": [
+          "Onion_Form": [
             "Powder",
             "Granules",
             "Minced",
             "Chopped",
-            "Sliced",
+            "Flakes",
+            "Kibbled",
             "Ground",
-            "Diced"
-          ],
-          "Onion_Type": [
-            "White Onion",
-            "Red Onion",
-            "Yellow Onion",
-            "Special Large"
-          ],
-          "Mesh_Size": [
-            "40-60 Mesh",
-            "8-16 Mesh",
-            "80-100 Mesh",
-            "100-120 Mesh",
-            "16-26 Mesh",
-            "5-8 Mesh",
-            "40-80 Mesh",
-            "8-20 Mesh"
-          ],
-          "Quality_Grade": [
-            "A Grade",
-            "Premium Grade",
-            "1st Quality",
-            "Standard"
+            "Ring",
+            "Sliced",
+            "Diced",
+            "Cut Flakes",
+            "Strips",
+            "Rings"
           ],
           "Processing_Method": [
             "Toasted",
-            "Dehydrated",
-            "Eto Treated",
-            "Irradiated",
-            "Fried",
-            "Roasted"
-          ]
-        }
-      },
-      "Dehydrated Onion Flakes and Slices": {
-        "attributes": {
-          "Onion_Variety": [
-            "White Onion",
-            "Red Onion",
-            "Pink Onion",
-            "Purple Onion",
-            "Green Onion",
-            "Shallots",
-            "Spring Onion"
-          ],
-          "Processing_Method": [
-            "Dehydrated",
-            "Dried",
+            "Roasted",
             "Air Dried",
-            "Sliced",
-            "Chopped",
-            "Kibbled",
-            "Granulated",
-            "Powder"
+            "Dehydrated",
+            "Irradiated",
+            "Dried",
+            "Unprocessed",
+            "Fried",
+            "Eto Treated",
+            "Conventionally Processed",
+            "Steam Sterilized",
+            "Freeze Dried",
+            "Heat Treated",
+            "Normally Processed"
           ],
-          "Product_Form": [
-            "Flakes",
-            "Sliced",
-            "Chopped",
-            "Granules",
-            "Powder",
-            "Rings",
-            "Rolls",
-            "Kibbled"
+          "Onion_Color": [
+            "White",
+            "Red",
+            "Pink",
+            "Green",
+            "Purple",
+            "Yellow"
           ],
-          "Grade": [
+          "Mesh_Size": [
+            "16-26 Mesh",
+            "16-40 Mesh",
+            "24 40 Mesh",
+            "40-60 Mesh",
+            "40-80 Mesh",
+            "80-100 Mesh",
+            "80-120",
+            "100 Mesh",
+            "100-120mesh",
+            "24-40 Mesh",
+            "80-120 Mesh",
+            "100-120 Mesh",
+            "60-80 Mesh",
+            "120 Mesh"
+          ],
+          "Quality_Grade": [
             "A Grade",
-            "Grade A",
-            "First Grade"
-          ],
-          "Packaging_Type": [
-            "Bag",
-            "Carton",
-            "Package",
-            "Barrel",
-            "Box",
-            "Tub"
-          ],
-          "Cut_Size": [
-            "1/2\"",
-            "3-5 Mm",
-            "4*4",
-            "5mm Ring",
-            "1/4\""
+            "Premium",
+            "Fancy",
+            "1st Quality",
+            "Std",
+            "B Grade",
+            "1st Grade",
+            "Standard",
+            "Commercial Grade",
+            "Regular"
           ],
           "Organic_Certification": [
             "Organic",
-            "Not Organic"
-          ]
-        }
-      },
-      "Organic Dehydrated Onion": {
-        "attributes": {
-          "Processing_Method": [
-            "Chopped",
-            "Granulated",
-            "Minced",
-            "Powder",
-            "Pulverized",
-            "Kibbled"
+            "Non Organic"
           ],
           "Origin_Country": [
+            "India",
             "China",
             "Egypt",
-            "India"
+            "United States",
+            "California"
           ],
-          "Mesh_Size": [
+          "Cut_Size": [
             "1-3 Mm",
-            "6 Mesh",
+            "2-5 Mm",
+            "3-5 Mm",
+            "3-6 Mm",
+            "5-8 Mm",
+            "8-10mm",
             "8-16 Mesh",
-            "40-80 Mesh",
-            "80-100 Mesh"
+            "0.2-0.5 Mm",
+            "1/4\"",
+            "3/8\" X 3/8\"",
+            "0.6-1.2 Mm",
+            "5-13 Mm",
+            "3/8\"",
+            "1-2 Mm",
+            "1/2\""
           ],
-          "Packaging_Type": [
-            "Bag",
-            "Box",
-            "Carton",
-            "Drums",
-            "Kraft Bag"
+          "Irradiation_Status": [
+            "Irradiated",
+            "Non-irradiated"
+          ],
+          "Toasting_Level": [
+            "Toasted",
+            "Non-toasted"
           ]
         }
       }
     },
     "_product_categories": [
-      "Dehydrated Onion Powder",
-      "Dehydrated Onion Granules",
-      "Dehydrated Minced Onion",
-      "Toasted Dehydrated Onion Products",
-      "Dehydrated Onion Flakes and Slices",
-      "Organic Dehydrated Onion"
+      "Dehydrated Onion Products"
     ],
     "_generation_notes": {
-      "Dehydrated Onion Powder": {
-        "model_attribute_count": 6,
-        "fallback_attributes": [],
-        "final_attribute_count": 6
-      },
-      "Dehydrated Onion Granules": {
-        "model_attribute_count": 6,
-        "fallback_attributes": [],
-        "final_attribute_count": 6
-      },
-      "Dehydrated Minced Onion": {
-        "model_attribute_count": 5,
-        "fallback_attributes": [],
-        "final_attribute_count": 5
-      },
-      "Toasted Dehydrated Onion Products": {
-        "model_attribute_count": 5,
-        "fallback_attributes": [],
-        "final_attribute_count": 5
-      },
-      "Dehydrated Onion Flakes and Slices": {
-        "model_attribute_count": 7,
-        "fallback_attributes": [],
-        "final_attribute_count": 7
-      },
-      "Organic Dehydrated Onion": {
-        "model_attribute_count": 4,
-        "fallback_attributes": [],
-        "final_attribute_count": 4
+      "Dehydrated Onion Products": {
+        "calls": 4,
+        "calls_meta": {
+          "call_1": {
+            "model_attribute_count": 6,
+            "fallback_attributes": [],
+            "final_attribute_count": 6
+          },
+          "call_2": {
+            "model_attribute_count": 8,
+            "fallback_attributes": [],
+            "final_attribute_count": 8
+          },
+          "call_3": {
+            "model_attribute_count": 9,
+            "fallback_attributes": [],
+            "final_attribute_count": 9
+          },
+          "call_4": {
+            "model_attribute_count": 10,
+            "fallback_attributes": [],
+            "final_attribute_count": 10
+          }
+        }
       }
     }
   },
-  "_generated_at": "2025-11-17T11:33:10.934185Z",
+  "_generated_at": "2025-11-29T16:24:07.910824Z",
   "_source": "auto_inference",
-  "_classified_rows": 24737
+  "_classified_rows": 18032
 }

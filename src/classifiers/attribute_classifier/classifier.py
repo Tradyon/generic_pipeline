@@ -142,7 +142,7 @@ def classify_attributes(
         'items_per_call': 10,
         'max_workers': 20,
         'product_batch_workers': 4,
-        'max_token_budget': 20_000_000,
+        'max_token_budget': 200_000_000,
         'model_name': 'gemini-2.0-flash',
         'retry_delay': 4,
         'max_retries': 3,
@@ -314,15 +314,21 @@ def classify_attributes(
             
             rows = []
             for c in prod_state['classifications']:
-                base = {
-                    'hs_code': hs4,
-                    'product': product,
-                    'goods_shipped': c['goods_shipped'],
-                    'shipment_id': c.get('shipment_ids', [])[0] if c.get('shipment_ids') else ''
-                }
-                for k, v in c['attributes'].items():
-                    base[f"attr_{k}"] = v
-                rows.append(base)
+                shipments = [s for s in (c.get('shipment_ids') or []) if isinstance(s, str) and s.strip()]
+                shipments = shipments or ['']
+                all_ids = "|".join(shipments)
+
+                for sid in shipments:
+                    base = {
+                        'hs_code': hs4,
+                        'product': product,
+                        'goods_shipped': c['goods_shipped'],
+                        'shipment_id': sid,
+                        'shipment_ids': all_ids,
+                    }
+                    for k, v in c['attributes'].items():
+                        base[f"attr_{k}"] = v
+                    rows.append(base)
             
             if rows:
                 pd.DataFrame(rows).to_csv(csv_path, index=False)
@@ -462,15 +468,21 @@ def _process_product(
 
     rows = []
     for c in prod_state['classifications']:
-        base = {
-            'hs_code': hs4,
-            'product': product,
-            'goods_shipped': c['goods_shipped'],
-            'shipment_id': c.get('shipment_ids', [])[0] if c.get('shipment_ids') else ''
-        }
-        for k, v in c['attributes'].items():
-            base[f"attr_{k}"] = v
-        rows.append(base)
+        shipments = [s for s in (c.get('shipment_ids') or []) if isinstance(s, str) and s.strip()]
+        shipments = shipments or ['']
+        all_ids = "|".join(shipments)
+
+        for sid in shipments:
+            base = {
+                'hs_code': hs4,
+                'product': product,
+                'goods_shipped': c['goods_shipped'],
+                'shipment_id': sid,
+                'shipment_ids': all_ids,
+            }
+            for k, v in c['attributes'].items():
+                base[f"attr_{k}"] = v
+            rows.append(base)
 
     if rows:
         pd.DataFrame(rows).to_csv(csv_path, index=False)

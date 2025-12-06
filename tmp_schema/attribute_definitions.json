@@ -1,17 +1,13 @@
 {
   "_source": "auto_inference",
-  "attr_Processing_Method": "The method used to process the organic dehydrated onion.",
-  "attr_Color": "Color of the dehydrated onion powder.",
-  "attr_Grade": "Quality classification assigned to the dehydrated onion flakes or slices.",
-  "attr_Mesh_Size": "The mesh size of the organic dehydrated onion, indicating particle size.",
-  "attr_Origin_Country": "The country where the organic dehydrated onion was originally produced.",
-  "attr_Packaging": "Type of packaging used for the onion powder.",
-  "attr_Onion_Type": "Variety or color of onion used in the toasted dehydrated product.",
-  "attr_Granule_Size_Mm": "Size range of the minced onion granules in millimeters.",
-  "attr_Quality_Grade": "Grading or quality level assigned to the toasted dehydrated onion product.",
-  "attr_Product_Form": "The physical shape and size of the dehydrated onion product.",
-  "attr_Onion_Variety": "The specific type or color of onion used to make the dehydrated product.",
-  "attr_Packaging_Type": "The type of packaging used for the organic dehydrated onion.",
-  "attr_Cut_Size": "The size of the cut of the dehydrated onion.",
-  "attr_Organic_Certification": "Indicates whether the dehydrated onion flakes or slices are certified organic."
+  "attr_Onion_Form": "Physical state and presentation of the dehydrated onion product.",
+  "attr_Processing_Method": "Method used to process the raw onions into dehydrated products.",
+  "attr_Onion_Color": "Color of the onion used in the dehydrated product.",
+  "attr_Mesh_Size": "Particle size designation using mesh count.",
+  "attr_Quality_Grade": "Grading or quality level assigned to the dehydrated onion product.",
+  "attr_Organic_Certification": "Indication of whether the dehydrated onion product is certified organic.",
+  "attr_Origin_Country": "Country where the onions were originally grown.",
+  "attr_Cut_Size": "Size of the cut for chopped, minced, or kibbled onion products.",
+  "attr_Irradiation_Status": "Indicates whether the dehydrated onion product has been irradiated.",
+  "attr_Toasting_Level": "Degree to which the onion product has been toasted."
 }

@@ -26,7 +26,7 @@ def main():
     parser.add_argument("--attribute-definitions", required=True, help="Path to attribute definitions JSON.")
     parser.add_argument("--model", default="gemini-2.0-flash", help="LLM model name.")
     parser.add_argument("--items-per-call", type=int, default=10, help="Items per LLM call.")
-    parser.add_argument("--token-budget", type=int, default=20_000_000, help="Max token budget.")
+    parser.add_argument("--token-budget", type=int, default=200_000_000, help="Max token budget.")
     parser.add_argument("--max-workers", type=int, default=20, help="Max parallel workers across products.")
     parser.add_argument("--checkpoint-file", help="Path to checkpoint file.")
     parser.add_argument("--no-resume", action="store_true", help="Do not resume from checkpoint.")

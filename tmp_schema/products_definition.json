@@ -1,53 +1,19 @@
 {
   "hs_code": "0712",
   "product_categories": [
-    "Dehydrated Onion Powder",
-    "Dehydrated Onion Granules",
-    "Dehydrated Minced Onion",
-    "Toasted Dehydrated Onion Products",
-    "Dehydrated Onion Flakes and Slices",
-    "Organic Dehydrated Onion"
+    "Dehydrated Onion Products"
   ],
   "category_descriptions": {
-    "Dehydrated Onion Powder": "Includes ground, milled, and pulverized dehydrated onions for use as a seasoning or ingredient.",
-    "Dehydrated Onion Granules": "Includes dehydrated onion in granular form, typically sized between powder and minced.",
-    "Dehydrated Minced Onion": "Includes dehydrated onion that has been chopped or diced into small pieces.",
-    "Toasted Dehydrated Onion Products": "Includes dehydrated onion products that have undergone a toasting or roasting process.",
-    "Dehydrated Onion Flakes and Slices": "Includes dehydrated onion that has been sliced or made into flakes.",
-    "Organic Dehydrated Onion": "Includes dehydrated onion products that are certified organic."
+    "Dehydrated Onion Products": "Anything related to onions or hinting/misspellings should be included."
   },
-  "_generated_at": "2025-11-17T11:23:40.340661Z",
+  "_generated_at": "2025-11-29T13:09:47.485901Z",
   "_source": "auto_inference",
   "_representative_goods": {
-    "Dehydrated Onion Powder": [
-      "ONION POWDER",
-      "DEHYDRATED WHITE ONION POWDER",
-      "CEBOLLA EN POLVO"
-    ],
-    "Dehydrated Onion Granules": [
-      "ONION GRANULE 40-80 mesh",
-      "GOLD GARLIC GRANULES IRRADIATED",
-      "GRANULATED ONION"
-    ],
-    "Dehydrated Minced Onion": [
-      "ONION MINCED",
-      "IQF DICED ONION",
-      "ONION CHOPPED"
-    ],
-    "Toasted Dehydrated Onion Products": [
-      "TOASTED WHITE ONION GRANULES",
-      "TOASTED ONION POWDER",
-      "TOASTED ONION CHOPPED"
-    ],
-    "Dehydrated Onion Flakes and Slices": [
-      "DEHYDRATED WHITE ONION FLAKES",
+    "Dehydrated Onion Products": [
       "Sliced onion",
-      "TOASTED ONION SLICED"
-    ],
-    "Organic Dehydrated Onion": [
-      "CEBOLLA GRANULADA ORGANICA",
-      "ORGANIC DEHYDRATED ONION MINCED",
-      "ORGANIC ONION POWDER"
+      "ONION POWDER",
+      "ONION MINCED",
+      "ONION GRANULATED"
     ]
   }
 }

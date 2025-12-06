@@ -26,7 +26,7 @@ def main():
     parser.add_argument("--model", default="gemini-2.0-flash", help="LLM model name.")
     parser.add_argument("--batch-size", type=int, default=10, help="Batch size.")
     parser.add_argument("--max-workers", type=int, default=8, help="Max workers.")
-    parser.add_argument("--batch-timeout", type=int, default=300, help="Seconds to wait per batch before marking as Unclassified.")
+    parser.add_argument("--batch-timeout", type=int, default=900, help="Seconds to wait per batch before marking as Unclassified (default: 900).")
     parser.add_argument("--checkpoint-file", help="Path to checkpoint file.")
     parser.add_argument("--no-resume", action="store_true", help="Do not resume from checkpoint.")
     parser.add_argument("--low-memory", action="store_true", help="Enable pandas low_memory mode (default: False).")

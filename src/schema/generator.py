@@ -564,6 +564,7 @@ Return a JSON object with a single key "product_categories" (array). Each item M
 - Propose between 1 and {max_categories} categories rooted in the evidence (processing stage, form, grading, packaging, destination usage, etc.).
 - Keep categories broad and reusable; combine mesh/size/packaging variants into a single category when they are the same fundamental product form.
 - Avoid over-splitting by fine specs (mesh size, minor granularity, pack weight) and avoid vague buckets like "General". Aim for mutually exclusive, widely applicable groupings.
+- Enforce strict mutual exclusivity: do not return parent/child or overlapping labels (e.g., "Fragrant Rice" and "Basmati Rice"); merge overlaps into a single best umbrella category.
 - Do not invent categories unsupported by the text.
 
 4) SAMPLED GOODS (DO NOT IGNORE)
@@ -634,7 +635,7 @@ Return an object with key "attributes" (array). Each attribute object MUST inclu
 - "values": Array of representative, normalized values. Use insights from the summary when the raw goods text is sparse.
 
 3) RULES
-- Deliver at least {MIN_ATTRIBUTES_PER_PRODUCT} well-supported attributes when evidence exists. Prefer trade-relevant facets: origin, processing, grading, packaging, quality, physical form, organic status, moisture/mesh specs, etc.
+- Deliver at least {MIN_ATTRIBUTES_PER_PRODUCT} and at max 10well-supported attributes when evidence exists. Prefer trade-relevant facets: origin, processing, grading, packaging, quality, physical form, organic status, moisture/mesh specs, etc.
 - Reuse naming conventions consistently (e.g., Origin_Country, Processing_Method).
 - Never output identifiers, invoice numbers, or purely logistical data as attributes.
 - Normalize values to Title Case, merge obvious synonym variants, and keep to {self.config['max_values_per_attribute']} values per attribute.

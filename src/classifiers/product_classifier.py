@@ -66,7 +66,7 @@ class ProductClassifier:
         checkpoint_file: Optional[str] = None,
         batch_size: int = 10,
         max_workers: int = 8,
-        batch_timeout: int = 300,
+        batch_timeout: int = 900,
         api_key: Optional[str] = None
     ):
         """
@@ -423,7 +423,7 @@ def classify_products(
     model_name: str = "gemini-2.0-flash",
     batch_size: int = 10,
     max_workers: int = 8,
-    batch_timeout: int = 300,
+    batch_timeout: int = 900,
     resume: bool = True,
     low_memory: bool = False,
     **kwargs

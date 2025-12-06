@@ -1,0 +1,693 @@
+{
+  "1006": {
+    "version": "2025-12-03T12:34:20.286868Z",
+    "products": {
+      "Other Milled Rice": {
+        "attributes": {
+          "Origin_Country": [
+            "Vietnam",
+            "India",
+            "Pakistan",
+            "Brazil",
+            "Paraguay",
+            "Thailand",
+            "Tanzania",
+            "Uruguay",
+            "Myanmar",
+            "United States",
+            "Ecuador"
+          ],
+          "Grain_Length": [
+            "Long Grain",
+            "Medium Grain"
+          ],
+          "Broken_Percentage": [
+            "5%",
+            "10%",
+            "15%",
+            "20%",
+            "25%",
+            "7.5%",
+            "45%",
+            "4%",
+            "0%"
+          ],
+          "Processing_Method": [
+            "Milled",
+            "Polished",
+            "Parboiled",
+            "Semi-milled",
+            "Wholly Milled",
+            "Steamed",
+            "Glazed",
+            "Non Parboiled",
+            "Raw",
+            "Well Milled",
+            "Double Polished",
+            "Sortexed",
+            "Whitened"
+          ],
+          "Rice_Variety": [
+            "White Rice",
+            "Glutinous Rice",
+            "Jasmine Rice",
+            "Nang Hoa Rice",
+            "Ponni Rice",
+            "Gaba Rice",
+            "Sticky Rice",
+            "Basmati Rice",
+            "Non Basmati Rice",
+            "Sona Masoori Rice",
+            "Swarna Masoori",
+            "Long Grain Rice",
+            "Fragrant Rice",
+            "Idli Rice",
+            "Kaima Rice",
+            "Black Rice",
+            "Parboilized Rice",
+            "Sona Masuri Rice",
+            "Brown Rice",
+            "Siam Patna Rice",
+            "Sweet Rice"
+          ],
+          "Rice_Grade": [
+            "Grade 1",
+            "Grade I",
+            "Grade Ii",
+            "Grade Iii",
+            "Grade 2",
+            "Grade Pe2"
+          ],
+          "Packaging_Type": [
+            "Bag",
+            "Bopp Bag",
+            "Pp Bag",
+            "Pe Bag",
+            "Carton",
+            "Big Bag",
+            "Paper Bag",
+            "Vacuum Bag",
+            "Poly Bag",
+            "Master Bag"
+          ],
+          "Rice_Brand": [
+            "Yong Xiang",
+            "Rice Princess Pandan",
+            "Slimmers",
+            "Toretto",
+            "Villa Tondero",
+            "Brilhante",
+            "Valle Sol",
+            "Viejo Molino",
+            "Kohaku",
+            "Sakuranoki",
+            "Master Chef",
+            "Lafia",
+            "Paris",
+            "Mariana",
+            "Dada",
+            "Alajee",
+            "Sindano",
+            "White Swan",
+            "Jaguar",
+            "Moko",
+            "Chanel",
+            "K-75",
+            "Tanriz",
+            "Aloha",
+            "Panthere",
+            "Sweet Jasmine",
+            "Gretel Green",
+            "Los Chinos",
+            "Brilhante Extra",
+            "Mara",
+            "Amul",
+            "Perfect Grain",
+            "Peach Blossom",
+            "Tiba",
+            "Kohaku Yellow Classic",
+            "Lulu Brand",
+            "Vilaconic",
+            "Fieders",
+            "Best Choice",
+            "Lotus",
+            "Uncle Sam",
+            "Smart Chef",
+            "Tatine"
+          ],
+          "Fortification_Status": [
+            "Fortified",
+            "Unfortified"
+          ]
+        }
+      },
+      "Basmati Rice": {
+        "attributes": {
+          "Rice_Variety": [
+            "1121 Basmati",
+            "Pusa Basmati",
+            "Sella Basmati",
+            "Golden Sella Basmati",
+            "Creamy Sella Basmati",
+            "Suraj Basmati",
+            "Traditional Basmati",
+            "Ultima Basmati",
+            "Excel Basmati",
+            "Majestic Basmati",
+            "Daawat Super Basmati",
+            "Rozana Gold Basmati",
+            "Super Kernel White Basmati",
+            "Everyday Basmati",
+            "Biryani Special Basmati",
+            "Pulav Basmati",
+            "Royal White Srp(ip) Basmati",
+            "Lal Qilla Basmati",
+            "Victoria Basmati",
+            "Kohinoor Diamond Basmati",
+            "Royal Chefs Secret Basmati",
+            "Daawat Traditional Basmati",
+            "Daawat Rozana Gold Basmati",
+            "Devaaya Basmati",
+            "Carolina Basmati",
+            "Walmart Great Value Basmati",
+            "Hilla Basmati",
+            "Fortune Biryani Special Basmati",
+            "Fortune Everyday Basmati",
+            "India Gate Classic Basmati",
+            "India Gate Excel Basmati",
+            "India Gate Indian Basmati White Rice",
+            "1509 Basmati",
+            "Tibar Basmati",
+            "Dubar Basmati",
+            "Basmati 1509 Steam Rice",
+            "Royal Basmati",
+            "Super Basmati",
+            "Pure Basmati",
+            "Classic Basmati",
+            "Biryani Special Rice",
+            "Royal White Srp(ip) Basmati Rice",
+            "Royal Sella Basmati Rice",
+            "Royal Basmati Brown Rice",
+            "Daawat Super Basmati Rice",
+            "Daawat Traditional Basmati Rice",
+            "India Gate Basmati Rice",
+            "India Gate Tibar Basmati Rice",
+            "India Gate Excel Indian Basmati White Rice",
+            "India Gate Classic Indian Basmati White Rice",
+            "Mahatma Basmati Rice",
+            "Falack Premium Super Basmati Rice",
+            "Falack Super Basmati Rice",
+            "Falack Extreme Parboiled Basmati Rice",
+            "Falack Sella Brown Basmati Rice",
+            "Basmati",
+            "Xxxl Basmati",
+            "Extra Fine Basmati"
+          ],
+          "Processing_Method": [
+            "Raw",
+            "Milled",
+            "Parboiled",
+            "Steamed",
+            "Sella",
+            "Brown",
+            "White",
+            "Semi-milled",
+            "Wholly Milled",
+            "Silky Polished",
+            "Double Polished",
+            "Extra Well Milled",
+            "Boiled",
+            "Golden Parboiled",
+            "Creamy Sella",
+            "Par Boiled"
+          ],
+          "Origin_Country": [
+            "India",
+            "Pakistan",
+            "Vietnam"
+          ],
+          "Grain_Length": [
+            "Long Grain",
+            "Extra Long Grain"
+          ],
+          "Rice_Quality": [
+            "Premium Quality",
+            "Grade A",
+            "Grade 1",
+            "Classic",
+            "Super Reserve",
+            "Supreme",
+            "Everyday",
+            "Traditional",
+            "Rozana Gold",
+            "Super Premium",
+            "Great Value",
+            "Silky Polished"
+          ],
+          "Cleaning_Method": [
+            "Sortex Cleaned",
+            "Double Polished",
+            "Extra Well Milled"
+          ],
+          "Packaging_Type": [
+            "Bag",
+            "Pouch",
+            "Carton",
+            "Plastic Pouches With Outer",
+            "Non Woven Bag",
+            "Pp Bag",
+            "Jute Bag",
+            "Cotton Bag",
+            "Hdpe Bag",
+            "Poly Pouch",
+            "Wpp Bag",
+            "Bopp Bag",
+            "Pp Laminated",
+            "Paper Bag",
+            "Jar Carton",
+            "Master Bag",
+            "Master Ctn",
+            "Sack",
+            "Poly Bag",
+            "Plastic Pouch",
+            "Fabric Bag",
+            "Tote Bag",
+            "Poly Bale"
+          ],
+          "Organic_Status": [
+            "Organic",
+            "Non-organic"
+          ],
+          "Broken_Percentage": [
+            "5%",
+            "2%"
+          ],
+          "Aging": [
+            "Aged",
+            "Non-aged"
+          ],
+          "Brand": [
+            "Royal",
+            "Daawat",
+            "India Gate",
+            "Mahatma",
+            "Falack",
+            "Little India",
+            "Shazia",
+            "Success",
+            "Ti-machan'n",
+            "Auzat",
+            "Larizer",
+            "Kroger",
+            "Dhanraj",
+            "Anmol",
+            "Kamal",
+            "Zeeba",
+            "Fortune",
+            "Butterfly",
+            "Tilada",
+            "Banjab",
+            "Gautam's",
+            "Shugraan",
+            "Kdm",
+            "Aiva",
+            "Dehkan",
+            "Tanriz",
+            "King Pyramid",
+            "Shimla Road",
+            "Hassabu",
+            "Zabib",
+            "Bountiful Harvest",
+            "Hamza",
+            "Lal Qilla",
+            "India Gate Excel",
+            "Shimla Road Lower Gi",
+            "Kohinoor",
+            "Empire",
+            "Bindas",
+            "Al-waled",
+            "Taj Mehal",
+            "Asad",
+            "Riceland",
+            "Chaminar"
+          ]
+        }
+      },
+      "Aromatic Long Grain Rice (Non-Basmati)": {
+        "attributes": {
+          "Rice_Variety": [
+            "Jasmine",
+            "Thai Hom Mali",
+            "St25",
+            "Dt8",
+            "Kdm",
+            "Nang Hoa",
+            "Om18",
+            "Nang Hoa Rice",
+            "Moon Rice",
+            "Seeraga Samba",
+            "Thai White Rice",
+            "Shrimp Rice",
+            "Hom Mali Jasmine",
+            "Long Chau 66 Lua Tom",
+            "St24",
+            "Dai Thom",
+            "Long Grain Fragrant Rice",
+            "Royal Milagrosa",
+            "Kalijeera"
+          ],
+          "Broken_Percentage": [
+            "5 Percent Broken",
+            "3 Percent Broken",
+            "10 Percent Broken",
+            "4 Percent Broken",
+            "Max 5 Percent Broken",
+            "2 Percent Broken",
+            "15 Percent Broken",
+            "85 Percent Broken",
+            "Max 10 Percent Broken"
+          ],
+          "Origin_Country": [
+            "Vietnam",
+            "Thailand",
+            "Cambodia",
+            "Taiwan",
+            "Malaysia"
+          ],
+          "Processing_State": [
+            "White",
+            "Brown",
+            "Polished",
+            "Sorted",
+            "Whitened"
+          ],
+          "Packaging_Type": [
+            "Bag",
+            "Pp Bag",
+            "Bopp Bag",
+            "Pe Bag",
+            "Bopp/pe Bag",
+            "Pa/pe Bags",
+            "Carton",
+            "Vacuum Bag",
+            "Laminated Pe",
+            "Laminated Pe Bag",
+            "Laminated Pp Bag",
+            "Jumbo Bag",
+            "Plastic Bag",
+            "Opp Bag",
+            "Pepa Bag",
+            "Pa/pe Bag",
+            "Pape Bag",
+            "Pp/pe Bag",
+            "Master Pp Bag",
+            "Zipper Bag"
+          ],
+          "Organic_Certification": [
+            "Organic",
+            "Nop",
+            "Usda"
+          ],
+          "Crop_Year": [
+            "2023/2024",
+            "2024",
+            "2024/2025",
+            "2025"
+          ],
+          "Purity_Percentage": [
+            "100 Percent",
+            "92 Percent",
+            "80 Percent"
+          ],
+          "Rice_Grade": [
+            "Premium",
+            "Premium Grade A",
+            "Superior"
+          ],
+          "Grain_Length": [
+            "Long Grain"
+          ]
+        }
+      },
+      "Short and Medium Grain Rice": {
+        "attributes": {
+          "Grain_Size": [
+            "Short Grain",
+            "Medium Grain",
+            "Round Grain"
+          ],
+          "Broken_Percentage": [
+            "2%",
+            "3%",
+            "5%",
+            "Max 4%",
+            "4%",
+            "10%",
+            "25%"
+          ],
+          "Rice_Variety": [
+            "Japonica",
+            "Calrose",
+            "Koshihikari",
+            "Akitakomachi",
+            "Arborio",
+            "Carnaroli",
+            "Valone Nano",
+            "Idly",
+            "Ponni",
+            "Dongbei",
+            "Sushi Hikari",
+            "Komachi",
+            "Sayanishiki",
+            "Takumi",
+            "Utage",
+            "Japanese Variety",
+            "Hananomai",
+            "Ham Chau",
+            "Inverni"
+          ],
+          "Processing_Method": [
+            "Milled",
+            "Polished",
+            "Semi-milled",
+            "Wholly Milled",
+            "Whitened",
+            "Unwashed",
+            "Fully Milled",
+            "Color Separated",
+            "Unpolished"
+          ],
+          "Origin_Country": [
+            "Vietnam",
+            "United States",
+            "Italy",
+            "Japan",
+            "Cambodia",
+            "Uruguay",
+            "Taiwan"
+          ],
+          "Packaging_Type": [
+            "Bag",
+            "Bopp Bag",
+            "Pp Bag",
+            "Pe Bag",
+            "Pa Bag",
+            "Carton",
+            "Plastic",
+            "Cloth Sack",
+            "Pillow Bag",
+            "Paper Bag",
+            "Vacuum Bag",
+            "Plastic Bag",
+            "Vacuum Sealed Bag",
+            "Big Bag",
+            "Box",
+            "Laminated Bopp Bag",
+            "Poly Bag"
+          ],
+          "Intended_Use": [
+            "Sushi Rice",
+            "Idly Rice",
+            "Risotto"
+          ],
+          "Brand": [
+            "Family Rice",
+            "Sello Rojo",
+            "Aizakku",
+            "King Crab",
+            "Pearl Rice",
+            "Super 88",
+            "Trukai",
+            "Prime Rice",
+            "Tsunehikari",
+            "Save",
+            "Alameer",
+            "Aw Pearl Rice",
+            "Koshihikari Rice",
+            "Daichi Yellow",
+            "Hana Yagi",
+            "Lotus Brand",
+            "White Rice Brand",
+            "Sk",
+            "Tomimai",
+            "Sunsui",
+            "Aki No Kome",
+            "Kokuho",
+            "Full Harvest",
+            "Sakura",
+            "Dragon",
+            "Taste Of Asia",
+            "Tiger Brand",
+            "Woa",
+            "Silver Lotus",
+            "Pacific Star",
+            "Lotus",
+            "Akafuji Ds1",
+            "Legacy Rose",
+            "Geumgang Mountain",
+            "Shirakiku",
+            "My Asia",
+            "Pirinac",
+            "Pacific Crown",
+            "Pacifika Choice",
+            "Kintokumai",
+            "Tiger Brand Tiger",
+            "Golden Pineapple",
+            "Oriental Rice",
+            "Wonder Rose",
+            "Malaysia",
+            "Sailing Boat",
+            "Island Rice",
+            "Kokuho Yellow",
+            "Vilaconic",
+            "Golden Sun",
+            "Daichi",
+            "Sun Rice",
+            "Lady Rice",
+            "Yukihana",
+            "Pacific",
+            "Pong",
+            "Kimpo",
+            "Waka Rice",
+            "Komachi"
+          ],
+          "Milling_Grade": [
+            "Us No.1",
+            "Premium"
+          ]
+        }
+      }
+    },
+    "_product_categories": [
+      "Basmati Rice",
+      "Aromatic Long Grain Rice (Non-Basmati)",
+      "Short and Medium Grain Rice",
+      "Other Milled Rice"
+    ],
+    "_generation_notes": {
+      "Other Milled Rice": {
+        "calls": 4,
+        "calls_meta": {
+          "call_1": {
+            "model_attribute_count": 7,
+            "fallback_attributes": [],
+            "final_attribute_count": 7
+          },
+          "call_2": {
+            "model_attribute_count": 8,
+            "fallback_attributes": [],
+            "final_attribute_count": 8
+          },
+          "call_3": {
+            "model_attribute_count": 8,
+            "fallback_attributes": [],
+            "final_attribute_count": 8
+          },
+          "call_4": {
+            "model_attribute_count": 9,
+            "fallback_attributes": [],
+            "final_attribute_count": 9
+          }
+        }
+      },
+      "Basmati Rice": {
+        "calls": 4,
+        "calls_meta": {
+          "call_1": {
+            "model_attribute_count": 9,
+            "fallback_attributes": [],
+            "final_attribute_count": 9
+          },
+          "call_2": {
+            "model_attribute_count": 10,
+            "fallback_attributes": [],
+            "final_attribute_count": 10
+          },
+          "call_3": {
+            "model_attribute_count": 9,
+            "fallback_attributes": [],
+            "final_attribute_count": 9
+          },
+          "call_4": {
+            "model_attribute_count": 10,
+            "fallback_attributes": [],
+            "final_attribute_count": 10
+          }
+        }
+      },
+      "Aromatic Long Grain Rice (Non-Basmati)": {
+        "calls": 4,
+        "calls_meta": {
+          "call_1": {
+            "model_attribute_count": 8,
+            "fallback_attributes": [],
+            "final_attribute_count": 8
+          },
+          "call_2": {
+            "model_attribute_count": 10,
+            "fallback_attributes": [],
+            "final_attribute_count": 10
+          },
+          "call_3": {
+            "model_attribute_count": 8,
+            "fallback_attributes": [],
+            "final_attribute_count": 8
+          },
+          "call_4": {
+            "model_attribute_count": 8,
+            "fallback_attributes": [],
+            "final_attribute_count": 8
+          }
+        }
+      },
+      "Short and Medium Grain Rice": {
+        "calls": 4,
+        "calls_meta": {
+          "call_1": {
+            "model_attribute_count": 7,
+            "fallback_attributes": [],
+            "final_attribute_count": 7
+          },
+          "call_2": {
+            "model_attribute_count": 9,
+            "fallback_attributes": [],
+            "final_attribute_count": 9
+          },
+          "call_3": {
+            "model_attribute_count": 9,
+            "fallback_attributes": [],
+            "final_attribute_count": 9
+          },
+          "call_4": {
+            "model_attribute_count": 9,
+            "fallback_attributes": [],
+            "final_attribute_count": 9
+          }
+        }
+      }
+    }
+  },
+  "_generated_at": "2025-12-03T12:34:20.286899Z",
+  "_source": "auto_inference",
+  "_classified_rows": 28932
+}
