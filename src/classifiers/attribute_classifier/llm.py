@@ -35,14 +35,20 @@ def build_multiitem_response_schema(attr_values: Dict[str, List[str]], allow_out
                         'attributes': {
                             'type': 'object',
                             'properties': attr_props,
-                            'required': []
+                            'required': list(attr_props.keys()),
+                            'additionalProperties': False,
+                            'propertyOrdering': list(attr_props.keys())
                         }
                     },
-                    'required': ['item_preview', 'attributes']
+                    'required': ['item_preview', 'attributes'],
+                    'additionalProperties': False,
+                    'propertyOrdering': ['item_preview', 'attributes']
                 }
             }
         },
-        'required': ['items']
+        'required': ['items'],
+        'additionalProperties': False,
+        'propertyOrdering': ['items']
     }
 
 
@@ -51,7 +57,7 @@ def build_batch_prompt(hs4: str, product: str, attr_values: Dict[str, List[str]]
     max_preview = config.get('max_hints_preview', 25)
     
     lines: List[str] = []
-    lines.append("TASK: For each goods description pick exactly one allowed value per attribute, or 'None' if nothing clearly fits.")
+    lines.append("TASK: For each goods description pick exactly one allowed value per attribute, or 'None' if nothing clearly fits. You MUST NOT invent new values.")
     lines.append(f"HS4 {hs4} | Product {product} | Batch {batch_num}/{total_batches}")
     
     if attr_definitions:
@@ -82,8 +88,7 @@ You are a **Senior Commodity Specialist** with deep experience in international 
    a. exact token match (whole-word)
    b. longest / most specific textual match
    c. contextual semantic match — choose the most industry-standard option
-4. **Extract obvious technical patterns**: For technical specifications like density (e.g., "500 G/L", "550 GR/L"), percentages, measurements, or other clearly identifiable values, ALWAYS extract them as custom values even if not in the allowed list. These are valuable data points that should never be missed.
-5. **Use "None" only when completely missing**: If the attribute is not present or cannot be inferred or matched (not even as a custom), then and only then use "None".
+4. **Use "None" only when completely missing**: If the attribute is not present or cannot be inferred or matched, then and only then use "None".
 ---
 
 ## CRITICAL GUARDRAILS (Violations will cause system errors)
@@ -98,33 +103,31 @@ You are a **Senior Commodity Specialist** with deep experience in international 
    - BAD: "None, CEBOLLA EN POLVO"
    - GOOD: "None"
 4. **NO HALLUCINATIONS:** Do not invent values that are not in the text. If it's not there, it's "None".
-5. **SHORT VALUES:** Custom values must be concise (under 60 chars). If you find yourself writing a sentence, STOP. It is likely "None" or you are hallucinating.
+5. **STRICT SCHEMA ADHERENCE:** You MUST pick from the allowed list. Do NOT invent new values. Do NOT output "custom".
 
 ## Hard rules (follow exactly)
 
 1. **Normalization:** Ignore case, punctuation, and hyphen/space differences. Treat obvious spelling errors, plural/singular forms, and verb endings as matches when intent is clear. Be language-agnostic.
-2. **Prefer allowed values:** You **must** prioritize matching values from the allowed list for each attribute. **If no allowed value is a fit**, you may come up with additional value for the attribute similar to the already provided allowed values but always remember product is NOT an attribute.
-3. **Extract obvious technical patterns:** For technical specifications like density (e.g., "500 G/L", "550 GR/L"), percentages, measurements, or other clearly identifiable values, ALWAYS extract them as custom values even if not in the allowed list. These are valuable data points that should never be missed.
-4. **Output format:** For each attribute, return either:
+2. **Prefer allowed values:** You **must** prioritize matching values from the allowed list for each attribute.
+3. **Output format:** For each attribute, return:
    * `"value"`: a string from the allowed list
    * or
-   * `"custom"`: a string **not** in the allowed list, when no provided value is appropriate or when extracting obvious technical patterns.
+   * `"None"`: if no value matches.
    Example:
    ```json
    {
      "Form": { "value": "Powder" },
-     "Color": { "custom": "Light reddish-brown" },
-     "Density": { "custom": "500 G/L" }
+     "Color": { "value": "None" }
    }
    ```
-5. **One unique value per attribute:** Return a **single, clear, unique** value per attribute (no arrays, no multiple choices).
-6. **Use `"None"` only when completely missing:** If the attribute is not present or cannot be inferred or matched (not even as a `"custom"`), then and only then use:
+4. **One unique value per attribute:** Return a **single, clear, unique** value per attribute (no arrays, no multiple choices).
+5. **Use `"None"` only when completely missing:** If the attribute is not present or cannot be inferred or matched, then and only then use:
    ```json
    "AttributeName": "None"
    ```
-7. **Inference only when obvious:** Apply domain-specific inference **only** when the conclusion is unambiguous (e.g., "not ground nor crushed" -> `Form = "Whole"`). Avoid speculative or creative guesses.
-8. **Units & minor variants:** Ignore minor unit/abbreviation differences (g/l, gl, gr/l, kg, etc.) when they don't impact the attribute value. Do not convert or normalize numeric quantities unless the taxonomy explicitly requires a numeric value.
-9. **Strict output format:** Output must be **ONLY** the JSON block described above. No extra text, no comments, no trailing commas.
+6. **Inference only when obvious:** Apply domain-specific inference **only** when the conclusion is unambiguous (e.g., "not ground nor crushed" -> `Form = "Whole"`). Avoid speculative or creative guesses.
+7. **Units & minor variants:** Ignore minor unit/abbreviation differences (g/l, gl, gr/l, kg, etc.) when they don't impact the attribute value. Do not convert or normalize numeric quantities unless the taxonomy explicitly requires a numeric value.
+8. **Strict output format:** Output must be **ONLY** the JSON block described above. No extra text, no comments, no trailing commas.
 
 ---
 

@@ -160,7 +160,7 @@ def classify_attributes(
         'deterministic_negation_window_chars': 28,
         'dry_run_deterministic_only': False,
         'debug_deterministic_examples': 0,
-        'allow_out_of_schema_values': True,
+        'allow_out_of_schema_values': False,
         'add_custom_flag_columns': False,
     }
     

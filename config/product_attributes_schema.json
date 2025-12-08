@@ -1,7 +1,48 @@
 {
   "0901": {
-    "version": "2025-11-26T14:31:11.580606Z",
+    "version": "2025-12-08T11:32:29.534995Z",
     "products": {
+      "Bulk Commodity Green Coffee": {
+        "attributes": {
+          "Coffee_Type": [
+            "Arabica",
+            "Robusta"
+          ],
+          "Processing_Method": [
+            "Washed",
+            "Natural",
+            "Fully Washed"
+          ],
+          "Origin_Country": [
+            "Tanzania",
+            "Uganda"
+          ],
+          "Coffee_Grade": [
+            "Aa-ab Plus",
+            "Aa-ab",
+            "Low Grade"
+          ],
+          "Screen_Size": [
+            "Screen 15",
+            "Screen 12",
+            "Screen 18",
+            "Sc 1500",
+            "Sc 1800",
+            "Sc 15",
+            "Sc 18",
+            "Screen 1800",
+            "Screen 1700",
+            "Sc15",
+            "Sc12"
+          ],
+          "Coffee_Form": [
+            "Beans"
+          ],
+          "Coffee_Color": [
+            "Black"
+          ]
+        }
+      },
       "Specialty Green Coffee": {
         "attributes": {
           "Origin_Country": [
@@ -9,99 +50,69 @@
             "Uganda"
           ],
           "Processing_Method": [
-            "Washed"
-          ],
-          "Coffee_Species": [
-            "Arabica"
-          ],
-          "Grade_Designation": [
-            "Aa",
-            "Ab"
-          ],
-          "Packaging_Type": [
-            "Bag"
-          ]
-        }
-      },
-      "Bulk Commodity Green Coffee": {
-        "attributes": {
-          "Coffee_Species": [
-            "Arabica",
-            "Robusta"
-          ],
-          "Processing_Method": [
             "Washed",
             "Natural",
-            "Pulped Natural",
-            "Honey"
+            "Dried"
           ],
-          "Origin_Country": [
-            "Tanzania",
-            "Uganda",
-            "Vietnam",
-            "Brazil",
-            "Colombia",
-            "India",
-            "Ethiopia",
-            "Guinea"
-          ],
-          "Grade_Classification": [
+          "Coffee_Grade": [
             "Aa",
             "Ab",
-            "Low Grade",
-            "Bugisu",
-            "Drugar",
-            "Screen 12",
-            "Screen 15",
-            "Screen 18"
+            "Plus"
           ],
-          "Packaging_Type": [
-            "Jute Bag",
-            "Grainpro Bag",
-            "Vacuum Bag",
-            "Bulk Container"
+          "Coffee_Type": [
+            "Arabica"
+          ],
+          "Certifications": [
+            "Rfa"
           ]
         }
       },
       "Finished Coffee Products": {
         "attributes": {
-          "Physical_Form": [
-            "Whole Bean",
-            "Ground",
-            "Roasted Bean",
-            "Flavored",
-            "Gift Box"
+          "Flavor": [
+            "Black Raspberry",
+            "Coffee Almonds",
+            "Assorted"
           ],
-          "Origin_Country": [
-            "Uganda",
-            "Vietnam"
+          "Product_Form": [
+            "Beans"
           ],
           "Packaging_Type": [
             "Bag",
-            "Gift Box",
-            "Bulk"
+            "Box",
+            "Gift Box"
           ],
-          "Coffee_Species": [
-            "Arabica"
+          "Net_Weight": [
+            "100 Grams",
+            "300 Grams",
+            "700 Grams",
+            "60 Kgs"
           ],
-          "Processing_Method": [
-            "Natural"
+          "Brand": [
+            "Maison Gourmet"
           ]
         }
       },
       "Not a Coffee/Bean Product": {
         "attributes": {
-          "Product_Type": [
-            "Compound Optical Microscope",
-            "Stereoscopic Microscope"
-          ],
-          "Application": [
-            "Photomicrography",
-            "Cinephotomicrography",
-            "Microprojection"
-          ],
           "Origin_Country": [
-            "Uganda"
+            "Uganda",
+            "Brazil"
+          ],
+          "Destination_Country": [
+            "China",
+            "Kazakhstan",
+            "Albania",
+            "Kenya",
+            "Belgium",
+            "Australia",
+            "United States",
+            "Japan"
+          ],
+          "Product_Type": [
+            "Coffee",
+            "Compound Optical Microscopes",
+            "Stereoscopic Microscopes"
           ]
         }
       }
@@ -113,17 +124,17 @@
       "Not a Coffee/Bean Product"
     ],
     "_generation_notes": {
-      "Specialty Green Coffee": {
+      "Bulk Commodity Green Coffee": {
         "calls": 1,
         "calls_meta": {
           "call_1": {
-            "model_attribute_count": 5,
+            "model_attribute_count": 7,
             "fallback_attributes": [],
-            "final_attribute_count": 5
+            "final_attribute_count": 7
           }
         }
       },
-      "Bulk Commodity Green Coffee": {
+      "Specialty Green Coffee": {
         "calls": 1,
         "calls_meta": {
           "call_1": {
@@ -155,7 +166,7 @@
       }
     }
   },
-  "_generated_at": "2025-11-26T14:31:11.580621Z",
+  "_generated_at": "2025-12-08T11:32:29.535008Z",
   "_source": "auto_inference",
   "_classified_rows": 229
 }

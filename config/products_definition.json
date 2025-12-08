@@ -2,45 +2,42 @@
   "hs_code": "0901",
   "product_categories": [
     "Natural Robusta Coffee",
+    "Screened Robusta Coffee",
     "Natural Arabica Coffee",
-    "Washed Arabica Coffee",
-    "Screened/Graded Coffee Beans",
-    "Screened Green Coffee"
+    "Washed Arabica Coffee"
   ],
   "category_descriptions": {
-    "Natural Robusta Coffee": "Unwashed/dry-processed Robusta coffee beans, typically from Uganda, often with screen size specifications.",
-    "Natural Arabica Coffee": "Unroasted Arabica coffee beans processed using the natural/dry method, often specifying origin like Uganda or DRUGAR grade.",
-    "Washed Arabica Coffee": "Unroasted Arabica coffee beans processed using the washed/wet method, often with specific regional or grade designations like RFA or Bugisu.",
-    "Screened/Graded Coffee Beans": "Coffee beans sorted by screen size (e.g., SC 12, SC 15, SC 18) indicating bean size and quality grading.",
-    "Screened Green Coffee": "Green coffee beans sorted by screen size (e.g., SC 15, SC 18, SC 1500), applicable to both Robusta and Arabica types."
+    "Natural Robusta Coffee": "Unprocessed Robusta coffee beans, often sun-dried, retaining their natural characteristics.",
+    "Screened Robusta Coffee": "Robusta coffee beans sorted by size using screens, indicating a specific bean size range.",
+    "Natural Arabica Coffee": "Unprocessed Arabica coffee beans, often sun-dried, retaining their natural characteristics.",
+    "Washed Arabica Coffee": "Arabica coffee beans that have undergone a washing process to remove the outer layers."
   },
-  "_generated_at": "2025-11-26T14:30:29.403375Z",
+  "_generated_at": "2025-12-08T11:32:18.713278Z",
   "_source": "auto_inference",
   "_representative_goods": {
     "Natural Robusta Coffee": [
       "NATURAL UGANDA ROBUSTA COFFEE",
-      "NATURAL ROBUSTA COFFEE SCREEN 15",
-      "UGANDA ROBUSTA COFFEE BLACK BEANS"
+      "NATURAL ROBUSTA COFFEE",
+      "UGANDA NATURAL ROBUSTA COFFEE",
+      "NATURAL UGANDA ROBUSTA"
+    ],
+    "Screened Robusta Coffee": [
+      "UGANDA ROBUSTA COFFE SCREEN 15",
+      "Uganda Robusta coffee Screen 12",
+      "NATURAL UGANDAN ROBUSTA COFFEE SCREEN 1500",
+      "NATURAL ROBUSTA COFFEE SCREEN 18"
     ],
     "Natural Arabica Coffee": [
       "NATURAL UGANDA ARABICA COFFEE",
+      "ARABICA COFFEE",
       "UGANDA NATURAL DRIED ARABICA GREEN COFFEE",
       "NATURAL ARABICA COFFEE DRUGAR"
     ],
     "Washed Arabica Coffee": [
       "WASHED RWENZORI ARABICA COFFE RFA",
+      "RWENZORI WASHED ARABICA COFFEE RFA",
       "WASHED UGANDA ARABICA COFFEE",
-      "RWENZORI WASHED ARABICA COFFEE RFA"
-    ],
-    "Screened/Graded Coffee Beans": [
-      "UGANDA ROBUSTA COFFEE SCREEN 15",
-      "NATURAL UGANDA ROBUSTA COFFEE SC 1800",
-      "ROBUSTA COFFEE BEANS SC 1500"
-    ],
-    "Screened Green Coffee": [
-      "UGANDA ROBUSTA COFFE SCREEN 15",
-      "NATURAL UGANDA ROBUSTA COFFEE SC 18",
-      "ROBUSTA COFFEE BEANS SC 1500"
+      "WASHED UGANDA ARABICA BUGISU"
     ]
   }
 }

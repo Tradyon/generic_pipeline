@@ -86,6 +86,14 @@ uv run python tradyon_post_process.py \
 - Product inference uses multiple rounds over up to 1,000 samples and honors `is_multi_product_shipment` to drop mixed rows.
 - Override `--model` with OpenRouter IDs like `deepseek/deepseek-v3.2-exp`; the client enforces JSON where supported.
 
+## Strict Attribute Enforcement
+
+The pipeline is configured to strictly enforce attribute values from the schema. It will **not** invent new values or output "custom" values. If an attribute value is not found in the schema and cannot be inferred, it will be set to "None".
+
+## Native Gemini Support (via OpenAI Compatibility)
+
+For Gemini models (e.g., `gemini-2.0-flash`), the pipeline uses the OpenAI SDK pointing to Google's OpenAI compatibility endpoint. This allows using the standard OpenAI client while leveraging Gemini's features. Note that `propertyOrdering` is passed in the JSON schema to ensure correct field ordering in structured outputs.
+
 ## Examples
 
 Coffee sample (Gemini flash 2.0):
