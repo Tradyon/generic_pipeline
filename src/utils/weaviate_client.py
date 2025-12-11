@@ -13,21 +13,13 @@ import logging
 import hashlib
 import json
 from typing import List, Dict, Any, Optional, Union
-from datetime import datetime
+from datetime import datetime, timezone
 from tqdm import tqdm
 
 import weaviate
 from weaviate.classes.config import Configure, Property, DataType, VectorDistances
-from weaviate.classes.query import Filter
+from weaviate.classes.query import Filter, Rerank, MetadataQuery
 import weaviate.classes as wvc
-
-# Try importing embedding libraries
-try:
-    import torch
-    from sentence_transformers import SentenceTransformer, CrossEncoder
-    HAS_LOCAL_MODELS = True
-except ImportError:
-    HAS_LOCAL_MODELS = False
 
 logger = logging.getLogger(__name__)
 
@@ -40,7 +32,7 @@ class WeaviateClient:
         api_key: Optional[str] = None,
         class_name: str = "AttributeClassification",
         embedding_model_name: str = "intfloat/multilingual-e5-large",
-        rerank_model_name: str = "BAAI/bge-reranker-v2-m3",
+        rerank_model_name: str = "cross-encoder-ms-marco-MiniLM-L-6-v2",
         text_field: str = "goods_shipped"
     ):
         """
@@ -78,40 +70,15 @@ class WeaviateClient:
         # Initialize models lazily
         self.embedding_model_name = embedding_model_name
         self.rerank_model_name = rerank_model_name
-        self._embedding_model = None
-        self._rerank_model = None
         
-    @property
-    def embedding_model(self):
-        if not self._embedding_model:
-            if not HAS_LOCAL_MODELS:
-                raise ImportError("sentence-transformers not installed. Run: pip install sentence-transformers")
-            
-            device = "cpu"
-            if torch.cuda.is_available():
-                device = "cuda"
-            elif torch.backends.mps.is_available():
-                device = "mps"
-                
-            logger.info(f"Loading embedding model: {self.embedding_model_name} on {device}")
-            self._embedding_model = SentenceTransformer(self.embedding_model_name, device=device)
-        return self._embedding_model
+    def warmup(self):
+        """No-op for server-side models."""
+        pass
 
-    @property
-    def rerank_model(self):
-        if not self._rerank_model:
-            if not HAS_LOCAL_MODELS:
-                raise ImportError("sentence-transformers not installed. Run: pip install sentence-transformers")
-            
-            device = "cpu"
-            if torch.cuda.is_available():
-                device = "cuda"
-            elif torch.backends.mps.is_available():
-                device = "mps"
-
-            logger.info(f"Loading rerank model: {self.rerank_model_name} on {device}")
-            self._rerank_model = CrossEncoder(self.rerank_model_name, device=device)
-        return self._rerank_model
+    def close(self):
+        """Close the Weaviate client connection."""
+        if self.client:
+            self.client.close()
 
     def ensure_schema(self):
         """Create the schema if it doesn't exist."""
@@ -123,6 +90,7 @@ class WeaviateClient:
         self.client.collections.create(
             name=self.class_name,
             vectorizer_config=Configure.Vectorizer.text2vec_transformers(),
+            reranker_config=Configure.Reranker.transformers(),
             properties=[
                 Property(name=self.text_field, data_type=DataType.TEXT),
                 Property(name="attribute_name", data_type=DataType.TEXT, skip_vectorization=True),
@@ -141,22 +109,6 @@ class WeaviateClient:
     def generate_id(self, text: str) -> str:
         """Generate deterministic ID."""
         return hashlib.sha256(text.encode('utf-8')).hexdigest()
-
-    def _generate_embeddings(self, texts: List[str]) -> List[List[float]]:
-        """Generate embeddings for a list of texts."""
-        # e5 models need "query: " or "passage: " prefix. 
-        # For goods descriptions (passages), we usually use "passage: "
-        # But let's check how Pinecone does it. Pinecone's integrated might handle it.
-        # Standard e5 usage: "passage: " for docs, "query: " for queries.
-        passages = [f"passage: {t}" for t in texts]
-        embeddings = self.embedding_model.encode(passages, normalize_embeddings=True)
-        return embeddings.tolist()
-
-    def _generate_query_embedding(self, text: str) -> List[float]:
-        """Generate embedding for a query."""
-        query = f"query: {text}"
-        embedding = self.embedding_model.encode(query, normalize_embeddings=True)
-        return embedding.tolist()
 
     def upsert_records(
         self,
@@ -186,7 +138,7 @@ class WeaviateClient:
                     "confidence": record.get("confidence", 1.0),
                     "classification_method": record.get("classification_method", "initial"),
                     "original_id": record.get("_id", ""),
-                    "created_at": datetime.utcnow().isoformat() + "Z"
+                    "created_at": datetime.now(timezone.utc).isoformat()
                 }
                 
                 # Add optional fields if present
@@ -223,7 +175,7 @@ class WeaviateClient:
         rerank_top_n: int = 5
     ) -> List[Dict[str, Any]]:
         """
-        Search with vector similarity and local reranking.
+        Search with vector similarity and server-side reranking.
         
         Args:
             query_text: The search query
@@ -234,9 +186,6 @@ class WeaviateClient:
             rerank_top_n: Final results
         """
         collection = self.client.collections.get(self.class_name)
-        
-        # 1. Vector Search
-        # query_vector = self._generate_query_embedding(query_text)
         
         # Build filter
         filters = None
@@ -253,51 +202,35 @@ class WeaviateClient:
             f = Filter.by_property("attribute_name").equal(attribute_name)
             filters = f if filters is None else filters & f
         
-        response = collection.query.near_text(
-            query=query_text,
-            limit=top_k,
-            filters=filters,
-            return_metadata=wvc.query.MetadataQuery(distance=True)
-        )
-        
-        if not response.objects:
+        try:
+            response = collection.query.near_text(
+                query=query_text,
+                limit=top_k,
+                filters=filters,
+                rerank=Rerank(
+                    prop=self.text_field,
+                    query=query_text
+                ),
+                return_metadata=MetadataQuery(score=True)
+            )
+            
+            if not response.objects:
+                return []
+                
+            # Format result to match Pinecone style for compatibility
+            final_results = []
+            for obj in response.objects[:rerank_top_n]:
+                final_results.append({
+                    "id": str(obj.uuid),
+                    "score": obj.metadata.score, # Rerank score
+                    "fields": obj.properties
+                })
+                
+            return final_results
+            
+        except Exception as e:
+            logger.error(f"Error in search_with_rerank: {e}")
             return []
-            
-        # 2. Reranking
-        # Prepare pairs for cross-encoder: [[query, doc1], [query, doc2], ...]
-        candidates = []
-        for obj in response.objects:
-            candidates.append({
-                "id": str(obj.uuid),
-                "score": 1 - obj.metadata.distance, # Convert distance to similarity
-                "fields": obj.properties,
-                "text": obj.properties[self.text_field]
-            })
-            
-        if not candidates:
-            return []
-            
-        pairs = [[query_text, c["text"]] for c in candidates]
-        scores = self.rerank_model.predict(pairs)
-        
-        # Attach scores and sort
-        for i, candidate in enumerate(candidates):
-            candidate["rerank_score"] = float(scores[i])
-            # Normalize sigmoid score if needed, but raw logits/scores are fine for sorting
-            
-        # Sort by rerank score descending
-        candidates.sort(key=lambda x: x["rerank_score"], reverse=True)
-        
-        # Format result to match Pinecone style for compatibility
-        final_results = []
-        for c in candidates[:rerank_top_n]:
-            final_results.append({
-                "id": c["id"],
-                "score": c["rerank_score"], # Use rerank score as final score
-                "fields": c["fields"]
-            })
-            
-        return final_results
             
         return final_results
 

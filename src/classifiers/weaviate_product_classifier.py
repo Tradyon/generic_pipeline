@@ -174,6 +174,14 @@ class WeaviateProductClassifier:
         self.total_similarity_score = 0.0
         self.start_time = None
         self.lock = threading.Lock()
+        
+        # Warmup models
+        self.weaviate_client.warmup()
+
+    def close(self):
+        """Close the Weaviate client connection."""
+        if self.weaviate_client:
+            self.weaviate_client.close()
     
     def classify_single_weaviate(self, goods_description: str) -> Tuple[str, float, str]:
         """

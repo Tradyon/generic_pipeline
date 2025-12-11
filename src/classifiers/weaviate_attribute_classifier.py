@@ -115,6 +115,9 @@ class WeaviateAttributeClassifier:
             text_field=text_field
         )
         
+        # Warmup models to prevent race conditions in threads
+        self.weaviate_client.warmup()
+        
         # Initialize LLM client for fallback
         self.llm_client = LLMClient(model_name=model_name, api_key=api_key)
         
@@ -135,6 +138,11 @@ class WeaviateAttributeClassifier:
             'attribute_accuracy': {},  # Per-attribute vector match rate
         }
     
+    def close(self):
+        """Close the Weaviate client connection."""
+        if self.weaviate_client:
+            self.weaviate_client.close()
+
     def _build_schema_map(self) -> Dict[str, Dict[str, Dict[str, List[str]]]]:
         """Build normalized schema map from schema model."""
         schema_map = {}
@@ -386,31 +394,50 @@ class WeaviateAttributeClassifier:
         Returns:
             List of AttributeClassificationResult objects
         """
-        results = []
+        results = [None] * len(goods_list)
         llm_fallback_goods = []
         llm_fallback_indices = []
         
-        # Step 1: Try Weaviate for all goods
-        for idx, goods in enumerate(goods_list):
-            weaviate_result = self.classify_single_goods_weaviate(goods, hs_code, category)
-            
-            # Check if we have enough vector matches
-            vector_match_count = weaviate_result.metadata.get('vector_matches', 0)
-            total_attrs = weaviate_result.metadata.get('total_attributes', 1)
-            match_rate = vector_match_count / total_attrs if total_attrs > 0 else 0.0
-            
-            # Only use LLM fallback if NO attributes matched (0% match rate)
-            # This preserves partial vector matches and only uses LLM when truly needed
-            if match_rate == 0.0 and weaviate_result.method != "no_schema":
-                llm_fallback_goods.append(goods)
-                llm_fallback_indices.append(idx)
-                results.append(None)  # Placeholder
-            else:
-                results.append(weaviate_result)
-                if weaviate_result.method == "vector":
-                    self.stats['vector_matches'] += 1
+        # Step 1: Try Weaviate for all goods in parallel
+        # Use up to 10 workers or len(goods_list)
+        max_workers = min(len(goods_list), 10)
         
-        # Step 2: LLM fallback for zero-match goods only
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            future_to_idx = {
+                executor.submit(self.classify_single_goods_weaviate, goods, hs_code, category): idx
+                for idx, goods in enumerate(goods_list)
+            }
+            
+            for future in as_completed(future_to_idx):
+                idx = future_to_idx[future]
+                try:
+                    weaviate_result = future.result()
+                    
+                    # Check if we have enough vector matches
+                    vector_match_count = weaviate_result.metadata.get('vector_matches', 0)
+                    total_attrs = weaviate_result.metadata.get('total_attributes', 1)
+                    match_rate = vector_match_count / total_attrs if total_attrs > 0 else 0.0
+                    
+                    # Only use LLM fallback if NO attributes matched (0% match rate)
+                    # This preserves partial vector matches and only uses LLM when truly needed
+                    if match_rate == 0.0 and weaviate_result.method != "no_schema":
+                        # Will be added to fallback list later
+                        pass
+                    else:
+                        results[idx] = weaviate_result
+                        if weaviate_result.method == "vector":
+                            self.stats['vector_matches'] += 1
+                            
+                except Exception as e:
+                    logger.error(f"Error classifying goods at index {idx}: {e}")
+        
+        # Step 2: Identify items needing LLM fallback
+        for idx, res in enumerate(results):
+            if res is None:
+                llm_fallback_goods.append(goods_list[idx])
+                llm_fallback_indices.append(idx)
+        
+        # Step 3: LLM fallback for zero-match goods only
         if llm_fallback_goods:
             logger.info(
                 f"Using LLM fallback for {len(llm_fallback_goods)}/{len(goods_list)} goods "

@@ -13,8 +13,8 @@
       },
       "attr_Processing_Method": {
         "agreement_rate": 1.0,
-        "total_comparisons": 5,
-        "agreements": 5,
+        "total_comparisons": 2,
+        "agreements": 2,
         "disagreements": 0
       },
       "attr_Screen_Size": {
@@ -28,5 +28,5 @@
   },
   "pinecone_stats": {},
   "llm_stats": {},
-  "timestamp": "2025-12-11T19:04:54.125032"
+  "timestamp": "2025-12-11T20:10:25.659955"
 }

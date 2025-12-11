@@ -286,6 +286,9 @@ def main():
     stats = classifier.get_stats()
     logger.info("Classification Stats:")
     logger.info(json.dumps(stats, indent=2))
+    
+    # Close connection
+    classifier.close()
 
 if __name__ == "__main__":
     main()

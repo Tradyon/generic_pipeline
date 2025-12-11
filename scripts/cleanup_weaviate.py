@@ -60,6 +60,8 @@ def main():
         logger.info(f"Class '{args.class_name}' deleted.")
     else:
         logger.info(f"Class '{args.class_name}' does not exist.")
+        
+    client.close()
 
 if __name__ == "__main__":
     main()

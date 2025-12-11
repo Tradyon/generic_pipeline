@@ -147,7 +147,7 @@ uv run python tradyon_classify_attributes_weaviate.py \
     --product-attributes-schema "$SCHEMA_FILE" \
     --attribute-definitions "$DEFINITIONS_FILE" \
     --class-name "$CLASS_NAME" \
-    --items-per-call 5 \
+    --items-per-call 50 \
     --no-resume
 
 echo -e "\n${GREEN}Step 4: Analyze Performance${NC}"
