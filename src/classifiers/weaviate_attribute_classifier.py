@@ -3,8 +3,7 @@ Weaviate-based hybrid attribute classifier with multilingual support.
 
 This classifier uses a hybrid approach:
 1. Vector search first: Query Weaviate for similar goods descriptions
-2. LLM fallback: For low similarity matches, use LLM classification
-3. Knowledge base update: Store new high-confidence classifications
+2. Knowledge base update: Store new high-confidence classifications
 
 Key features:
 - Multilingual support with multilingual-e5-large model (local)
@@ -54,7 +53,7 @@ class AttributeClassificationResult:
 
 class WeaviateAttributeClassifier:
     """
-    Hybrid attribute classifier using Weaviate vector search with LLM fallback.
+    Hybrid attribute classifier using Weaviate vector search.
     
     Optimized for multilingual accuracy and precision with:
     - multilingual-e5-large embedding model
@@ -418,46 +417,31 @@ class WeaviateAttributeClassifier:
                     total_attrs = weaviate_result.metadata.get('total_attributes', 1)
                     match_rate = vector_match_count / total_attrs if total_attrs > 0 else 0.0
                     
-                    # Only use LLM fallback if NO attributes matched (0% match rate)
-                    # This preserves partial vector matches and only uses LLM when truly needed
-                    if match_rate == 0.0 and weaviate_result.method != "no_schema":
-                        # Will be added to fallback list later
-                        pass
-                    else:
-                        results[idx] = weaviate_result
-                        if weaviate_result.method == "vector":
-                            self.stats['vector_matches'] += 1
+                    # Always use Weaviate result, even if 0% match (User requested removal of fallback)
+                    results[idx] = weaviate_result
+                    if weaviate_result.method == "vector":
+                        self.stats['vector_matches'] += 1
                             
                 except Exception as e:
                     logger.error(f"Error classifying goods at index {idx}: {e}")
         
-        # Step 2: Identify items needing LLM fallback
+        # Step 2: Identify items needing LLM fallback (Should be none now)
         for idx, res in enumerate(results):
             if res is None:
-                llm_fallback_goods.append(goods_list[idx])
-                llm_fallback_indices.append(idx)
-        
-        # Step 3: LLM fallback for zero-match goods only
-        if llm_fallback_goods:
-            logger.info(
-                f"Using LLM fallback for {len(llm_fallback_goods)}/{len(goods_list)} goods "
-                f"(0% vector match - no attributes found)"
-            )
-            
-            llm_results = self.classify_batch_llm(
-                llm_fallback_goods,
-                hs_code,
-                category,
-                token_tracker,
-                batch_num,
-                total_batches,
-                config
-            )
-            
-            # Fill in LLM results
-            for idx, llm_result in zip(llm_fallback_indices, llm_results):
-                results[idx] = llm_result
-                self.stats['llm_fallbacks'] += 1
+                # If for some reason weaviate failed completely (exception), we might still have None
+                # But we are removing fallback, so we should probably return an empty result or handle it gracefully without LLM
+                # For now, let's just log it and return an empty result if possible, or let it crash if that's what "remove fallback" implies
+                # But to be safe, let's create an empty result
+                results[idx] = AttributeClassificationResult(
+                    goods_shipped=goods_list[idx],
+                    attributes={},
+                    confidence=0.0,
+                    method="failed",
+                    metadata={"error": "Classification failed and fallback disabled"}
+                )
+
+        # Step 3: LLM fallback removed
+
         
         self.stats['total_classifications'] += len(goods_list)
         

@@ -117,3 +117,51 @@ uv run python tradyon_generate_schema.py attribute-schema --hs-code 0901 --input
 uv run python tradyon_classify_attributes.py --input ./output/coffee/shipment_master_classified.csv --output-dir ./output/coffee --product-attributes-schema config/product_attributes_schema_example.json --attribute-definitions config/attribute_definitions_example.json --items-per-call 5 --max-workers 10 --model deepseek/deepseek-v3.2-exp
 uv run python tradyon_post_process.py --input-dir ./output/coffee/per_product_classifications --output-dir ./output/coffee
 ```
+
+## Weaviate Hybrid Search
+
+The pipeline supports hybrid classification using Weaviate (Vector Search + Reranking). This approach is faster and cheaper than pure LLM classification for large datasets, as it reuses previous high-confidence classifications.
+
+### Prerequisites
+
+1. **Docker**: Ensure Docker and Docker Compose are installed.
+2. **Start Weaviate**:
+   ```bash
+   docker compose up -d
+   ```
+   This starts Weaviate with `text2vec-transformers` (embeddings) and `reranker-transformers` (reranking) modules enabled.
+
+### 1) Classify Products (Weaviate)
+
+Uses vector search to classify products based on similarity to previously classified examples.
+
+```bash
+uv run python tradyon_classify_products_weaviate.py \
+  --input <shipment_master.csv> \                 # required
+  --output <shipment_master_classified.csv> \     # required
+  --products-definition <products_definition.json> \ # required
+  [--class-name <str>] \                          # optional, default ProductClassification
+  [--similarity-threshold <float>] \              # optional, default 0.85
+  [--no-rerank]                                   # optional: disable reranking
+```
+
+### 2) Classify Attributes (Weaviate)
+
+Uses vector search to extract attributes. This is highly efficient for recurring goods descriptions.
+
+```bash
+uv run python tradyon_classify_attributes_weaviate.py \
+  --input <shipment_master_classified.csv> \        # required
+  --output-dir <output_dir> \                       # required
+  --product-attributes-schema <product_attributes_schema.json> \ # required
+  --attribute-definitions <attribute_definitions.json> \         # required
+  [--class-name <str>] \                            # optional, default AttributeClassification
+  [--update-kb] \                                   # optional: update knowledge base with new findings
+  [--min-similarity <float>]                        # optional, default 0.95 (for KB update)
+```
+
+### Notes on Weaviate Pipeline
+
+- **Strict Mode**: The Weaviate classifiers are configured to **strictly** rely on vector search and reranking scores. There is **no LLM fallback** enabled by default in these scripts to ensure predictable performance and cost.
+- **Reranking**: The pipeline uses `cross-encoder-ms-marco-MiniLM-L-6-v2` for reranking, which significantly improves accuracy over raw vector search.
+- **Performance**: Vector search is orders of magnitude faster than LLM calls. Use this for bulk processing after establishing a baseline of classifications.

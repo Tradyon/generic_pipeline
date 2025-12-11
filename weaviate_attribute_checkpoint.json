@@ -13,17 +13,17 @@
             "Screen_Size": "None"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9808303117752075,
-            "Processing_Method": 0.004266822244971991,
+            "Coffee_Variety": 9.890968322753906,
+            "Processing_Method": -7.098856449127197,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.003659467678517103
+            "Screen_Size": -5.824418544769287
           },
           "method": "vector",
           "metadata": {
             "vector_matches": 1,
             "total_attributes": 5,
-            "avg_similarity": 0.19775132033973933
+            "avg_similarity": -0.6064613342285157
           },
           "shipment_ids": [
             "5788d4fe3ff16fdf33596bb08415c5d64454554bd3e5eb21957e4aca97d5c87e"
@@ -39,26 +39,17 @@
             "Screen_Size": "None"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.0,
-            "Processing_Method": 0.0,
+            "Coffee_Variety": -3.1083316802978516,
+            "Processing_Method": -8.470166206359863,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.0
+            "Screen_Size": -2.9577605724334717
           },
-          "method": "llm",
+          "method": "no_match",
           "metadata": {
-            "invalid": 0,
-            "total": 50,
-            "deterministic_stats": {
-              "rows_with_any_match": 0,
-              "rows_total": 10,
-              "attribute_matches": 0,
-              "attribute_attempted": 50,
-              "attribute_match_rate": 0.0,
-              "negation_blocked": 0
-            },
-            "out_of_schema": 0,
-            "heuristic_fills": 0
+            "vector_matches": 0,
+            "total_attributes": 5,
+            "avg_similarity": -2.9072516918182374
           },
           "shipment_ids": [
             "a984d291a3b182aaca6b166fb494b61dd602ff12db4a0a334df3dc6eb6d6aba4"
@@ -74,17 +65,17 @@
             "Screen_Size": "None"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9999772310256958,
-            "Processing_Method": 0.00321113015525043,
+            "Coffee_Variety": 10.10168170928955,
+            "Processing_Method": -6.47846794128418,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.0017659056466072798
+            "Screen_Size": -5.37518835067749
           },
           "method": "vector",
           "metadata": {
             "vector_matches": 1,
             "total_attributes": 5,
-            "avg_similarity": 0.2009908533655107
+            "avg_similarity": -0.35039491653442384
           },
           "shipment_ids": [
             "be0d35674adb2dcbe153eb1ec17cc1bfc97e7f9970c01b9ca4598ad314143ab9"
@@ -100,17 +91,17 @@
             "Screen_Size": "None"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9999774694442749,
-            "Processing_Method": 0.0036725772079080343,
+            "Coffee_Variety": 9.95289421081543,
+            "Processing_Method": -7.109429359436035,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.002175494097173214
+            "Screen_Size": -5.838050842285156
           },
           "method": "vector",
           "metadata": {
             "vector_matches": 1,
             "total_attributes": 5,
-            "avg_similarity": 0.20116510814987124
+            "avg_similarity": -0.5989171981811523
           },
           "shipment_ids": [
             "5c5162baa4a96731c624a023bef7b1115aedd02d625f425fcbe38e53df2d8460"
@@ -126,14 +117,18 @@
             "Screen_Size": "None"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.0,
-            "Processing_Method": 0.0,
+            "Coffee_Variety": -5.879770278930664,
+            "Processing_Method": -3.6568708419799805,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.0
+            "Screen_Size": -6.510129451751709
           },
-          "method": "llm",
-          "metadata": {},
+          "method": "no_match",
+          "metadata": {
+            "vector_matches": 0,
+            "total_attributes": 5,
+            "avg_similarity": -3.209354114532471
+          },
           "shipment_ids": [
             "c62eb2452b38c46f87866696205f4f21a02f0d5a38e73dc329700fd9276a473d"
           ]
@@ -148,17 +143,17 @@
             "Screen_Size": "None"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9999139308929443,
-            "Processing_Method": 0.013131685554981232,
+            "Coffee_Variety": 8.185617446899414,
+            "Processing_Method": -1.201116919517517,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.03277835622429848
+            "Screen_Size": -1.8014442920684814
           },
           "method": "vector",
           "metadata": {
             "vector_matches": 1,
             "total_attributes": 5,
-            "avg_similarity": 0.2091647945344448
+            "avg_similarity": 1.0366112470626831
           },
           "shipment_ids": [
             "4ddd5f307692b41738ddcdf2d564b3550b9903d4cab94e925d8d21e8c7414079",
@@ -182,17 +177,17 @@
             "Screen_Size": "None"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9999563694000244,
-            "Processing_Method": 0.004066667519509792,
+            "Coffee_Variety": 9.158918380737305,
+            "Processing_Method": -3.5749130249023438,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.016032252460718155
+            "Screen_Size": -0.42428815364837646
           },
           "method": "vector",
           "metadata": {
             "vector_matches": 1,
             "total_attributes": 5,
-            "avg_similarity": 0.20401105787605048
+            "avg_similarity": 1.031943440437317
           },
           "shipment_ids": [
             "105fc535c97d35412a00bf2396f7f266568130cfac427f65577e754979d3c677",
@@ -210,17 +205,17 @@
             "Screen_Size": "None"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9999798536300659,
-            "Processing_Method": 0.016662772744894028,
+            "Coffee_Variety": 9.454570770263672,
+            "Processing_Method": -2.6852593421936035,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.013297965750098228
+            "Screen_Size": -6.000288963317871
           },
           "method": "vector",
           "metadata": {
             "vector_matches": 1,
             "total_attributes": 5,
-            "avg_similarity": 0.20598811842501163
+            "avg_similarity": 0.15380449295043946
           },
           "shipment_ids": [
             "ade116f1b619dbea59e6640e25f8afc604ea865eac9fffd66e71bde860480eab"
@@ -236,14 +231,18 @@
             "Screen_Size": "None"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.0,
-            "Processing_Method": 0.0,
+            "Coffee_Variety": -7.329039096832275,
+            "Processing_Method": -9.816059112548828,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.0
+            "Screen_Size": -8.150333404541016
           },
-          "method": "llm",
-          "metadata": {},
+          "method": "no_match",
+          "metadata": {
+            "vector_matches": 0,
+            "total_attributes": 5,
+            "avg_similarity": -5.059086322784424
+          },
           "shipment_ids": [
             "2018264cfea654930b5603024f1ed1470471702cf934bfbe0ecec9b49fe7e0ed"
           ]
@@ -258,14 +257,18 @@
             "Screen_Size": "None"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.0,
-            "Processing_Method": 0.0,
+            "Coffee_Variety": -7.349456787109375,
+            "Processing_Method": -9.820771217346191,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.0
+            "Screen_Size": -8.199555397033691
           },
-          "method": "llm",
-          "metadata": {},
+          "method": "no_match",
+          "metadata": {
+            "vector_matches": 0,
+            "total_attributes": 5,
+            "avg_similarity": -5.073956680297852
+          },
           "shipment_ids": [
             "6c55f1616731163aceae4463e8939f6bce866eef41e288723114697fc1b5bfb9"
           ]
@@ -273,21 +276,25 @@
         {
           "goods_shipped": "COFFEE",
           "attributes": {
-            "Coffee_Variety": "None",
-            "Processing_Method": "None",
+            "Coffee_Variety": "Robusta",
+            "Processing_Method": "Natural",
             "Origin_Country": "None",
             "Quality_Grade": "None",
-            "Screen_Size": "None"
+            "Screen_Size": "Screen 15"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.0,
-            "Processing_Method": 0.0,
+            "Coffee_Variety": 2.651280403137207,
+            "Processing_Method": 1.0137443542480469,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.0
+            "Screen_Size": 1.2453625202178955
           },
-          "method": "llm",
-          "metadata": {},
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 3,
+            "total_attributes": 5,
+            "avg_similarity": 0.9820774555206299
+          },
           "shipment_ids": [
             "61bf8e359969c3c8652b8690303b6d4b1794d0808fefd4bb51d50bd511964d20",
             "5e60c11efc42388123ce55af576794923132a61b6446ba3bed6aa15a284d832d",
@@ -347,14 +354,18 @@
             "Screen_Size": "None"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.0,
-            "Processing_Method": 0.0,
+            "Coffee_Variety": -6.652774810791016,
+            "Processing_Method": -6.398529529571533,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.0
+            "Screen_Size": -6.317383766174316
           },
-          "method": "llm",
-          "metadata": {},
+          "method": "no_match",
+          "metadata": {
+            "vector_matches": 0,
+            "total_attributes": 5,
+            "avg_similarity": -3.873737621307373
+          },
           "shipment_ids": [
             "960098a276112d7d40d881fa3b7093d45b1d342b4334ad1c51a98379d2645198",
             "2564baf553bbda3665bbcf4667820a5a07c12a029ccdef5b7b877630f47ff0c6",
@@ -372,17 +383,17 @@
             "Screen_Size": "None"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9999759197235107,
-            "Processing_Method": 0.02323503978550434,
+            "Coffee_Variety": 9.071130752563477,
+            "Processing_Method": -2.8083176612854004,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.0018619400216266513
+            "Screen_Size": -6.589179992675781
           },
           "method": "vector",
           "metadata": {
             "vector_matches": 1,
             "total_attributes": 5,
-            "avg_similarity": 0.20501457990612834
+            "avg_similarity": -0.06527338027954102
           },
           "shipment_ids": [
             "f3f3f1f49db314bac719cdbd1d72f6d3bbb2af6260230af833f4bbae393ac57a"
@@ -398,14 +409,18 @@
             "Screen_Size": "None"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.0,
-            "Processing_Method": 0.0,
+            "Coffee_Variety": -10.135107040405273,
+            "Processing_Method": -10.662633895874023,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.0
+            "Screen_Size": -10.126001358032227
           },
-          "method": "llm",
-          "metadata": {},
+          "method": "no_match",
+          "metadata": {
+            "vector_matches": 0,
+            "total_attributes": 5,
+            "avg_similarity": -6.1847484588623045
+          },
           "shipment_ids": [
             "389a6885c7e66b779af4e56ca2c19555a6b35c41eecfd55d8c1762189aff63c4",
             "ea8e49c95538fb97559eb7fd2799443e3c762cabc355719ecbf2d46402780039"
@@ -421,14 +436,18 @@
             "Screen_Size": "None"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.0,
-            "Processing_Method": 0.0,
+            "Coffee_Variety": -10.135107040405273,
+            "Processing_Method": -10.662633895874023,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.0
+            "Screen_Size": -10.126001358032227
           },
-          "method": "llm",
-          "metadata": {},
+          "method": "no_match",
+          "metadata": {
+            "vector_matches": 0,
+            "total_attributes": 5,
+            "avg_similarity": -6.1847484588623045
+          },
           "shipment_ids": [
             "27dd60f8c0c6aaa661421af198c84b385c4bffb1fd1fe37bb6bca78a18c4c97a",
             "2fdd8e52992d869d0dd340a2638fb6baa17ab19eaa1095ce272155da3d4c07bc",
@@ -446,17 +465,17 @@
             "Screen_Size": "None"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9998158812522888,
-            "Processing_Method": 0.006530337035655975,
+            "Coffee_Variety": 8.208141326904297,
+            "Processing_Method": -5.554449081420898,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.02396640181541443
+            "Screen_Size": -1.499457597732544
           },
           "method": "vector",
           "metadata": {
             "vector_matches": 1,
             "total_attributes": 5,
-            "avg_similarity": 0.20606252402067185
+            "avg_similarity": 0.2308469295501709
           },
           "shipment_ids": [
             "c2abf512521d11fb38715ebe11260970b4c8ec03792b8e71f10424fe5d3f88c7",
@@ -470,20 +489,20 @@
             "Processing_Method": "None",
             "Origin_Country": "None",
             "Quality_Grade": "None",
-            "Screen_Size": "None"
+            "Screen_Size": "Screen 18"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9999517202377319,
-            "Processing_Method": 0.04024980589747429,
+            "Coffee_Variety": 8.023788452148438,
+            "Processing_Method": -5.19247579574585,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.6842750310897827
+            "Screen_Size": 7.590549945831299
           },
           "method": "vector",
           "metadata": {
-            "vector_matches": 1,
+            "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.3448953114449978
+            "avg_similarity": 2.0843725204467773
           },
           "shipment_ids": [
             "dd239b2438481e91384fb0fe7c6a24531b86947b363a9bcee00dce8bfdf7d435",
@@ -495,24 +514,24 @@
         {
           "goods_shipped": "NATURAL ROBUSTA COFFEE SCREEN 15",
           "attributes": {
-            "Coffee_Variety": "Robusta",
+            "Coffee_Variety": "None",
             "Processing_Method": "None",
             "Origin_Country": "None",
             "Quality_Grade": "None",
             "Screen_Size": "Screen 15"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.8737960457801819,
-            "Processing_Method": 0.002287084935232997,
+            "Coffee_Variety": 0.6220442652702332,
+            "Processing_Method": -9.566621780395508,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.9999222755432129
+            "Screen_Size": 8.653372764587402
           },
           "method": "vector",
           "metadata": {
-            "vector_matches": 2,
+            "vector_matches": 1,
             "total_attributes": 5,
-            "avg_similarity": 0.3752010812517256
+            "avg_similarity": -0.05824095010757446
           },
           "shipment_ids": [
             "8395f0b93289120234e5de55034cf062fa2fafb4b25a53d7ee5e56e4ebd5cdff",
@@ -530,17 +549,17 @@
             "Screen_Size": "Screen 18"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.8639874458312988,
-            "Processing_Method": 0.002954646246507764,
+            "Coffee_Variety": 0.7572484016418457,
+            "Processing_Method": -9.449275970458984,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.9999046325683594
+            "Screen_Size": 8.862689018249512
           },
           "method": "vector",
           "metadata": {
             "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.3733693449292332
+            "avg_similarity": 0.03413228988647461
           },
           "shipment_ids": [
             "95242518a32991d3c76ee6ca1f6df84d05d2332fa4506403f6ae38a299f9f897"
@@ -556,17 +575,17 @@
             "Screen_Size": "Screen 18"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9161707758903503,
-            "Processing_Method": 0.00451646838337183,
+            "Coffee_Variety": 2.070918560028076,
+            "Processing_Method": -8.820968627929688,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.9998329877853394
+            "Screen_Size": 8.513723373413086
           },
           "method": "vector",
           "metadata": {
             "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.3841040464118123
+            "avg_similarity": 0.3527346611022949
           },
           "shipment_ids": [
             "d160cd2fd87fee19c9036e9eb79121c9b4d7c65a4fa9d6f0d66b6345aa7e973b"
@@ -579,20 +598,20 @@
             "Processing_Method": "None",
             "Origin_Country": "None",
             "Quality_Grade": "None",
-            "Screen_Size": "None"
+            "Screen_Size": "Screen 15"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.999958872795105,
-            "Processing_Method": 0.01861046813428402,
+            "Coffee_Variety": 9.008454322814941,
+            "Processing_Method": -0.7032976746559143,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.1819993555545807
+            "Screen_Size": 6.586921215057373
           },
           "method": "vector",
           "metadata": {
-            "vector_matches": 1,
+            "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.24011373929679394
+            "avg_similarity": 2.97841557264328
           },
           "shipment_ids": [
             "534899b724a78be033344f20b2c8fda8010b0bed034d845c088ec08a7eb4c657"
@@ -602,23 +621,23 @@
           "goods_shipped": "NATURAL UGANDA ARABICA COFFEE",
           "attributes": {
             "Coffee_Variety": "Arabica",
-            "Processing_Method": "None",
+            "Processing_Method": "Washed",
             "Origin_Country": "None",
             "Quality_Grade": "None",
-            "Screen_Size": "None"
+            "Screen_Size": "Screen 15"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9999333620071411,
-            "Processing_Method": 0.024442104622721672,
+            "Coffee_Variety": 8.731626510620117,
+            "Processing_Method": 0.7836127281188965,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.17619502544403076
+            "Screen_Size": 6.926711559295654
           },
           "method": "vector",
           "metadata": {
-            "vector_matches": 1,
+            "vector_matches": 3,
             "total_attributes": 5,
-            "avg_similarity": 0.2401140984147787
+            "avg_similarity": 3.2883901596069336
           },
           "shipment_ids": [
             "f8708ce8dd22befb4691d9e0845975366e8c7553946ba8ab4d042abc91601011",
@@ -629,24 +648,24 @@
         {
           "goods_shipped": "NATURAL UGANDA ARABICA COFFEE BEANS",
           "attributes": {
-            "Coffee_Variety": "Arabica",
+            "Coffee_Variety": "Robusta",
             "Processing_Method": "None",
             "Origin_Country": "None",
             "Quality_Grade": "None",
-            "Screen_Size": "None"
+            "Screen_Size": "Screen 18"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9855561852455139,
-            "Processing_Method": 0.06161801889538765,
+            "Coffee_Variety": 8.07323932647705,
+            "Processing_Method": 0.45472580194473267,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.17722289264202118
+            "Screen_Size": 7.660149574279785
           },
           "method": "vector",
           "metadata": {
-            "vector_matches": 1,
+            "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.24487941935658455
+            "avg_similarity": 3.2376229405403136
           },
           "shipment_ids": [
             "c0a43d17c31a690a8a4d5d4e59425503536716959250aaaa233ffc1a9b572a67"
@@ -659,20 +678,20 @@
             "Processing_Method": "None",
             "Origin_Country": "None",
             "Quality_Grade": "None",
-            "Screen_Size": "None"
+            "Screen_Size": "Screen 18"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9999631643295288,
-            "Processing_Method": 0.018342602998018265,
+            "Coffee_Variety": 8.569679260253906,
+            "Processing_Method": -0.03247601538896561,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.09439001232385635
+            "Screen_Size": 4.2189836502075195
           },
           "method": "vector",
           "metadata": {
-            "vector_matches": 1,
+            "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.22253915593028067
+            "avg_similarity": 2.551237379014492
           },
           "shipment_ids": [
             "d02c280a49e27889df4dcf825beaa9d751eb792481db9cb675ce25ff39ae5c92"
@@ -685,20 +704,20 @@
             "Processing_Method": "None",
             "Origin_Country": "None",
             "Quality_Grade": "None",
-            "Screen_Size": "None"
+            "Screen_Size": "Screen 18"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9998480081558228,
-            "Processing_Method": 0.011197226122021675,
+            "Coffee_Variety": 8.414533615112305,
+            "Processing_Method": -4.951594352722168,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.7362176775932312
+            "Screen_Size": 8.053834915161133
           },
           "method": "vector",
           "metadata": {
-            "vector_matches": 1,
+            "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.3494525823742151
+            "avg_similarity": 2.303354835510254
           },
           "shipment_ids": [
             "eb2ee59125561e23b78e164d733337297172bf6c98c4eeedb54cca75244ab6b5",
@@ -730,17 +749,17 @@
             "Screen_Size": "Screen 18"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9998363256454468,
-            "Processing_Method": 0.008510562591254711,
+            "Coffee_Variety": 9.052022933959961,
+            "Processing_Method": -6.614589691162109,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.8254409432411194
+            "Screen_Size": 8.645342826843262
           },
           "method": "vector",
           "metadata": {
             "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.36675756629556416
+            "avg_similarity": 2.2165552139282227
           },
           "shipment_ids": [
             "76295c4d3fd84d14e70819271968bc487545c0fe84f334fc9f855e9c5e56eea4",
@@ -774,17 +793,17 @@
             "Screen_Size": "Screen 18"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9999548196792603,
-            "Processing_Method": 0.04665640369057655,
+            "Coffee_Variety": 9.158530235290527,
+            "Processing_Method": -6.491584777832031,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.8074368238449097
+            "Screen_Size": 8.783110618591309
           },
           "method": "vector",
           "metadata": {
             "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.3708096094429493
+            "avg_similarity": 2.2900112152099608
           },
           "shipment_ids": [
             "45c62a2df25c4be71866fac8b03d944a580d65d550ed812b41de1efe0b900278",
@@ -801,17 +820,17 @@
             "Screen_Size": "Screen 18"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9836350679397583,
-            "Processing_Method": 0.00963047705590725,
+            "Coffee_Variety": 4.555368900299072,
+            "Processing_Method": -8.248994827270508,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.9999765157699585
+            "Screen_Size": 9.285419464111328
           },
           "method": "vector",
           "metadata": {
             "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.3986484121531248
+            "avg_similarity": 1.1183587074279786
           },
           "shipment_ids": [
             "c93a9ad8be1c4ebbbece827d29785cdbbfa38d02d35bc33c1c9b9bb0703ab204"
@@ -824,20 +843,20 @@
             "Processing_Method": "None",
             "Origin_Country": "None",
             "Quality_Grade": "None",
-            "Screen_Size": "None"
+            "Screen_Size": "Screen 15"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.999977707862854,
-            "Processing_Method": 0.011392928659915924,
+            "Coffee_Variety": 9.114669799804688,
+            "Processing_Method": -9.469626426696777,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.11203227192163467
+            "Screen_Size": 4.056161880493164
           },
           "method": "vector",
           "metadata": {
-            "vector_matches": 1,
+            "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.22468058168888091
+            "avg_similarity": 0.7402410507202148
           },
           "shipment_ids": [
             "fd918bf74b3eee90df960dc24d96d343093a40d9e3b2b4b68c4c8ed97d26fc07"
@@ -850,20 +869,20 @@
             "Processing_Method": "None",
             "Origin_Country": "None",
             "Quality_Grade": "None",
-            "Screen_Size": "None"
+            "Screen_Size": "Screen 18"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9999651908874512,
-            "Processing_Method": 0.014864271506667137,
+            "Coffee_Variety": 9.06258773803711,
+            "Processing_Method": -6.97218132019043,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.35904350876808167
+            "Screen_Size": 7.513471603393555
           },
           "method": "vector",
           "metadata": {
-            "vector_matches": 1,
+            "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.27477459423244
+            "avg_similarity": 1.9207756042480468
           },
           "shipment_ids": [
             "240e139272b19ba57ba477a8826f712693c9f62dbbdb536b2ad0314739a317f2",
@@ -880,17 +899,17 @@
             "Screen_Size": "Screen 12"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9432982802391052,
-            "Processing_Method": 0.005614182446151972,
+            "Coffee_Variety": 6.65117073059082,
+            "Processing_Method": -8.311756134033203,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.9999251365661621
+            "Screen_Size": 8.743120193481445
           },
           "method": "vector",
           "metadata": {
             "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.38976751985028385
+            "avg_similarity": 1.4165069580078125
           },
           "shipment_ids": [
             "b3ed0999f25bd8698bbd23e2248e86958b5439ee08dd67212c1d69a1262fde01",
@@ -907,17 +926,17 @@
             "Screen_Size": "Screen 15"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9494614005088806,
-            "Processing_Method": 0.005936885718256235,
+            "Coffee_Variety": 6.660070419311523,
+            "Processing_Method": -8.650578498840332,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.9999309778213501
+            "Screen_Size": 8.823158264160156
           },
           "method": "vector",
           "metadata": {
             "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.3910658528096974
+            "avg_similarity": 1.3665300369262696
           },
           "shipment_ids": [
             "7c52287cc97685ec640922338daaf07cbc5d8c100a93dff19d222d505a61dc07",
@@ -938,17 +957,17 @@
             "Screen_Size": "Screen 18"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9397315979003906,
-            "Processing_Method": 0.006183705758303404,
+            "Coffee_Variety": 6.199467182159424,
+            "Processing_Method": -8.51887035369873,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.9999470710754395
+            "Screen_Size": 9.126762390136719
           },
           "method": "vector",
           "metadata": {
             "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.3891724749468267
+            "avg_similarity": 1.3614718437194824
           },
           "shipment_ids": [
             "d071d17d7138c9c8bfabf73602fdf18a41a4cad9c5a1b21dcc8b48acc1f0a0e8",
@@ -963,20 +982,20 @@
             "Processing_Method": "None",
             "Origin_Country": "None",
             "Quality_Grade": "None",
-            "Screen_Size": "Screen 18"
+            "Screen_Size": "Screen 15"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9998856782913208,
-            "Processing_Method": 0.00447927275672555,
+            "Coffee_Variety": 8.920221328735352,
+            "Processing_Method": -8.683816909790039,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.9990158081054688
+            "Screen_Size": 7.9696269035339355
           },
           "method": "vector",
           "metadata": {
             "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.40067615183070304
+            "avg_similarity": 1.6412062644958496
           },
           "shipment_ids": [
             "655a012f1103283ec059e698ddb39d1658f5d86d56b1924c7b2a6316e975586f"
@@ -992,17 +1011,17 @@
             "Screen_Size": "Screen 18"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9812631607055664,
-            "Processing_Method": 0.022369248792529106,
+            "Coffee_Variety": 6.376443386077881,
+            "Processing_Method": -8.399465560913086,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.9999727010726929
+            "Screen_Size": 8.985639572143555
           },
           "method": "vector",
           "metadata": {
             "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.40072102211415767
+            "avg_similarity": 1.3925234794616699
           },
           "shipment_ids": [
             "b274eee23e29734531d8f87a26ba9bded40da469faa1bd1e5951393c35a9479c"
@@ -1018,17 +1037,17 @@
             "Screen_Size": "Screen 12"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9646017551422119,
-            "Processing_Method": 0.007031237706542015,
+            "Coffee_Variety": 7.189715385437012,
+            "Processing_Method": -8.034566879272461,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.9999269247055054
+            "Screen_Size": 8.832084655761719
           },
           "method": "vector",
           "metadata": {
             "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.39431198351085184
+            "avg_similarity": 1.5974466323852539
           },
           "shipment_ids": [
             "339c2624bf8abd678a96267b069d4e370f8f67343f84a43ab22f71bdffded011"
@@ -1044,17 +1063,17 @@
             "Screen_Size": "Screen 15"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9677598476409912,
-            "Processing_Method": 0.008006674237549305,
+            "Coffee_Variety": 6.977140426635742,
+            "Processing_Method": -7.9578776359558105,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.9999486207962036
+            "Screen_Size": 8.864704132080078
           },
           "method": "vector",
           "metadata": {
             "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.3951430285349488
+            "avg_similarity": 1.576793384552002
           },
           "shipment_ids": [
             "1dd67c7c6746a14a394c68f323650440df67c5dc601a397bbdd1c2bf41b443fc"
@@ -1070,17 +1089,17 @@
             "Screen_Size": "Screen 17"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9649601578712463,
-            "Processing_Method": 0.0025561980437487364,
+            "Coffee_Variety": 4.2703857421875,
+            "Processing_Method": -9.436870574951172,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.9999561309814453
+            "Screen_Size": 8.749750137329102
           },
           "method": "vector",
           "metadata": {
             "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.3934944973792881
+            "avg_similarity": 0.7166530609130859
           },
           "shipment_ids": [
             "6b9464c51cd6c2757c461d7535de8912de7898259d7fc0fb2348a76c5702b362"
@@ -1096,17 +1115,17 @@
             "Screen_Size": "Screen 18"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9971092343330383,
-            "Processing_Method": 0.0019953097216784954,
+            "Coffee_Variety": 6.98543119430542,
+            "Processing_Method": -9.225069046020508,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.9999380111694336
+            "Screen_Size": 8.9378080368042
           },
           "method": "vector",
           "metadata": {
             "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.39980851104483006
+            "avg_similarity": 1.3396340370178224
           },
           "shipment_ids": [
             "647c10aa6eb29872d3eed40f5dbe9484c432145717d2fd1ba25f5519b116ab9c"
@@ -1122,17 +1141,17 @@
             "Screen_Size": "Screen 15"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9499406814575195,
-            "Processing_Method": 0.002174709690734744,
+            "Coffee_Variety": 5.539756774902344,
+            "Processing_Method": -9.131216049194336,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.9998779296875
+            "Screen_Size": 8.940628051757812
           },
           "method": "vector",
           "metadata": {
             "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.39039866416715086
+            "avg_similarity": 1.069833755493164
           },
           "shipment_ids": [
             "f2e1b08eed9be5b703b0426e626407df0521c4b4d371f6b83f521ec11cbe4dda"
@@ -1145,20 +1164,20 @@
             "Processing_Method": "None",
             "Origin_Country": "None",
             "Quality_Grade": "None",
-            "Screen_Size": "None"
+            "Screen_Size": "Screen 15"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9999759197235107,
-            "Processing_Method": 0.011340966448187828,
+            "Coffee_Variety": 9.026561737060547,
+            "Processing_Method": -9.572107315063477,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.13909484446048737
+            "Screen_Size": 4.108742713928223
           },
           "method": "vector",
           "metadata": {
-            "vector_matches": 1,
+            "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.2300823461264372
+            "avg_similarity": 0.7126394271850586
           },
           "shipment_ids": [
             "bebbab699aff17b6108658719f9ab28fccfbd097c39b787b06ce25b35c9daea4"
@@ -1174,17 +1193,17 @@
             "Screen_Size": "Screen 15"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9264412522315979,
-            "Processing_Method": 0.005868386477231979,
+            "Coffee_Variety": 7.5841264724731445,
+            "Processing_Method": -9.152216911315918,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.9998636245727539
+            "Screen_Size": 8.820877075195312
           },
           "method": "vector",
           "metadata": {
             "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.38643465265631677
+            "avg_similarity": 1.450557327270508
           },
           "shipment_ids": [
             "546255ecc7617ec4565c5ed087d858c2efa6c92f59f77d086a98a00cae63ea8f"
@@ -1200,17 +1219,17 @@
             "Screen_Size": "Screen 15"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9382214546203613,
-            "Processing_Method": 0.0022528073750436306,
+            "Coffee_Variety": 4.792308330535889,
+            "Processing_Method": -9.662443161010742,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.9998964071273804
+            "Screen_Size": 8.945852279663086
           },
           "method": "vector",
           "metadata": {
             "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.3880741338245571
+            "avg_similarity": 0.8151434898376465
           },
           "shipment_ids": [
             "555d0735108b78faa78495170e58125a72149d6a3a77958ce3a9d0632ab87d71"
@@ -1226,17 +1245,17 @@
             "Screen_Size": "Screen 18"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9974122643470764,
-            "Processing_Method": 0.001750098424963653,
+            "Coffee_Variety": 6.92253303527832,
+            "Processing_Method": -9.553796768188477,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.9999271631240845
+            "Screen_Size": 8.81367301940918
           },
           "method": "vector",
           "metadata": {
             "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.3998179051792249
+            "avg_similarity": 1.2364818572998046
           },
           "shipment_ids": [
             "44cc3c5498a95dc28d572e65c78885199de79299a0a001b08041d280d724bf44"
@@ -1252,17 +1271,17 @@
             "Screen_Size": "Screen 15"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9614744782447815,
-            "Processing_Method": 0.0016123027307912707,
+            "Coffee_Variety": 7.716039657592773,
+            "Processing_Method": -8.79508113861084,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.9998910427093506
+            "Screen_Size": 8.975569725036621
           },
           "method": "vector",
           "metadata": {
             "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.39259556473698465
+            "avg_similarity": 1.579305648803711
           },
           "shipment_ids": [
             "368d565b7f3a8a9309e70662909d69d95ca4c88405983fea727e603926df6978"
@@ -1278,14 +1297,18 @@
             "Screen_Size": "None"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.0,
-            "Processing_Method": 0.0,
+            "Coffee_Variety": -6.2136945724487305,
+            "Processing_Method": -8.609016418457031,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.0
+            "Screen_Size": -6.714295387268066
           },
-          "method": "llm",
-          "metadata": {},
+          "method": "no_match",
+          "metadata": {
+            "vector_matches": 0,
+            "total_attributes": 5,
+            "avg_similarity": -4.307401275634765
+          },
           "shipment_ids": [
             "41664c31d808ec0cd51107965261573f947d48447dba1822b2b34796831a25c6"
           ]
@@ -1300,17 +1323,17 @@
             "Screen_Size": "Screen 15"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9999250173568726,
-            "Processing_Method": 0.005119821988046169,
+            "Coffee_Variety": 7.561178207397461,
+            "Processing_Method": -7.255673408508301,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.7625157237052917
+            "Screen_Size": 6.997459411621094
           },
           "method": "vector",
           "metadata": {
             "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.3535121126100421
+            "avg_similarity": 1.4605928421020509
           },
           "shipment_ids": [
             "7dfbd38bc97a55820c5020d845747f4e7c1d3fc90f04489864df36f9b00a313b",
@@ -1332,24 +1355,24 @@
         {
           "goods_shipped": "ROBUSTA COFFEE BEANS SC 1500",
           "attributes": {
-            "Coffee_Variety": "None",
+            "Coffee_Variety": "Robusta",
             "Processing_Method": "None",
             "Origin_Country": "None",
             "Quality_Grade": "None",
             "Screen_Size": "Screen 15"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.5128035545349121,
-            "Processing_Method": 0.003016206668689847,
+            "Coffee_Variety": 5.483870506286621,
+            "Processing_Method": -9.318279266357422,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.9997027516365051
+            "Screen_Size": 8.64348030090332
           },
           "method": "vector",
           "metadata": {
-            "vector_matches": 1,
+            "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.3031045025680214
+            "avg_similarity": 0.9618143081665039
           },
           "shipment_ids": [
             "aea4850902942eb38d82b4fea6ecbc582c86c798b80248017d739d91b1e51f27",
@@ -1360,20 +1383,24 @@
           "goods_shipped": "RWENZORI WASHED ARABICA COFFEE RFA",
           "attributes": {
             "Coffee_Variety": "Arabica",
-            "Processing_Method": "Washed",
+            "Processing_Method": "None",
             "Origin_Country": "None",
             "Quality_Grade": "None",
             "Screen_Size": "None"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.0,
-            "Processing_Method": 0.0,
+            "Coffee_Variety": 4.544397354125977,
+            "Processing_Method": -2.092121124267578,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.0
+            "Screen_Size": -9.245573043823242
           },
-          "method": "llm",
-          "metadata": {},
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 1,
+            "total_attributes": 5,
+            "avg_similarity": -1.3586593627929688
+          },
           "shipment_ids": [
             "129c5459b68efe9f3df996ef669e4f957d6db1ed421f1e51d522fcc225c92323"
           ]
@@ -1382,23 +1409,23 @@
           "goods_shipped": "TANZANIA WASHED ARABICA COFFEE",
           "attributes": {
             "Coffee_Variety": "Arabica",
-            "Processing_Method": "None",
+            "Processing_Method": "Washed",
             "Origin_Country": "None",
             "Quality_Grade": "None",
             "Screen_Size": "None"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.99992835521698,
-            "Processing_Method": 0.03234228119254112,
+            "Coffee_Variety": 8.979081153869629,
+            "Processing_Method": 2.247924327850342,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.007282986771315336
+            "Screen_Size": -5.301732063293457
           },
           "method": "vector",
           "metadata": {
-            "vector_matches": 1,
+            "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.20791072463616728
+            "avg_similarity": 1.1850546836853026
           },
           "shipment_ids": [
             "6372fa1d3971c4ade5dc547210cd58c5ed203d79016d2ff3adf6c77c710c5a3c"
@@ -1408,23 +1435,23 @@
           "goods_shipped": "UGANDA NATURAL DRIED ARABICA GREEN COFFEE",
           "attributes": {
             "Coffee_Variety": "Arabica",
-            "Processing_Method": "None",
+            "Processing_Method": "Washed",
             "Origin_Country": "None",
             "Quality_Grade": "None",
-            "Screen_Size": "None"
+            "Screen_Size": "Screen 18"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9917362332344055,
-            "Processing_Method": 0.009768799878656864,
+            "Coffee_Variety": 7.171561241149902,
+            "Processing_Method": 1.4579026699066162,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.043023448437452316
+            "Screen_Size": 4.085460186004639
           },
           "method": "vector",
           "metadata": {
-            "vector_matches": 1,
+            "vector_matches": 3,
             "total_attributes": 5,
-            "avg_similarity": 0.20890569631010295
+            "avg_similarity": 2.5429848194122315
           },
           "shipment_ids": [
             "92b3e24c3bd5198b99b56bde6f4c456b0605c45c35c49b9857f93643d337e9cd"
@@ -1440,17 +1467,17 @@
             "Screen_Size": "Screen 18"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9999663829803467,
-            "Processing_Method": 0.01127849891781807,
+            "Coffee_Variety": 9.096092224121094,
+            "Processing_Method": -6.119263172149658,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.864481508731842
+            "Screen_Size": 8.693218231201172
           },
           "method": "vector",
           "metadata": {
             "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.37514527812600135
+            "avg_similarity": 2.3340094566345213
           },
           "shipment_ids": [
             "a594c3fe34ab65bc9e01929552f5c3d5cf2c3f0093a78e42cafb9784bccb8ac6",
@@ -1479,17 +1506,17 @@
             "Screen_Size": "Screen 15"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.45410415530204773,
-            "Processing_Method": 0.0015532552497461438,
+            "Coffee_Variety": -1.2615814208984375,
+            "Processing_Method": -9.580770492553711,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.999968409538269
+            "Screen_Size": 8.810659408569336
           },
           "method": "vector",
           "metadata": {
             "vector_matches": 1,
             "total_attributes": 5,
-            "avg_similarity": 0.2911251640180126
+            "avg_similarity": -0.4063385009765625
           },
           "shipment_ids": [
             "d0dfc66a4b07a538d39959bec988f2904ce5516cd1ec7516a1e0d7f6b874ab2e"
@@ -1502,20 +1529,20 @@
             "Processing_Method": "None",
             "Origin_Country": "None",
             "Quality_Grade": "None",
-            "Screen_Size": "None"
+            "Screen_Size": "Screen 18"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9999699592590332,
-            "Processing_Method": 0.003901143791154027,
+            "Coffee_Variety": 8.94997501373291,
+            "Processing_Method": -6.799609184265137,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.5382187962532043
+            "Screen_Size": 6.691374778747559
           },
           "method": "vector",
           "metadata": {
-            "vector_matches": 1,
+            "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.3084179798606783
+            "avg_similarity": 1.7683481216430663
           },
           "shipment_ids": [
             "c1d7c6998cd6bb57049272e1251ec7aff4c17f518af2238ab369d215b8355ed2"
@@ -1524,24 +1551,24 @@
         {
           "goods_shipped": "Uganda Arabica Naturals Green Coffee Beans",
           "attributes": {
-            "Coffee_Variety": "Arabica",
+            "Coffee_Variety": "Robusta",
             "Processing_Method": "None",
             "Origin_Country": "None",
             "Quality_Grade": "None",
-            "Screen_Size": "None"
+            "Screen_Size": "Screen 18"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9944830536842346,
-            "Processing_Method": 0.005375397391617298,
+            "Coffee_Variety": 6.646895408630371,
+            "Processing_Method": -1.0972477197647095,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.19195722043514252
+            "Screen_Size": 6.129971504211426
           },
           "method": "vector",
           "metadata": {
-            "vector_matches": 1,
+            "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.23836313430219888
+            "avg_similarity": 2.3359238386154173
           },
           "shipment_ids": [
             "78ab2189f67bc5e299a4fd8bcc2fee517a97a011dbf0cbab0d9905d104fd48c1"
@@ -1550,24 +1577,24 @@
         {
           "goods_shipped": "Uganda Robusta coffee Screen 12",
           "attributes": {
-            "Coffee_Variety": "None",
+            "Coffee_Variety": "Robusta",
             "Processing_Method": "None",
             "Origin_Country": "None",
             "Quality_Grade": "None",
             "Screen_Size": "Screen 12"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.45455417037010193,
-            "Processing_Method": 0.00039400148671120405,
+            "Coffee_Variety": 2.7835350036621094,
+            "Processing_Method": -8.607084274291992,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.9998865127563477
+            "Screen_Size": 8.702133178710938
           },
           "method": "vector",
           "metadata": {
-            "vector_matches": 1,
+            "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.29096693692263215
+            "avg_similarity": 0.575716781616211
           },
           "shipment_ids": [
             "b5f2186f7cb0ac1b1ba94b7c911b1b3e57e365ba486caee8bfb9d17ba5376df1"
@@ -1583,17 +1610,17 @@
             "Screen_Size": "None"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.871201753616333,
-            "Processing_Method": 0.03627769649028778,
+            "Coffee_Variety": 1.7535696029663086,
+            "Processing_Method": -2.117238998413086,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.0034906219225376844
+            "Screen_Size": -6.88014030456543
           },
           "method": "vector",
           "metadata": {
             "vector_matches": 1,
             "total_attributes": 5,
-            "avg_similarity": 0.1821940144058317
+            "avg_similarity": -1.4487619400024414
           },
           "shipment_ids": [
             "44d06cce141708eb929b6be69968921c12ab521c688a01085f050a425905f8ab"
@@ -1603,23 +1630,23 @@
           "goods_shipped": "WASHED TANZANIA ARABICA COFFEE",
           "attributes": {
             "Coffee_Variety": "Arabica",
-            "Processing_Method": "None",
+            "Processing_Method": "Washed",
             "Origin_Country": "None",
             "Quality_Grade": "None",
             "Screen_Size": "None"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9999454021453857,
-            "Processing_Method": 0.05731738731265068,
+            "Coffee_Variety": 8.879925727844238,
+            "Processing_Method": 2.0969643592834473,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.006038491148501635
+            "Screen_Size": -5.77071475982666
           },
           "method": "vector",
           "metadata": {
-            "vector_matches": 1,
+            "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.21266025612130762
+            "avg_similarity": 1.0412350654602052
           },
           "shipment_ids": [
             "ed85aeb62e67baee82d01b27ccc88d2c205568041fb201db234624ab25e75793"
@@ -1635,17 +1662,17 @@
             "Screen_Size": "None"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9999102354049683,
-            "Processing_Method": 0.10186196863651276,
+            "Coffee_Variety": 8.49566650390625,
+            "Processing_Method": 0.6326599717140198,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 4.124093902646564e-05
+            "Screen_Size": -11.352846145629883
           },
           "method": "vector",
           "metadata": {
             "vector_matches": 1,
             "total_attributes": 5,
-            "avg_similarity": 0.2203626889961015
+            "avg_similarity": -0.44490393400192263
           },
           "shipment_ids": [
             "dedd13b1f0476800dae0be12f6dcff422c69e1ecafec2fd92f0213bf5ffbabbe"
@@ -1654,24 +1681,24 @@
         {
           "goods_shipped": "WASHED UGANDA ARABICA BUGISU",
           "attributes": {
-            "Coffee_Variety": "None",
+            "Coffee_Variety": "Arabica",
             "Processing_Method": "Washed",
             "Origin_Country": "None",
             "Quality_Grade": "None",
             "Screen_Size": "None"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.285738080739975,
-            "Processing_Method": 0.9998849630355835,
+            "Coffee_Variety": 6.2976484298706055,
+            "Processing_Method": 8.697781562805176,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.002019729930907488
+            "Screen_Size": -8.613578796386719
           },
           "method": "vector",
           "metadata": {
-            "vector_matches": 1,
+            "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.2575285547412932
+            "avg_similarity": 1.2763702392578125
           },
           "shipment_ids": [
             "61dd4b93037783784b02e4127df9444dbfdbc54ac86f6c4e6f5963b6520e9a49"
@@ -1681,23 +1708,23 @@
           "goods_shipped": "WASHED UGANDA ARABICA COFFEE",
           "attributes": {
             "Coffee_Variety": "Arabica",
-            "Processing_Method": "None",
+            "Processing_Method": "Washed",
             "Origin_Country": "None",
             "Quality_Grade": "None",
-            "Screen_Size": "None"
+            "Screen_Size": "Screen 15"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9999290704727173,
-            "Processing_Method": 0.31790268421173096,
+            "Coffee_Variety": 8.86508560180664,
+            "Processing_Method": 6.503302574157715,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.09074028581380844
+            "Screen_Size": 1.337344765663147
           },
           "method": "vector",
           "metadata": {
-            "vector_matches": 1,
+            "vector_matches": 3,
             "total_attributes": 5,
-            "avg_similarity": 0.2817144080996513
+            "avg_similarity": 3.3411465883255005
           },
           "shipment_ids": [
             "2f5119590d5cd2dc912a385031fffbc5c996f71a0c8d16192f5d30f99354fe11"
@@ -1710,20 +1737,20 @@
             "Processing_Method": "None",
             "Origin_Country": "None",
             "Quality_Grade": "None",
-            "Screen_Size": "None"
+            "Screen_Size": "Screen 18"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9999316930770874,
-            "Processing_Method": 0.040415070950984955,
+            "Coffee_Variety": 8.023788452148438,
+            "Processing_Method": -5.19247579574585,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.6803117990493774
+            "Screen_Size": 7.590549945831299
           },
           "method": "vector",
           "metadata": {
-            "vector_matches": 1,
+            "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.34413171261548997
+            "avg_similarity": 2.0843725204467773
           },
           "shipment_ids": [
             "de13b1efc48e9f60853c55aad1ee265cd4ee77e092b9d9d493204e4875dd1dc6"
@@ -1732,24 +1759,24 @@
         {
           "goods_shipped": "КАВА, СМАЖЕНА АБО НЕСМАЖЕНА, З КОФЕЇНОМ АБО БЕЗ КОФЕЇНУ; КАВОВА ШКАРАЛУПА ТА ОБОЛОНКИ ЗЕРЕН КАВИ; ЗАМІННИКИ КАВИ З ВМІСТОМ КАВИ В БУДЬ-ЯКІЙ ПРОПОРЦІЇ: - КАВА НЕСМАЖЕНА: - - З КОФЕЇНОМ: - - - ІНША,COFFEE ,  WHETHER OR NOT ROASTED ,  DECAFFEINATED OR NOT; COFFEE SHELLS AND COFFEE BEANS; COFFEE SUBSTITUTES CONTAINING COFFEE IN ANY PROPORTION: - COFFEE ,  UNROASTED: - - DECAFFEINATED: - - - OTHER",
           "attributes": {
-            "Coffee_Variety": "Arabica",
-            "Processing_Method": "Natural",
+            "Coffee_Variety": "None",
+            "Processing_Method": "None",
             "Origin_Country": "None",
             "Quality_Grade": "None",
-            "Screen_Size": "Screen 18"
+            "Screen_Size": "None"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.8819991946220398,
-            "Processing_Method": 0.9248466491699219,
+            "Coffee_Variety": -3.4220223426818848,
+            "Processing_Method": -0.5158631205558777,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.7571014761924744
+            "Screen_Size": -4.011541366577148
           },
-          "method": "vector",
+          "method": "no_match",
           "metadata": {
-            "vector_matches": 3,
+            "vector_matches": 0,
             "total_attributes": 5,
-            "avg_similarity": 0.5127894639968872
+            "avg_similarity": -1.5898853659629821
           },
           "shipment_ids": [
             "4f21cc16dfea018d1081dcd834680d5faab3b40bc390e65ea921f5aabf52804b"
@@ -1758,24 +1785,24 @@
         {
           "goods_shipped": "КАВА, СМАЖЕНА АБО НЕСМАЖЕНА, З КОФЕЇНОМ АБО БЕЗ КОФЕЇНУ; КАВОВА ШКАРАЛУПА ТА ОБОЛОНКИ ЗЕРЕН КАВИ; ЗАМІННИКИ КАВИ З ВМІСТОМ КАВИ В БУДЬ-ЯКІЙ ПРОПОРЦІЇ: - КАВА НЕСМАЖЕНА: - - З КОФЕЇНОМ: - - - ДЛЯ ПРОМИСЛОВОГО ВИРОБНИЦТВА КОМПОНЕНТІВ КАВОВИХ НАПОЇВ І КАВИ Н,COFFEE ,  WHETHER OR NOT ROASTED ,  DECAFFEINATED OR NOT; COFFEE SHELLS AND COFFEE BEANS; COFFEE SUBSTITUTES CONTAINING COFFEE IN ANY PROPORTION: - COFFEE ,  UNROASTED: - - DECAFFEINATED: - - - FOR THE INDUSTRIAL MANUFACTURE OF COMPONENTS OF COFFEE BEVERAGES AND COFFEE N",
           "attributes": {
-            "Coffee_Variety": "Arabica",
+            "Coffee_Variety": "None",
             "Processing_Method": "Natural",
             "Origin_Country": "None",
             "Quality_Grade": "None",
-            "Screen_Size": "Screen 18"
+            "Screen_Size": "None"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9621188044548035,
-            "Processing_Method": 0.9389477372169495,
+            "Coffee_Variety": -2.59553599357605,
+            "Processing_Method": 3.4356284141540527,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.9651136994361877
+            "Screen_Size": -3.526409149169922
           },
           "method": "vector",
           "metadata": {
-            "vector_matches": 3,
+            "vector_matches": 1,
             "total_attributes": 5,
-            "avg_similarity": 0.5732360482215881
+            "avg_similarity": -0.5372633457183837
           },
           "shipment_ids": [
             "ad12ac817b7c5a965e03e2d033054f2f091bc6e5d7a4150af0136e7228c5a609"
@@ -1784,24 +1811,24 @@
         {
           "goods_shipped": "КАВА, СМАЖЕНА АБО НЕСМАЖЕНА, З КОФЕЇНОМ АБО БЕЗ КОФЕЇНУ; КАВОВА ШКАРАЛУПА ТА ОБОЛОНКИ ЗЕРЕН КАВИ; ЗАМІННИКИ КАВИ З ВМІСТОМ КАВИ В БУДЬ-ЯКІЙ ПРОПОРЦІЇ: - КАВА НЕСМАЖЕНА: - - З КОФЕЇНОМ: - - - ДЛЯ ПРОМИСЛОВОГО ВИРОБНИЦТВАКОМПОНЕНТІВ КАВОВИХ НАПОЇВ І КАВИ НА,COFFEE ,  WHETHER OR NOT ROASTED ,  DECAFFEINATED OR NOT; COFFEE SHELLS AND COFFEE BEANS; COFFEE SUBSTITUTES CONTAINING COFFEE IN ANY PROPORTION: - COFFEE ,  UNROASTED: - - DECAFFEINATED: - - - FOR THE INDUSTRIAL MANUFACTURE OF COMPONENTS OF COFFEE BEVERAGES AND COFFEE",
           "attributes": {
-            "Coffee_Variety": "Arabica",
+            "Coffee_Variety": "None",
             "Processing_Method": "Natural",
             "Origin_Country": "None",
             "Quality_Grade": "None",
-            "Screen_Size": "Screen 18"
+            "Screen_Size": "None"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9679857492446899,
-            "Processing_Method": 0.9461566805839539,
+            "Coffee_Variety": -3.3843040466308594,
+            "Processing_Method": 3.3542842864990234,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.9674745202064514
+            "Screen_Size": -4.213784694671631
           },
           "method": "vector",
           "metadata": {
-            "vector_matches": 3,
+            "vector_matches": 1,
             "total_attributes": 5,
-            "avg_similarity": 0.576323390007019
+            "avg_similarity": -0.8487608909606934
           },
           "shipment_ids": [
             "cb9d297c4e7e9b208179aef452a525fbb1f724edda85c4a91a178ab9da5cbe34",
@@ -1815,24 +1842,24 @@
         {
           "goods_shipped": "КАВА, СМАЖЕНА АБО НЕСМАЖЕНА, З КОФЕЇНОМ АБО БЕЗ КОФЕЇНУ; КАВОВА ШКАРАЛУПА ТА ОБОЛОНКИ ЗЕРЕН КАВИ; ЗАМІННИКИ КАВИ З ВМІСТОМ КАВИ В БУДЬ-ЯКІЙ ПРОПОРЦІЇ: - КАВА НЕСМАЖЕНА: - - З КОФЕЇНОМ: - - - ДЛЯ ПРОМИСЛОВОГО ВИРОБНИЦТВАКОМПОНЕНТІВ КАВОВИХ НАПОЇВ І КАВИ НА,COFFEE ,  WHETHER OR NOT ROASTED ,  DECAFFEINATED OR NOT; COFFEE SHELLS AND COFFEE BEANS; COFFEE SUBSTITUTES CONTAINING COFFEE IN ANY PROPORTION: - COFFEE ,  UNROASTED: - - DECAFFEINATED: - - - FOR THE INDUSTRIAL MANUFACTURE OF COMPONENTS OF COFFEE BEVERAGES AND COFFEE FOR",
           "attributes": {
-            "Coffee_Variety": "Arabica",
+            "Coffee_Variety": "None",
             "Processing_Method": "Natural",
             "Origin_Country": "None",
             "Quality_Grade": "None",
-            "Screen_Size": "Screen 18"
+            "Screen_Size": "None"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9630435109138489,
-            "Processing_Method": 0.9504382610321045,
+            "Coffee_Variety": -3.3621175289154053,
+            "Processing_Method": 3.3542842864990234,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.9632480144500732
+            "Screen_Size": -4.513497352600098
           },
           "method": "vector",
           "metadata": {
-            "vector_matches": 3,
+            "vector_matches": 1,
             "total_attributes": 5,
-            "avg_similarity": 0.5753459572792053
+            "avg_similarity": -0.9042661190032959
           },
           "shipment_ids": [
             "5f9b224e0d46bdff2d5175055f83fb0fe869ef50a6236216f12385114a4a8daf",
@@ -1849,24 +1876,24 @@
         {
           "goods_shipped": "КАВА, СМАЖЕНА АБО НЕСМАЖЕНА, З КОФЕЇНОМ АБО БЕЗ КОФЕЇНУ; КАВОВА ШКАРАЛУПА ТА ОБОЛОНКИ ЗЕРЕН КАВИ; ЗАМІННИКИ КАВИ З ВМІСТОМ КАВИ В БУДЬ-ЯКІЙ ПРОПОРЦІЇ: - КАВА НЕСМАЖЕНА: - - З КОФЕЇНОМ: - - - ДЛЯ ПРОМИСЛОВОГО ВИРОБНИЦТВАКОМПОНЕНТІВ КАВОВИХ НАПОЇВ І КАВИ НАТУРАЛЬНОЇ, СМАЖЕНОЇ В ЗЕРНАХ, МЕЛЕНОЇ, РОЗЧИННОЇ,COFFEE ,  ROASTED OR UNROASTED ,  WHETHER OR NOT DECAFFEINED; COFFEE HUSKERS AND COFFEE BEANS; COFFEE SUBSTITUTES CONTAINING COFFEE IN ANY PROPORTION: - COFFEE ,  UNROASTED: - - DECAFFEINED: - - - FOR THE INDUSTRIAL MANUFACTURE OF COMPONENTS OF COFFEE BEVERAGES AND NATURAL COFFEE ,  ROASTED IN BEANS ,  GROUND ,  SOLUBLE",
           "attributes": {
-            "Coffee_Variety": "Arabica",
+            "Coffee_Variety": "None",
             "Processing_Method": "Natural",
             "Origin_Country": "None",
             "Quality_Grade": "None",
-            "Screen_Size": "Screen 15"
+            "Screen_Size": "None"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9590776562690735,
-            "Processing_Method": 0.976760983467102,
+            "Coffee_Variety": -3.1757383346557617,
+            "Processing_Method": 3.144958734512329,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.9533286094665527
+            "Screen_Size": -3.661923885345459
           },
           "method": "vector",
           "metadata": {
-            "vector_matches": 3,
+            "vector_matches": 1,
             "total_attributes": 5,
-            "avg_similarity": 0.5778334498405456
+            "avg_similarity": -0.7385406970977784
           },
           "shipment_ids": [
             "148c845761b0e88f2cdaa44c69a21b7a19cda933d90086d0d901eee18c7ffc71",
@@ -1883,23 +1910,23 @@
           "goods_shipped": "КОФЕ НЕЖАРЕНЫЙ С КОФЕИНОМ: АРАБИКА (COFFEA ARABICA)",
           "attributes": {
             "Coffee_Variety": "Arabica",
-            "Processing_Method": "None",
+            "Processing_Method": "Natural",
             "Origin_Country": "None",
             "Quality_Grade": "None",
             "Screen_Size": "None"
           },
           "similarity_scores": {
-            "Coffee_Variety": 0.9999786615371704,
-            "Processing_Method": 0.4525621235370636,
+            "Coffee_Variety": 8.494144439697266,
+            "Processing_Method": 7.984644889831543,
             "Origin_Country": 0.0,
             "Quality_Grade": 0.0,
-            "Screen_Size": 0.01534753292798996
+            "Screen_Size": -9.237102508544922
           },
           "method": "vector",
           "metadata": {
-            "vector_matches": 1,
+            "vector_matches": 2,
             "total_attributes": 5,
-            "avg_similarity": 0.2935776636004448
+            "avg_similarity": 1.4483373641967774
           },
           "shipment_ids": [
             "997d4ef5c466fd5f76fd3cc19c22a17bf8cf575a428e34b16215b7deb7dd59c2"
@@ -1908,7 +1935,7 @@
       ]
     }
   },
-  "token_usage": 2324,
-  "timestamp": "2025-12-11T20:10:21.723068",
+  "token_usage": 0,
+  "timestamp": "2025-12-11T22:14:18.250195",
   "version": 2
 }

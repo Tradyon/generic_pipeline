@@ -1,9 +1,8 @@
 """
 Weaviate-based Products Classifier Module
 
-Hybrid classification using Weaviate vector search with LLM fallback.
-Uses semantic similarity for fast classification of known patterns,
-falls back to LLM for novel goods descriptions.
+Hybrid classification using Weaviate vector search.
+Uses semantic similarity for fast classification of known patterns.
 """
 
 import pandas as pd
@@ -59,7 +58,7 @@ def create_classification_schema(product_categories: List[str]) -> Dict[str, Any
 
 
 class WeaviateProductClassifier:
-    """Hybrid product classifier using Weaviate vector search with LLM fallback."""
+    """Hybrid product classifier using Weaviate vector search."""
 
     def __init__(
         self,
@@ -319,7 +318,7 @@ If uncertain, use "Unclassified". Array length MUST match {len(goods_description
     
     def classify_batch_hybrid(self, goods_batch: List[str]) -> List[Tuple[str, float, str]]:
         """
-        Classify a batch using hybrid approach: Weaviate first, LLM for misses.
+        Classify a batch using hybrid approach: Weaviate first.
         
         Parameters:
         -----------
@@ -332,32 +331,11 @@ If uncertain, use "Unclassified". Array length MUST match {len(goods_description
             List of (category, confidence, method) tuples
         """
         results = []
-        llm_needed = []
-        llm_indices = []
         
         # Try Weaviate for all items
         for i, goods in enumerate(goods_batch):
             category, confidence, method = self.classify_single_weaviate(goods)
-            
-            if method == 'vector_match':
-                results.append((category, confidence, method))
-            else:
-                # Mark for LLM fallback
-                results.append(None)
-                llm_needed.append(goods)
-                llm_indices.append(i)
-        
-        # Use LLM for items that didn't match
-        if llm_needed:
-            logger.debug(f"Using LLM fallback for {len(llm_needed)} items")
-            llm_categories = self.classify_batch_llm(llm_needed)
-            
-            # Fill in LLM results
-            for idx, category in zip(llm_indices, llm_categories):
-                results[idx] = (category, 0.0, 'llm_fallback')
-            
-            # Store new classifications in Weaviate for future use
-            self.store_new_classifications(llm_needed, llm_categories)
+            results.append((category, confidence, method))
         
         return results
     

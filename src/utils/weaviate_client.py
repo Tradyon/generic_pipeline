@@ -92,7 +92,8 @@ class WeaviateClient:
             vectorizer_config=Configure.Vectorizer.text2vec_transformers(),
             reranker_config=Configure.Reranker.transformers(),
             properties=[
-                Property(name=self.text_field, data_type=DataType.TEXT),
+                Property(name="text_vector", data_type=DataType.TEXT),
+                Property(name=self.text_field, data_type=DataType.TEXT, skip_vectorization=True),
                 Property(name="attribute_name", data_type=DataType.TEXT, skip_vectorization=True),
                 Property(name="attribute_value", data_type=DataType.TEXT, skip_vectorization=True),
                 Property(name="hs_code", data_type=DataType.TEXT, skip_vectorization=True),
@@ -131,8 +132,13 @@ class WeaviateClient:
         with collection.batch.fixed_size(batch_size=batch_size, concurrent_requests=4) as batch:
             for i, record in enumerate(records):
                 # Prepare properties
+                # E5 models require "passage: " prefix for documents
+                raw_text = record[self.text_field]
+                vector_text = f"passage: {raw_text}"
+
                 properties = {
-                    self.text_field: record[self.text_field],
+                    "text_vector": vector_text,
+                    self.text_field: raw_text,
                     "hs_code": record["hs_code"],
                     "category": record["category"],
                     "confidence": record.get("confidence", 1.0),
@@ -202,14 +208,20 @@ class WeaviateClient:
             f = Filter.by_property("attribute_name").equal(attribute_name)
             filters = f if filters is None else filters & f
         
+        # E5 models require "query: " prefix for queries
+        search_query = query_text
+        if not search_query.startswith("query: "):
+            search_query = f"query: {search_query}"
+
         try:
+            # Use Weaviate's built-in reranker
             response = collection.query.near_text(
-                query=query_text,
+                query=search_query,
                 limit=top_k,
                 filters=filters,
                 rerank=Rerank(
                     prop=self.text_field,
-                    query=query_text
+                    query=query_text  # Use raw query for reranker
                 ),
                 return_metadata=MetadataQuery(score=True)
             )
@@ -220,10 +232,16 @@ class WeaviateClient:
             # Format result to match Pinecone style for compatibility
             final_results = []
             for obj in response.objects[:rerank_top_n]:
+                props = obj.properties
+                # Strip "passage: " prefix from text field if present, to keep it clean for the caller
+                if self.text_field in props and isinstance(props[self.text_field], str):
+                    if props[self.text_field].startswith("passage: "):
+                        props[self.text_field] = props[self.text_field][9:]
+
                 final_results.append({
                     "id": str(obj.uuid),
-                    "score": obj.metadata.score, # Rerank score
-                    "fields": obj.properties
+                    "score": obj.metadata.rerank_score if obj.metadata.rerank_score is not None else obj.metadata.score,
+                    "fields": props
                 })
                 
             return final_results
