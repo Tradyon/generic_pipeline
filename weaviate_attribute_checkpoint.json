@@ -1,0 +1,1931 @@
+{
+  "products": {
+    "9011::Bulk Commodity Green Coffee": {
+      "completed": 67,
+      "classifications": [
+        {
+          "goods_shipped": "25 BAGS OF TANZANIA ARABICA COFFEE AA-AB PLUS P75121",
+          "attributes": {
+            "Coffee_Variety": "Arabica",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9808303117752075,
+            "Processing_Method": 0.004266810137778521,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.0036594693083316088
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 1,
+            "total_attributes": 5,
+            "avg_similarity": 0.19775131824426354
+          },
+          "shipment_ids": [
+            "5788d4fe3ff16fdf33596bb08415c5d64454554bd3e5eb21957e4aca97d5c87e"
+          ]
+        },
+        {
+          "goods_shipped": "30) COFFEE BEANS OF ASSORTED FLAVOR  NET WEIGHT: 60 KGS APPROX.",
+          "attributes": {
+            "Coffee_Variety": "None",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.0,
+            "Processing_Method": 0.0,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.0
+          },
+          "method": "llm",
+          "metadata": {
+            "invalid": 0,
+            "total": 5,
+            "deterministic_stats": {
+              "rows_with_any_match": 0,
+              "rows_total": 2,
+              "attribute_matches": 0,
+              "attribute_attempted": 10,
+              "attribute_match_rate": 0.0,
+              "negation_blocked": 0
+            },
+            "out_of_schema": 0,
+            "heuristic_fills": 0
+          },
+          "shipment_ids": [
+            "a984d291a3b182aaca6b166fb494b61dd602ff12db4a0a334df3dc6eb6d6aba4"
+          ]
+        },
+        {
+          "goods_shipped": "54 BAGS OF TANZANIA ARABICA COFFEE AA-AB PLUS P75744.000",
+          "attributes": {
+            "Coffee_Variety": "Arabica",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9999772310256958,
+            "Processing_Method": 0.00321113015525043,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.0017659056466072798
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 1,
+            "total_attributes": 5,
+            "avg_similarity": 0.2009908533655107
+          },
+          "shipment_ids": [
+            "be0d35674adb2dcbe153eb1ec17cc1bfc97e7f9970c01b9ca4598ad314143ab9"
+          ]
+        },
+        {
+          "goods_shipped": "58 BAGS OF TANZANIA ARABICA COFFEE AA-AB PLUS P75744",
+          "attributes": {
+            "Coffee_Variety": "Arabica",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9999774694442749,
+            "Processing_Method": 0.0036725755780935287,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.002175494097173214
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 1,
+            "total_attributes": 5,
+            "avg_similarity": 0.20116510782390834
+          },
+          "shipment_ids": [
+            "5c5162baa4a96731c624a023bef7b1115aedd02d625f425fcbe38e53df2d8460"
+          ]
+        },
+        {
+          "goods_shipped": "ARABICA COFFEE",
+          "attributes": {
+            "Coffee_Variety": "Arabica",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9999139308929443,
+            "Processing_Method": 0.014751472510397434,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.03277835622429848
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 1,
+            "total_attributes": 5,
+            "avg_similarity": 0.20948875192552804
+          },
+          "shipment_ids": [
+            "4ddd5f307692b41738ddcdf2d564b3550b9903d4cab94e925d8d21e8c7414079",
+            "d53e74973fc694467e37121f3dec7f84bd8163f49d07c407ea8db26e8ddf37af",
+            "8ed97c44f1a9a814d234c114d894910861b76e7ba572dd204ba16aec8a5625ad",
+            "826f8e6da23765f1da9d0451c5308437666f43ebeb28b7573418d3d2b597f33e",
+            "c50fb814df0ebf0d111d77e37f3574bd87705252d923eeea3f7d0be6f73519bc",
+            "5f48cf627d93b5973553091482104c83502c079a3008b897c1350482ba5fed89",
+            "dadef02b05603f82595c84e050bd8d32712621fcc66ee748735d4ace68e58e78",
+            "b7e1a976507c15b4fad0816fcc119861f655e30cd6603619553ab6d6e8cb618f",
+            "140d39cc359ed28a3372dd82d371cb48c985ddc535b625bbf9812aff50a96cb9"
+          ]
+        },
+        {
+          "goods_shipped": "ARABICA GREEN COFFEE BEANS",
+          "attributes": {
+            "Coffee_Variety": "Arabica",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9999563694000244,
+            "Processing_Method": 0.0040666754357516766,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.016032252460718155
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 1,
+            "total_attributes": 5,
+            "avg_similarity": 0.20401105945929884
+          },
+          "shipment_ids": [
+            "105fc535c97d35412a00bf2396f7f266568130cfac427f65577e754979d3c677",
+            "fb015a65a31cd3f1f32dce6add2656a8031130dc005bdbd568801a89a68feafe",
+            "923c1a7fb94d70855e5235b96af307471154cab4d3ebc019f28702d5d8baa7ef"
+          ]
+        },
+        {
+          "goods_shipped": "BAGS OF 60KGS TANZANIA WASHED ARABICA COFFEE CONTRACT NO.4127250084",
+          "attributes": {
+            "Coffee_Variety": "Arabica",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9999798536300659,
+            "Processing_Method": 0.016662757843732834,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.013297929428517818
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 1,
+            "total_attributes": 5,
+            "avg_similarity": 0.20598810818046331
+          },
+          "shipment_ids": [
+            "ade116f1b619dbea59e6640e25f8afc604ea865eac9fffd66e71bde860480eab"
+          ]
+        },
+        {
+          "goods_shipped": "Black raspberry coffee  300gr/bag  manufacturer: Vesco Pharmaceutical Company  expiry date: January 20  2025 - 12 months#&VN",
+          "attributes": {
+            "Coffee_Variety": "None",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.0,
+            "Processing_Method": 0.0,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.0
+          },
+          "method": "llm",
+          "metadata": {
+            "invalid": 0,
+            "total": 10,
+            "deterministic_stats": {
+              "rows_with_any_match": 0,
+              "rows_total": 2,
+              "attribute_matches": 0,
+              "attribute_attempted": 10,
+              "attribute_match_rate": 0.0,
+              "negation_blocked": 0
+            },
+            "out_of_schema": 0,
+            "heuristic_fills": 0
+          },
+          "shipment_ids": [
+            "2018264cfea654930b5603024f1ed1470471702cf934bfbe0ecec9b49fe7e0ed"
+          ]
+        },
+        {
+          "goods_shipped": "Black raspberry coffee  700gr/bag  manufacturer: Vesco Pharmaceutical Company  expiry date: January 20  2025 - 12 months#&VN",
+          "attributes": {
+            "Coffee_Variety": "None",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.0,
+            "Processing_Method": 0.0,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.0
+          },
+          "method": "llm",
+          "metadata": {},
+          "shipment_ids": [
+            "6c55f1616731163aceae4463e8939f6bce866eef41e288723114697fc1b5bfb9"
+          ]
+        },
+        {
+          "goods_shipped": "COFFEE",
+          "attributes": {
+            "Coffee_Variety": "None",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.0,
+            "Processing_Method": 0.0,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.0
+          },
+          "method": "llm",
+          "metadata": {
+            "invalid": 0,
+            "total": 20,
+            "deterministic_stats": {
+              "rows_with_any_match": 0,
+              "rows_total": 4,
+              "attribute_matches": 0,
+              "attribute_attempted": 20,
+              "attribute_match_rate": 0.0,
+              "negation_blocked": 0
+            },
+            "out_of_schema": 0,
+            "heuristic_fills": 0
+          },
+          "shipment_ids": [
+            "61bf8e359969c3c8652b8690303b6d4b1794d0808fefd4bb51d50bd511964d20",
+            "5e60c11efc42388123ce55af576794923132a61b6446ba3bed6aa15a284d832d",
+            "e4914e0ab4c070bd9060e1098bf1015a887a4e092ac5ced8461c374e76701dcd",
+            "32a8a176abbf23cdb8b26a1cf372c56135c5c61d92dee69b01be8cd90faa9a0c",
+            "a4de048e5b6745cfd5fa1aa6bcadd5c2bdc6a40fa8debc49ae5d7d8b22d359b5",
+            "60be3b5d81efee76c397bfbaa85b6b2708278917185889b80ee39020ebc188bf",
+            "04ea1d3c9a38fd33c6d79a2e3fe84262a848c6ed7d1a49ef0e433fe48cf99d9c",
+            "a2312decf7e539386f178f04b8e2504cce7c8f69d8324f815ccd655a8b0a95fd",
+            "a8bd5aea3a18a48f3353652a1264926f7f7ff67db43fbc1ffde2f75749b02871",
+            "7b414498b15f16797d916a18ebadd84540b37bf801f5075b34376ea2ec23389e",
+            "261ec95f0dbde8d37e43cc7d3d9cced1a451326e2522ed7d32eb217e526cd1fd",
+            "1b68d029a521141256ad04870356ef11cf0dfb871b3d9789b78738ce08acbf27",
+            "ba43213ec2222d461b65bdeb157367e2857f3da23d5b78432c34130c31adbea8",
+            "6e3de1418b8e8c49d4b073ed796f29e0c6d0764461408af6e1449076653adc42",
+            "2922973bb3933a99e1095d5a157422064bb6dd0cf8a2ae7de7d3cedf10c97937",
+            "86165b4b40d2a8ca53c614cdaaee9de1fb90f081800df6e945884e12e3307817",
+            "62c7c157c289148ac3f360e076f0552b5b0c8b91f0fbfb5f702e0ad830de9158",
+            "fcbfe903f2a6be0a22b344a9f2bc39c6214353a01f807c581e2f0f0b15573423",
+            "74531513e6ed00c69038d93a544843aa4bbf39e84a2d6ab8c06a41160e830037",
+            "7209f9536a8115eb5aee78e38b33e8f5de34d3060852f2edbe8a3562f43d4518",
+            "1f86ae549d438139c38edd0e72ccc7aeca212825db258f2f599ac2f2e3584fe7",
+            "ee06efb898b0e14e1fad817ecc3d20b4485edb252061770c50acf4236898eae9",
+            "cb9abb3c5e5d4ee53665a38bf34608d8c27771909f320f930293e4a90fcc76a6",
+            "eea0dd16f7f85971707ff5495cf3a6830adb9cfd22957a926face74bdb1a93dc",
+            "8cdd72649e9260da2689a97097e175759d32e9d270640c07e3043614006f9169",
+            "646513f9fa7438ca1cd1b8d0bf69666beead6deaae2f16405108563e1094f490",
+            "21960e228f4f68a4ac66c492ff3f5b6ab1742ee986366f78a5c8af0cd8ff8011",
+            "b3115dfc46d5ddf4740a690dfcaf9227c8bcc34772d888a3dad816699b2d59ea",
+            "ac88117c6857e05fc4e6fc5856bd15443ed327839e2ec0905153f9e930a6b681",
+            "0383d371a72364f1f441c561344aa65a2a1b4fe52941ec99612d9167b564bce4",
+            "6c5caee56f28be966fef299e54d12e04c4b1d0833fc16d4e7edc2f7b5a4d3e06",
+            "dcd62ab07d2490f8dbd3e3e95d55596baedaccef3d6b2c9678210525e558fb78",
+            "3b85119a3c390275d17d6a1aaead210b5566563d754294d79046e35e1255775e",
+            "4236bb586cd99530ccbe4337a9d792de5f00b7827f08fc7ad2225a190f89c1c9",
+            "92dc4ebc42f0b1701f4e93f45dabdfde6cdb06dde4f42d96bde396ccb0802969",
+            "e333697e3cb51a7c3541ed2a5761ad60aadceac9435eb4aa2ad334cb10b05f02",
+            "ed3a20fcb5f3df2830c9320bdd4913dafc704677f5b98f1125f8e87538d975b6",
+            "f9ef6d5f14cfc4399c5112fd43fed01cd6da7797e85887b17023ecab6590512c",
+            "cef9e97ae9309b78d9534b348f6307c32c5d3c3737827717a3013a202a1c6fa2",
+            "cfc0da92946f651042dfa7fef23317fa08f18374e4c618035bf990c033f24b44",
+            "6d999b87f0110779203c036d2e9c14a6dc04499b277d4d79967eb2ede9af3180",
+            "07cb374f42c4da759f32efe8815da85ca4d50554b82038b2762f18795aab4b4c",
+            "ec5e6e36b871b1b88a5d6f456ac84ab570adb4c28e2a28902c5ee654c0a967b6",
+            "e46df1754083e102f7f7b94559934746b099911f8d35f830ad1acd9ea1d8f641",
+            "c2bea7af33b40f5ca16e6f29f32ed55234efb3a0b0058078e5c1af31cd650f8c",
+            "26f7f52964def970c152d70cca73bfddf30a62c9fd773a7734bbfe5dab783c2a"
+          ]
+        },
+        {
+          "goods_shipped": "Compound optical microscopes ,  including those for photomicrography ,  cinephotomicrography or microprojection. ,  Stereoscopic microscopes",
+          "attributes": {
+            "Coffee_Variety": "None",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.0,
+            "Processing_Method": 0.0,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.0
+          },
+          "method": "llm",
+          "metadata": {},
+          "shipment_ids": [
+            "960098a276112d7d40d881fa3b7093d45b1d342b4334ad1c51a98379d2645198",
+            "2564baf553bbda3665bbcf4667820a5a07c12a029ccdef5b7b877630f47ff0c6",
+            "b3bed54c6db6f45abdc442671bf2e193d27f22b76b2917b42d631d70ab809adb",
+            "b7f348cb7ddbf983e1637db5e8f03181dedbd9c6b1502cc58f196be90b086211"
+          ]
+        },
+        {
+          "goods_shipped": "GREEN COFFEE ARABICA TANZANIA FULLY WASHED AB-RFA",
+          "attributes": {
+            "Coffee_Variety": "Arabica",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9999759197235107,
+            "Processing_Method": 0.02323503978550434,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.0018619400216266513
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 1,
+            "total_attributes": 5,
+            "avg_similarity": 0.20501457990612834
+          },
+          "shipment_ids": [
+            "f3f3f1f49db314bac719cdbd1d72f6d3bbb2af6260230af833f4bbae393ac57a"
+          ]
+        },
+        {
+          "goods_shipped": "Movable assets: Coffee#&JP",
+          "attributes": {
+            "Coffee_Variety": "None",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.0,
+            "Processing_Method": 0.0,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.0
+          },
+          "method": "llm",
+          "metadata": {},
+          "shipment_ids": [
+            "389a6885c7e66b779af4e56ca2c19555a6b35c41eecfd55d8c1762189aff63c4",
+            "ea8e49c95538fb97559eb7fd2799443e3c762cabc355719ecbf2d46402780039"
+          ]
+        },
+        {
+          "goods_shipped": "Movable assets: coffee#&JP",
+          "attributes": {
+            "Coffee_Variety": "None",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.0,
+            "Processing_Method": 0.0,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.0
+          },
+          "method": "llm",
+          "metadata": {},
+          "shipment_ids": [
+            "27dd60f8c0c6aaa661421af198c84b385c4bffb1fd1fe37bb6bca78a18c4c97a",
+            "2fdd8e52992d869d0dd340a2638fb6baa17ab19eaa1095ce272155da3d4c07bc",
+            "b7f8b2174ab3ddee2c07c68d6897891133673f3fc2ca4f582beeb8782162d8ba",
+            "fa683a5f69cf1108a7607040f80d9ed93670ec0c7f50abb891312a0466220a50"
+          ]
+        },
+        {
+          "goods_shipped": "NATURAL ARABICA COFFEE DRUGAR",
+          "attributes": {
+            "Coffee_Variety": "Arabica",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9998158812522888,
+            "Processing_Method": 0.01126472931355238,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.02396640181541443
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 1,
+            "total_attributes": 5,
+            "avg_similarity": 0.20700940247625113
+          },
+          "shipment_ids": [
+            "c2abf512521d11fb38715ebe11260970b4c8ec03792b8e71f10424fe5d3f88c7",
+            "4f4da1f161780463686a5c12129f38eeff9b3a70adbd06390cfa404590a7f12e"
+          ]
+        },
+        {
+          "goods_shipped": "NATURAL ROBUSTA COFFEE",
+          "attributes": {
+            "Coffee_Variety": "Robusta",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9999517202377319,
+            "Processing_Method": 0.4270198345184326,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.6842750310897827
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 1,
+            "total_attributes": 5,
+            "avg_similarity": 0.42224931716918945
+          },
+          "shipment_ids": [
+            "dd239b2438481e91384fb0fe7c6a24531b86947b363a9bcee00dce8bfdf7d435",
+            "cd1d7b51cf0ca70e4a6aa6be94114c7cafbcca84ed455945856da6d421b82084",
+            "38caac2f5ece03cea67a7267d663c397e2117ee0b5603c610d002252c473eef0",
+            "36ff399ca8f9728035eb33b101bb48c0ba7c1445c7b6e97df690cbf3f7d517d7"
+          ]
+        },
+        {
+          "goods_shipped": "NATURAL ROBUSTA COFFEE SCREEN 15",
+          "attributes": {
+            "Coffee_Variety": "Robusta",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "Screen 15"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.8737960457801819,
+            "Processing_Method": 0.058316901326179504,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.9999222755432129
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 2,
+            "total_attributes": 5,
+            "avg_similarity": 0.38640704452991487
+          },
+          "shipment_ids": [
+            "8395f0b93289120234e5de55034cf062fa2fafb4b25a53d7ee5e56e4ebd5cdff",
+            "adbefa98623a5254edd8ab8637541c18cd07653af9bd9dbb36324196e4cc5075",
+            "e8359acc40bb9bcf9322d409759abbd10a0a036ef9b0b87f619abbad3ceec30d"
+          ]
+        },
+        {
+          "goods_shipped": "NATURAL ROBUSTA COFFEE SCREEN 18",
+          "attributes": {
+            "Coffee_Variety": "Robusta",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "Screen 18"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.8639874458312988,
+            "Processing_Method": 0.0995921790599823,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.9999046325683594
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 2,
+            "total_attributes": 5,
+            "avg_similarity": 0.3926968514919281
+          },
+          "shipment_ids": [
+            "95242518a32991d3c76ee6ca1f6df84d05d2332fa4506403f6ae38a299f9f897"
+          ]
+        },
+        {
+          "goods_shipped": "NATURAL ROBUSTA COFFEE SCREEN18",
+          "attributes": {
+            "Coffee_Variety": "Robusta",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "Screen 18"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9161707758903503,
+            "Processing_Method": 0.23203840851783752,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.9998329877853394
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 2,
+            "total_attributes": 5,
+            "avg_similarity": 0.42960843443870544
+          },
+          "shipment_ids": [
+            "d160cd2fd87fee19c9036e9eb79121c9b4d7c65a4fa9d6f0d66b6345aa7e973b"
+          ]
+        },
+        {
+          "goods_shipped": "NATURAL UGANDA ARABIC COFFEE",
+          "attributes": {
+            "Coffee_Variety": "Arabica",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.999958872795105,
+            "Processing_Method": 0.1253521889448166,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.18199916183948517
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 1,
+            "total_attributes": 5,
+            "avg_similarity": 0.26146204471588136
+          },
+          "shipment_ids": [
+            "534899b724a78be033344f20b2c8fda8010b0bed034d845c088ec08a7eb4c657"
+          ]
+        },
+        {
+          "goods_shipped": "NATURAL UGANDA ARABICA COFFEE",
+          "attributes": {
+            "Coffee_Variety": "Arabica",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9999333620071411,
+            "Processing_Method": 0.08714011311531067,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.17619502544403076
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 1,
+            "total_attributes": 5,
+            "avg_similarity": 0.2526537001132965
+          },
+          "shipment_ids": [
+            "f8708ce8dd22befb4691d9e0845975366e8c7553946ba8ab4d042abc91601011",
+            "d597357a4e12a8a5cb29fa6f690c23d7defa4d5c7d33383546fb1e1de4953af0",
+            "70c8fa6569ce41801946ed017794f36d63b67d4c4be44d4f26d4a2ee0f641e09"
+          ]
+        },
+        {
+          "goods_shipped": "NATURAL UGANDA ARABICA COFFEE BEANS",
+          "attributes": {
+            "Coffee_Variety": "Arabica",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9855561852455139,
+            "Processing_Method": 0.061618149280548096,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.17722289264202118
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 1,
+            "total_attributes": 5,
+            "avg_similarity": 0.24487944543361664
+          },
+          "shipment_ids": [
+            "c0a43d17c31a690a8a4d5d4e59425503536716959250aaaa233ffc1a9b572a67"
+          ]
+        },
+        {
+          "goods_shipped": "NATURAL UGANDA ARABICA COFFEE DRUGAR",
+          "attributes": {
+            "Coffee_Variety": "Arabica",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9999631643295288,
+            "Processing_Method": 0.05725429952144623,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.09439001232385635
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 1,
+            "total_attributes": 5,
+            "avg_similarity": 0.23032149523496628
+          },
+          "shipment_ids": [
+            "d02c280a49e27889df4dcf825beaa9d751eb792481db9cb675ce25ff39ae5c92"
+          ]
+        },
+        {
+          "goods_shipped": "NATURAL UGANDA ROBUSTA",
+          "attributes": {
+            "Coffee_Variety": "Robusta",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9998480081558228,
+            "Processing_Method": 0.5623530745506287,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.7362174391746521
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 1,
+            "total_attributes": 5,
+            "avg_similarity": 0.4596837043762207
+          },
+          "shipment_ids": [
+            "eb2ee59125561e23b78e164d733337297172bf6c98c4eeedb54cca75244ab6b5",
+            "b486a651c7e0fada3150afa2316ee6b5c3ba1422da04425515e00e1e74d48013",
+            "b7a4b0adce8bc46b5fc213cbb7b067fadbc67093360a53d47421f397dc44f131",
+            "0050a0284b1091616ea39eef8c35e8769bbb792b54f7c543c0415073664e90af",
+            "724101d94f7f10d50b70cd54ea767d98944ef53dc0429c727df92b4c2ff1cfd4",
+            "f3bc45281cf5483b8ecb5f5b9c789487873714f57bab70412fa5c1cb66cfe30e",
+            "13b00dab906011a77c758c001435b3db05d68f127db084fb697c6165ea88e649",
+            "28c637e82b50dd16f600be39213b21a815de49747616dbf76f43fb99652363fb",
+            "88aecbdc1513d33151c36e6898a0f0bb9a9777c52255426f82d39353a667d4ff",
+            "44302083af9ebb59cd5e9b9a99ec08f33905596eb14bca56a56c7c0e28f7d347",
+            "865ce53a8168614236fa935f235bf0276504fe9e17f365bb278b71a370c8b328",
+            "9c54c58b057e0a6b7e45cbd82208c667f0197252e7b1fdb7618a9f88dab157ba",
+            "964ae32102609ae376cafe04cc782da63762060b2a1f4065ddab6a0546286357",
+            "51a8ebbb04e3c804833a0c70a7f6888f2db41288b08bb1cf3570d5fbd9b1d131",
+            "410feed70e261432ee5619ad89ad9606e77599a0a5505d4ccafbff76547fa2d7",
+            "1b174055c1b5243271fb6f53e64fc66a81500e07023c54734ba0e70e3ede06d2",
+            "e07e7128972cf83b67fd4478bfd723d6a006c5f1c6af43fa8ff45f3e0188350f"
+          ]
+        },
+        {
+          "goods_shipped": "NATURAL UGANDA ROBUSTA COFFEE",
+          "attributes": {
+            "Coffee_Variety": "Robusta",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "Screen 18"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9998363256454468,
+            "Processing_Method": 0.46129465103149414,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.8254409432411194
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 2,
+            "total_attributes": 5,
+            "avg_similarity": 0.45731438398361207
+          },
+          "shipment_ids": [
+            "76295c4d3fd84d14e70819271968bc487545c0fe84f334fc9f855e9c5e56eea4",
+            "24c1dd17d649b42fda48a1b71033a8eba39c83528f54ff22d3534d32d10a9f36",
+            "99d4117df20628cf7b5f84e547e3a326fbed20368d567445883a4a21402feb38",
+            "dbd61e70a4a5599d3f81041c16ba9d5085e79e4ca8c57bb0c0f30e7ee73228c2",
+            "381d119b374d37d564ef0141ed4d27026fc205a96b54094e6f18c282beb7f075",
+            "faf28571836b30e02d58a27e5d37a143396efc4c4d25e96d499a67d4376a58a8",
+            "8360459ec25b62d46266cdd25fb54a339261bf099823596c533fb35454dcfc9c",
+            "e2c12573e54bb14d4edf4b7e3521190c1c9f4f11a648acf02d53ba0846175009",
+            "537afef577c0173becd88f3a938e34da7f2571b567fc501f758ac9fbad2b9938",
+            "9e1fc6c957ad33af135152ca9b2277c017f87ef0e76e241645a4a3002876b626",
+            "476b521831276f763d604dfa6842091d31ed1abb7357e329dc757bcd213ea878",
+            "733ac319bfecc0339f1a27bc194b9692f92a3c6645664868b0b0cf460674b0a0",
+            "aab1e2080459e8d7ec59f8667034a302d2ee53de020fb83b0afa3751c4c0d4b6",
+            "71e6ed91e514bf1fe305b61a137b4e1938cd518502e77c430ed118c0007f2e66",
+            "9320f04bbc8295b5196e5789d6e69451f835f86e154e96293d1f940498a0fd8e",
+            "ba07e4671d67fd4468a036add9508d616387ce6b70dbeffa86dbec095eb979a8",
+            "8cbf23e77dcb11f69d74320161c70f7fef73ccbaaeacb8ebf5d5986199da5d7c",
+            "4e656133cf85962faa5e94a95e0008e66eb812c7db188d6620141ef8be604aff",
+            "6435d2aef4b6af3de1e5d778f7b7c94d1abcd57d6588593112c696fd06367e8f"
+          ]
+        },
+        {
+          "goods_shipped": "NATURAL UGANDA ROBUSTA COFFEE BEANS",
+          "attributes": {
+            "Coffee_Variety": "Robusta",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "Screen 18"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9999548196792603,
+            "Processing_Method": 0.2659410238265991,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.8074368238449097
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 2,
+            "total_attributes": 5,
+            "avg_similarity": 0.4146665334701538
+          },
+          "shipment_ids": [
+            "45c62a2df25c4be71866fac8b03d944a580d65d550ed812b41de1efe0b900278",
+            "3f0ffc53c6c3d0a17f5eebcd260dc05544e35685d2191b4701987ff076cdc922"
+          ]
+        },
+        {
+          "goods_shipped": "NATURAL UGANDA ROBUSTA COFFEE BEANS , SCREEN 18",
+          "attributes": {
+            "Coffee_Variety": "Robusta",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "Screen 18"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9836350679397583,
+            "Processing_Method": 0.3430543541908264,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.9999765157699585
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 2,
+            "total_attributes": 5,
+            "avg_similarity": 0.46533318758010866
+          },
+          "shipment_ids": [
+            "c93a9ad8be1c4ebbbece827d29785cdbbfa38d02d35bc33c1c9b9bb0703ab204"
+          ]
+        },
+        {
+          "goods_shipped": "NATURAL UGANDA ROBUSTA COFFEE BHP 1199",
+          "attributes": {
+            "Coffee_Variety": "Robusta",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.999977707862854,
+            "Processing_Method": 0.09430878609418869,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.18388326466083527
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 1,
+            "total_attributes": 5,
+            "avg_similarity": 0.2556339517235756
+          },
+          "shipment_ids": [
+            "fd918bf74b3eee90df960dc24d96d343093a40d9e3b2b4b68c4c8ed97d26fc07"
+          ]
+        },
+        {
+          "goods_shipped": "NATURAL UGANDA ROBUSTA COFFEE BLACK BEANS",
+          "attributes": {
+            "Coffee_Variety": "Robusta",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9999651908874512,
+            "Processing_Method": 0.06646130234003067,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.35904350876808167
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 1,
+            "total_attributes": 5,
+            "avg_similarity": 0.2850940003991127
+          },
+          "shipment_ids": [
+            "240e139272b19ba57ba477a8826f712693c9f62dbbdb536b2ad0314739a317f2",
+            "20428974663b6f073df9bb47794f38584e3f0fee08156464dedf201db8680293"
+          ]
+        },
+        {
+          "goods_shipped": "NATURAL UGANDA ROBUSTA COFFEE SC 12",
+          "attributes": {
+            "Coffee_Variety": "Robusta",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "Screen 12"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9432982802391052,
+            "Processing_Method": 0.16019438207149506,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.9999251365661621
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 2,
+            "total_attributes": 5,
+            "avg_similarity": 0.4206835597753525
+          },
+          "shipment_ids": [
+            "b3ed0999f25bd8698bbd23e2248e86958b5439ee08dd67212c1d69a1262fde01",
+            "93a356f59e5dbbc37296b1d8e4b908d7ad2d34a9f5dfc165ae85e3358894e695"
+          ]
+        },
+        {
+          "goods_shipped": "NATURAL UGANDA ROBUSTA COFFEE SC 15",
+          "attributes": {
+            "Coffee_Variety": "Robusta",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "Screen 15"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9494614005088806,
+            "Processing_Method": 0.2678670287132263,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.9999309778213501
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 2,
+            "total_attributes": 5,
+            "avg_similarity": 0.4434518814086914
+          },
+          "shipment_ids": [
+            "7c52287cc97685ec640922338daaf07cbc5d8c100a93dff19d222d505a61dc07",
+            "847109e69da47f3ed484382be223ab7e26ee730bf1c481e5c69b5380485804b8",
+            "aa8818606dfd7a9a6cd90ba10d309faff4b5679212c0901e51a939b8a147dce2",
+            "7b5da97f9c5e0ae57e0947f6fb2e1f8d0bf42e4d480525b401e91c31e6d79fe2",
+            "615d1f4be368d8a34044c797cbcb21fb1b52b198ac3c3fbb393901563a4106e0",
+            "7a9383d06653a659576d24b12a402d2bacab14740d5dce42888a155f7aeb5ba6"
+          ]
+        },
+        {
+          "goods_shipped": "NATURAL UGANDA ROBUSTA COFFEE SC 18",
+          "attributes": {
+            "Coffee_Variety": "Robusta",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "Screen 18"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9397315979003906,
+            "Processing_Method": 0.3379066288471222,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.9999470710754395
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 2,
+            "total_attributes": 5,
+            "avg_similarity": 0.45551705956459043
+          },
+          "shipment_ids": [
+            "d071d17d7138c9c8bfabf73602fdf18a41a4cad9c5a1b21dcc8b48acc1f0a0e8",
+            "f16baebad9ce102b2771dc2a814e700c754c3cf4c4c949ad21c6c5d51ee62e1d",
+            "a8c974a34f86e9f610c66b0f550404a6784f9eb49136f5f269d2e0e4d7dbd103"
+          ]
+        },
+        {
+          "goods_shipped": "NATURAL UGANDA ROBUSTA COFFEE SC 1800",
+          "attributes": {
+            "Coffee_Variety": "Robusta",
+            "Processing_Method": "Natural",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "Screen 18"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9998856782913208,
+            "Processing_Method": 0.9990158081054688,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.9989885687828064
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 3,
+            "total_attributes": 5,
+            "avg_similarity": 0.5995780110359192
+          },
+          "shipment_ids": [
+            "655a012f1103283ec059e698ddb39d1658f5d86d56b1924c7b2a6316e975586f"
+          ]
+        },
+        {
+          "goods_shipped": "NATURAL UGANDA ROBUSTA COFFEE SC.18",
+          "attributes": {
+            "Coffee_Variety": "Robusta",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "Screen 18"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9812631607055664,
+            "Processing_Method": 0.6599162817001343,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.9999727010726929
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 2,
+            "total_attributes": 5,
+            "avg_similarity": 0.5282304286956787
+          },
+          "shipment_ids": [
+            "b274eee23e29734531d8f87a26ba9bded40da469faa1bd1e5951393c35a9479c"
+          ]
+        },
+        {
+          "goods_shipped": "NATURAL UGANDA ROBUSTA COFFEE SC12",
+          "attributes": {
+            "Coffee_Variety": "Robusta",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "Screen 12"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9646017551422119,
+            "Processing_Method": 0.2529647946357727,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.9999269247055054
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 2,
+            "total_attributes": 5,
+            "avg_similarity": 0.443498694896698
+          },
+          "shipment_ids": [
+            "339c2624bf8abd678a96267b069d4e370f8f67343f84a43ab22f71bdffded011"
+          ]
+        },
+        {
+          "goods_shipped": "NATURAL UGANDA ROBUSTA COFFEE SC15",
+          "attributes": {
+            "Coffee_Variety": "Robusta",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "Screen 15"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9677598476409912,
+            "Processing_Method": 0.327522873878479,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.9999486207962036
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 2,
+            "total_attributes": 5,
+            "avg_similarity": 0.4590462684631348
+          },
+          "shipment_ids": [
+            "1dd67c7c6746a14a394c68f323650440df67c5dc601a397bbdd1c2bf41b443fc"
+          ]
+        },
+        {
+          "goods_shipped": "NATURAL UGANDA ROBUSTA COFFEE SCREEN 1700",
+          "attributes": {
+            "Coffee_Variety": "Robusta",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "Screen 17"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9649601578712463,
+            "Processing_Method": 0.368086576461792,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.9999561309814453
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 2,
+            "total_attributes": 5,
+            "avg_similarity": 0.4666005730628967
+          },
+          "shipment_ids": [
+            "6b9464c51cd6c2757c461d7535de8912de7898259d7fc0fb2348a76c5702b362"
+          ]
+        },
+        {
+          "goods_shipped": "NATURAL UGANDA ROBUSTA COFFEE SCREEN 1800",
+          "attributes": {
+            "Coffee_Variety": "Robusta",
+            "Processing_Method": "Natural",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "Screen 18"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9971092343330383,
+            "Processing_Method": 0.9999028444290161,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.9999380111694336
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 3,
+            "total_attributes": 5,
+            "avg_similarity": 0.5993900179862977
+          },
+          "shipment_ids": [
+            "647c10aa6eb29872d3eed40f5dbe9484c432145717d2fd1ba25f5519b116ab9c"
+          ]
+        },
+        {
+          "goods_shipped": "NATURAL UGANDA ROBUSTA COFFEESCREEN 1500",
+          "attributes": {
+            "Coffee_Variety": "Robusta",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "Screen 15"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9499406814575195,
+            "Processing_Method": 0.32867172360420227,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.9998779296875
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 2,
+            "total_attributes": 5,
+            "avg_similarity": 0.4556980669498444
+          },
+          "shipment_ids": [
+            "f2e1b08eed9be5b703b0426e626407df0521c4b4d371f6b83f521ec11cbe4dda"
+          ]
+        },
+        {
+          "goods_shipped": "NATURAL UGANDAN ROBUSTA COFFEE BHP 1199",
+          "attributes": {
+            "Coffee_Variety": "Robusta",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9999759197235107,
+            "Processing_Method": 0.07613468915224075,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.26221829652786255
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 1,
+            "total_attributes": 5,
+            "avg_similarity": 0.2676657810807228
+          },
+          "shipment_ids": [
+            "bebbab699aff17b6108658719f9ab28fccfbd097c39b787b06ce25b35c9daea4"
+          ]
+        },
+        {
+          "goods_shipped": "NATURAL UGANDAN ROBUSTA COFFEE SC 1500",
+          "attributes": {
+            "Coffee_Variety": "Robusta",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "Screen 15"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9264412522315979,
+            "Processing_Method": 0.25912898778915405,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.9998636245727539
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 2,
+            "total_attributes": 5,
+            "avg_similarity": 0.4370867729187012
+          },
+          "shipment_ids": [
+            "546255ecc7617ec4565c5ed087d858c2efa6c92f59f77d086a98a00cae63ea8f"
+          ]
+        },
+        {
+          "goods_shipped": "NATURAL UGANDAN ROBUSTA COFFEE SCREEN 1500",
+          "attributes": {
+            "Coffee_Variety": "Robusta",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "Screen 15"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9382214546203613,
+            "Processing_Method": 0.2463446855545044,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.9998964071273804
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 2,
+            "total_attributes": 5,
+            "avg_similarity": 0.4368925094604492
+          },
+          "shipment_ids": [
+            "555d0735108b78faa78495170e58125a72149d6a3a77958ce3a9d0632ab87d71"
+          ]
+        },
+        {
+          "goods_shipped": "NATURAL UGANDAN ROBUSTA COFFEE SCREEN 1800",
+          "attributes": {
+            "Coffee_Variety": "Robusta",
+            "Processing_Method": "Natural",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "Screen 18"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9974122643470764,
+            "Processing_Method": 0.9999271631240845,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.9999196529388428
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 3,
+            "total_attributes": 5,
+            "avg_similarity": 0.5994518160820007
+          },
+          "shipment_ids": [
+            "44cc3c5498a95dc28d572e65c78885199de79299a0a001b08041d280d724bf44"
+          ]
+        },
+        {
+          "goods_shipped": "Natural Uganda Robusta Coffee SC 1500",
+          "attributes": {
+            "Coffee_Variety": "Robusta",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "Screen 15"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9614744782447815,
+            "Processing_Method": 0.5704083442687988,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.9998910427093506
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 2,
+            "total_attributes": 5,
+            "avg_similarity": 0.5063547730445862
+          },
+          "shipment_ids": [
+            "368d565b7f3a8a9309e70662909d69d95ca4c88405983fea727e603926df6978"
+          ]
+        },
+        {
+          "goods_shipped": "Phu Quy Tet gift box  MAISON GOURMET brand: coffee almonds  100 grams/box  gift item  100% new#&VN",
+          "attributes": {
+            "Coffee_Variety": "None",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.0,
+            "Processing_Method": 0.0,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.0
+          },
+          "method": "llm",
+          "metadata": {
+            "invalid": 0,
+            "total": 10,
+            "deterministic_stats": {
+              "rows_with_any_match": 0,
+              "rows_total": 2,
+              "attribute_matches": 0,
+              "attribute_attempted": 10,
+              "attribute_match_rate": 0.0,
+              "negation_blocked": 0
+            },
+            "out_of_schema": 0,
+            "heuristic_fills": 0
+          },
+          "shipment_ids": [
+            "41664c31d808ec0cd51107965261573f947d48447dba1822b2b34796831a25c6"
+          ]
+        },
+        {
+          "goods_shipped": "ROBUSTA COFFEE",
+          "attributes": {
+            "Coffee_Variety": "Robusta",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "Screen 15"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9999250173568726,
+            "Processing_Method": 0.736254096031189,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.7625157237052917
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 2,
+            "total_attributes": 5,
+            "avg_similarity": 0.49973896741867063
+          },
+          "shipment_ids": [
+            "7dfbd38bc97a55820c5020d845747f4e7c1d3fc90f04489864df36f9b00a313b",
+            "a6aaa704b571cf4db1d811429926a52f2b5ea4ad8e5c6678c79a3658373e1a42",
+            "078740d2b4132cef0655aa132d96bca5dc5e3e03628001163b2465a45e05fda5",
+            "30285d00eb4f0f0fbbe27e29b13f8d6455408c1412b3bbe556c2737396c91fde",
+            "4e5fdafffe34963e6710264d1a1429a071bbaebdde58f0c6b6762367c9cb4f9c",
+            "97f4b65afb3e0efe7a50c76e8301484368fcd00fcb9d5af46682bd7340acf7f8",
+            "315724729484c8199d0db800c35c7426b33955f2767c1f7a3c4db9e6d1e9f369",
+            "c36f54603c6de01c8e4a58d39c88238a746a0d745c105d2f40dd06bdb1e8f858",
+            "827b3e370273e5746a5aa35bafdb3d772fa0a12513e0ce7647c28f22024167c4",
+            "7543056da1b504cc1d4f20187f296131eb718b73bc398680673a03b5cda741c8",
+            "c317df8302256031b462b0d7fe5ab8072737714dff351bfcf93ded1fb087dcfb",
+            "10890d17db454dbdb5f0dd3daaaf33df35d2b46e39b24422153687ec66cc8238",
+            "91ed0a13e81cb90668400d34462fd72968fdd6381d37988cd7d8acc2ba2019b0",
+            "1223ee2a9b600b73df6eb65d1499686aef5952fbdab594a9633f9c8708494b0f"
+          ]
+        },
+        {
+          "goods_shipped": "ROBUSTA COFFEE BEANS SC 1500",
+          "attributes": {
+            "Coffee_Variety": "None",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "Screen 15"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.5128035545349121,
+            "Processing_Method": 0.17193596065044403,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.9997027516365051
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 1,
+            "total_attributes": 5,
+            "avg_similarity": 0.33688845336437223
+          },
+          "shipment_ids": [
+            "aea4850902942eb38d82b4fea6ecbc582c86c798b80248017d739d91b1e51f27",
+            "0c3dbb7dff043e7a6e8edc9812145c716f36c6ff6bf926421a8729552822253d"
+          ]
+        },
+        {
+          "goods_shipped": "RWENZORI WASHED ARABICA COFFEE RFA",
+          "attributes": {
+            "Coffee_Variety": "Arabica",
+            "Processing_Method": "Washed",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.0,
+            "Processing_Method": 0.0,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.0
+          },
+          "method": "llm",
+          "metadata": {},
+          "shipment_ids": [
+            "129c5459b68efe9f3df996ef669e4f957d6db1ed421f1e51d522fcc225c92323"
+          ]
+        },
+        {
+          "goods_shipped": "TANZANIA WASHED ARABICA COFFEE",
+          "attributes": {
+            "Coffee_Variety": "Arabica",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.99992835521698,
+            "Processing_Method": 0.03234228119254112,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.007282986771315336
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 1,
+            "total_attributes": 5,
+            "avg_similarity": 0.20791072463616728
+          },
+          "shipment_ids": [
+            "6372fa1d3971c4ade5dc547210cd58c5ed203d79016d2ff3adf6c77c710c5a3c"
+          ]
+        },
+        {
+          "goods_shipped": "UGANDA NATURAL DRIED ARABICA GREEN COFFEE",
+          "attributes": {
+            "Coffee_Variety": "Arabica",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9917362332344055,
+            "Processing_Method": 0.03169090673327446,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.06500451266765594
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 1,
+            "total_attributes": 5,
+            "avg_similarity": 0.21768633052706718
+          },
+          "shipment_ids": [
+            "92b3e24c3bd5198b99b56bde6f4c456b0605c45c35c49b9857f93643d337e9cd"
+          ]
+        },
+        {
+          "goods_shipped": "UGANDA NATURAL ROBUSTA COFFEE",
+          "attributes": {
+            "Coffee_Variety": "Robusta",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "Screen 18"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9999663829803467,
+            "Processing_Method": 0.49557459354400635,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.864481508731842
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 2,
+            "total_attributes": 5,
+            "avg_similarity": 0.47200449705123904
+          },
+          "shipment_ids": [
+            "a594c3fe34ab65bc9e01929552f5c3d5cf2c3f0093a78e42cafb9784bccb8ac6",
+            "3f6013a6e30b7017e44b9be3c8320df25f114bb70f744622cd701c874d7ddec2",
+            "bd55cbefdef694b03fdbcb70fa990964c9638489852afdcf2cf7335506fcd1e2",
+            "3621cdd58e901e847a17132ecbf3565b17ddd3d44149801d5450321f79c808c0",
+            "19b40517166f88d37d8c6b91faabfd58e6a4c83db9d1163b3bc4de145177acb4",
+            "49f492ab6bb39b2e0610bbf8ff1950e3ea5e09e01d9a6818ca105f1fd32dd804",
+            "c13b20ee6cbd1875e1d26c2526f5a62af1e12857b012283592b7d0bcfa354e7a",
+            "5ac1d064e330b3f4a359f0904e8e60852f6a8b38cd96cb361a46760d6be1c2f5",
+            "a14d47902c0283a7418dd8ae485306f403e5755f7f42a08836d0177892988cee",
+            "bf72bf442c0e5a363811ff80ae61833b5ad259a74063ac22199dd280b4f118b6",
+            "ef6ce501d4ee56d2091c0ef830dd6de4aeec900d879bab6eace31e93451686d6",
+            "00aa1a601eb2d9cd48e33f310b985b0c0e44ac39be6ea1ba3565dce4f5360f92",
+            "85914f8cc8cde9fdb1cbafd333504e6e613e311a423100c31dd367085d043fa0",
+            "c745f121ad925b88292a4ed6181e36f52b843e3573a2d9da85a110deeb64ce22"
+          ]
+        },
+        {
+          "goods_shipped": "UGANDA ROBUSTA COFFE SCREEN 15",
+          "attributes": {
+            "Coffee_Variety": "None",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "Screen 15"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.45410415530204773,
+            "Processing_Method": 0.11323961615562439,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.999968409538269
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 1,
+            "total_attributes": 5,
+            "avg_similarity": 0.31346243619918823
+          },
+          "shipment_ids": [
+            "d0dfc66a4b07a538d39959bec988f2904ce5516cd1ec7516a1e0d7f6b874ab2e"
+          ]
+        },
+        {
+          "goods_shipped": "UGANDA ROBUSTA COFFEE BLACK BEANS",
+          "attributes": {
+            "Coffee_Variety": "Robusta",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9999699592590332,
+            "Processing_Method": 0.07892519235610962,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.5382187962532043
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 1,
+            "total_attributes": 5,
+            "avg_similarity": 0.32342278957366943
+          },
+          "shipment_ids": [
+            "c1d7c6998cd6bb57049272e1251ec7aff4c17f518af2238ab369d215b8355ed2"
+          ]
+        },
+        {
+          "goods_shipped": "Uganda Arabica Naturals Green Coffee Beans",
+          "attributes": {
+            "Coffee_Variety": "Arabica",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9944830536842346,
+            "Processing_Method": 0.060947123914957047,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.19195722043514252
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 1,
+            "total_attributes": 5,
+            "avg_similarity": 0.24947747960686684
+          },
+          "shipment_ids": [
+            "78ab2189f67bc5e299a4fd8bcc2fee517a97a011dbf0cbab0d9905d104fd48c1"
+          ]
+        },
+        {
+          "goods_shipped": "Uganda Robusta coffee Screen 12",
+          "attributes": {
+            "Coffee_Variety": "None",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "Screen 12"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.45455417037010193,
+            "Processing_Method": 0.14692775905132294,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.9998865127563477
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 1,
+            "total_attributes": 5,
+            "avg_similarity": 0.3202736884355545
+          },
+          "shipment_ids": [
+            "b5f2186f7cb0ac1b1ba94b7c911b1b3e57e365ba486caee8bfb9d17ba5376df1"
+          ]
+        },
+        {
+          "goods_shipped": "WASHED RWENZORI ARABICA COFFE RFA",
+          "attributes": {
+            "Coffee_Variety": "Arabica",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.871201753616333,
+            "Processing_Method": 0.03627769649028778,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.005884716287255287
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 1,
+            "total_attributes": 5,
+            "avg_similarity": 0.1826728332787752
+          },
+          "shipment_ids": [
+            "44d06cce141708eb929b6be69968921c12ab521c688a01085f050a425905f8ab"
+          ]
+        },
+        {
+          "goods_shipped": "WASHED TANZANIA ARABICA COFFEE",
+          "attributes": {
+            "Coffee_Variety": "Arabica",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9999454021453857,
+            "Processing_Method": 0.057317402213811874,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.006038491148501635
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 1,
+            "total_attributes": 5,
+            "avg_similarity": 0.21266025910153985
+          },
+          "shipment_ids": [
+            "ed85aeb62e67baee82d01b27ccc88d2c205568041fb201db234624ab25e75793"
+          ]
+        },
+        {
+          "goods_shipped": "WASHED TANZANIA ARABICA LOW GRADE",
+          "attributes": {
+            "Coffee_Variety": "Arabica",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9999102354049683,
+            "Processing_Method": 0.10186196863651276,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 4.124093902646564e-05
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 1,
+            "total_attributes": 5,
+            "avg_similarity": 0.2203626889961015
+          },
+          "shipment_ids": [
+            "dedd13b1f0476800dae0be12f6dcff422c69e1ecafec2fd92f0213bf5ffbabbe"
+          ]
+        },
+        {
+          "goods_shipped": "WASHED UGANDA ARABICA BUGISU",
+          "attributes": {
+            "Coffee_Variety": "None",
+            "Processing_Method": "Washed",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.285738080739975,
+            "Processing_Method": 0.9998849630355835,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.002019734587520361
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 1,
+            "total_attributes": 5,
+            "avg_similarity": 0.2575285556726158
+          },
+          "shipment_ids": [
+            "61dd4b93037783784b02e4127df9444dbfdbc54ac86f6c4e6f5963b6520e9a49"
+          ]
+        },
+        {
+          "goods_shipped": "WASHED UGANDA ARABICA COFFEE",
+          "attributes": {
+            "Coffee_Variety": "Arabica",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9999290704727173,
+            "Processing_Method": 0.31790268421173096,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.09074028581380844
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 1,
+            "total_attributes": 5,
+            "avg_similarity": 0.2817144080996513
+          },
+          "shipment_ids": [
+            "2f5119590d5cd2dc912a385031fffbc5c996f71a0c8d16192f5d30f99354fe11"
+          ]
+        },
+        {
+          "goods_shipped": "nATURAL ROBUSTA COFFEE",
+          "attributes": {
+            "Coffee_Variety": "Robusta",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9999316930770874,
+            "Processing_Method": 0.5039000511169434,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.6803117990493774
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 1,
+            "total_attributes": 5,
+            "avg_similarity": 0.4368287086486816
+          },
+          "shipment_ids": [
+            "de13b1efc48e9f60853c55aad1ee265cd4ee77e092b9d9d493204e4875dd1dc6"
+          ]
+        },
+        {
+          "goods_shipped": "КАВА, СМАЖЕНА АБО НЕСМАЖЕНА, З КОФЕЇНОМ АБО БЕЗ КОФЕЇНУ; КАВОВА ШКАРАЛУПА ТА ОБОЛОНКИ ЗЕРЕН КАВИ; ЗАМІННИКИ КАВИ З ВМІСТОМ КАВИ В БУДЬ-ЯКІЙ ПРОПОРЦІЇ: - КАВА НЕСМАЖЕНА: - - З КОФЕЇНОМ: - - - ІНША,COFFEE ,  WHETHER OR NOT ROASTED ,  DECAFFEINATED OR NOT; COFFEE SHELLS AND COFFEE BEANS; COFFEE SUBSTITUTES CONTAINING COFFEE IN ANY PROPORTION: - COFFEE ,  UNROASTED: - - DECAFFEINATED: - - - OTHER",
+          "attributes": {
+            "Coffee_Variety": "Arabica",
+            "Processing_Method": "Natural",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "Screen 18"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.8819991946220398,
+            "Processing_Method": 0.9248467683792114,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.7571014761924744
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 3,
+            "total_attributes": 5,
+            "avg_similarity": 0.5127894878387451
+          },
+          "shipment_ids": [
+            "4f21cc16dfea018d1081dcd834680d5faab3b40bc390e65ea921f5aabf52804b"
+          ]
+        },
+        {
+          "goods_shipped": "КАВА, СМАЖЕНА АБО НЕСМАЖЕНА, З КОФЕЇНОМ АБО БЕЗ КОФЕЇНУ; КАВОВА ШКАРАЛУПА ТА ОБОЛОНКИ ЗЕРЕН КАВИ; ЗАМІННИКИ КАВИ З ВМІСТОМ КАВИ В БУДЬ-ЯКІЙ ПРОПОРЦІЇ: - КАВА НЕСМАЖЕНА: - - З КОФЕЇНОМ: - - - ДЛЯ ПРОМИСЛОВОГО ВИРОБНИЦТВА КОМПОНЕНТІВ КАВОВИХ НАПОЇВ І КАВИ Н,COFFEE ,  WHETHER OR NOT ROASTED ,  DECAFFEINATED OR NOT; COFFEE SHELLS AND COFFEE BEANS; COFFEE SUBSTITUTES CONTAINING COFFEE IN ANY PROPORTION: - COFFEE ,  UNROASTED: - - DECAFFEINATED: - - - FOR THE INDUSTRIAL MANUFACTURE OF COMPONENTS OF COFFEE BEVERAGES AND COFFEE N",
+          "attributes": {
+            "Coffee_Variety": "Arabica",
+            "Processing_Method": "Natural",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "Screen 18"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9621188044548035,
+            "Processing_Method": 0.9389476180076599,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.9651136994361877
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 3,
+            "total_attributes": 5,
+            "avg_similarity": 0.5732360243797302
+          },
+          "shipment_ids": [
+            "ad12ac817b7c5a965e03e2d033054f2f091bc6e5d7a4150af0136e7228c5a609"
+          ]
+        },
+        {
+          "goods_shipped": "КАВА, СМАЖЕНА АБО НЕСМАЖЕНА, З КОФЕЇНОМ АБО БЕЗ КОФЕЇНУ; КАВОВА ШКАРАЛУПА ТА ОБОЛОНКИ ЗЕРЕН КАВИ; ЗАМІННИКИ КАВИ З ВМІСТОМ КАВИ В БУДЬ-ЯКІЙ ПРОПОРЦІЇ: - КАВА НЕСМАЖЕНА: - - З КОФЕЇНОМ: - - - ДЛЯ ПРОМИСЛОВОГО ВИРОБНИЦТВАКОМПОНЕНТІВ КАВОВИХ НАПОЇВ І КАВИ НА,COFFEE ,  WHETHER OR NOT ROASTED ,  DECAFFEINATED OR NOT; COFFEE SHELLS AND COFFEE BEANS; COFFEE SUBSTITUTES CONTAINING COFFEE IN ANY PROPORTION: - COFFEE ,  UNROASTED: - - DECAFFEINATED: - - - FOR THE INDUSTRIAL MANUFACTURE OF COMPONENTS OF COFFEE BEVERAGES AND COFFEE",
+          "attributes": {
+            "Coffee_Variety": "Arabica",
+            "Processing_Method": "Natural",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "Screen 18"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9679857492446899,
+            "Processing_Method": 0.9461566805839539,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.9674745202064514
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 3,
+            "total_attributes": 5,
+            "avg_similarity": 0.576323390007019
+          },
+          "shipment_ids": [
+            "cb9d297c4e7e9b208179aef452a525fbb1f724edda85c4a91a178ab9da5cbe34",
+            "a63b454ca76724a741395edd964d3ceb7821b6b429a7de275a1e886ea4664049",
+            "0d159d99d0b93b5819fe8b2d8884ad1cc6e328058245332d4fe455d7ba273f6d",
+            "4a92da91bd4993a8c415ad15cf1de05f2b64cd57daee129af066cb85c20ec73a",
+            "0b1d68315ccad0370daacc5c494d4756920592f1b8b9008d39ba57f105c5e758",
+            "13c8f3bf7b699d19dd38929fe243906648241cc29d0dc311ea1622fa496454bb"
+          ]
+        },
+        {
+          "goods_shipped": "КАВА, СМАЖЕНА АБО НЕСМАЖЕНА, З КОФЕЇНОМ АБО БЕЗ КОФЕЇНУ; КАВОВА ШКАРАЛУПА ТА ОБОЛОНКИ ЗЕРЕН КАВИ; ЗАМІННИКИ КАВИ З ВМІСТОМ КАВИ В БУДЬ-ЯКІЙ ПРОПОРЦІЇ: - КАВА НЕСМАЖЕНА: - - З КОФЕЇНОМ: - - - ДЛЯ ПРОМИСЛОВОГО ВИРОБНИЦТВАКОМПОНЕНТІВ КАВОВИХ НАПОЇВ І КАВИ НА,COFFEE ,  WHETHER OR NOT ROASTED ,  DECAFFEINATED OR NOT; COFFEE SHELLS AND COFFEE BEANS; COFFEE SUBSTITUTES CONTAINING COFFEE IN ANY PROPORTION: - COFFEE ,  UNROASTED: - - DECAFFEINATED: - - - FOR THE INDUSTRIAL MANUFACTURE OF COMPONENTS OF COFFEE BEVERAGES AND COFFEE FOR",
+          "attributes": {
+            "Coffee_Variety": "Arabica",
+            "Processing_Method": "Natural",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "Screen 18"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9630435109138489,
+            "Processing_Method": 0.9504382610321045,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.9632480144500732
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 3,
+            "total_attributes": 5,
+            "avg_similarity": 0.5753459572792053
+          },
+          "shipment_ids": [
+            "5f9b224e0d46bdff2d5175055f83fb0fe869ef50a6236216f12385114a4a8daf",
+            "f70f29a30828a2fa12354dfc431f9ebd0f76f6d79d7ee494863e59733530575c",
+            "23006c8c180cecab94395afe6ad1cc9f6009f477fcdcb165b8945ce57d3a3050",
+            "9234c515ea12fd2919e4e38e6ede5da24f5306111283fd42199048df08cf2825",
+            "6db2b4521b8963af0e177baffd8b038888399036226f5afaf7203d6440b23449",
+            "c9ee4b3f933b7fd7c775fdfc23e228f0f0ef90b277ee178b3157292d071e0bd0",
+            "7b120b4defd3fcb5f57182a388b96df61bc036201c52775fbdf4e7290e66c031",
+            "26bd50a19616eb7bc58314c7d266de4ef22766b60113578e47e79fb88b4b598b",
+            "c638f3d48b5dd42ee2d1c004f52c2eea8eb5698125d4a5b1fb86ade388181200"
+          ]
+        },
+        {
+          "goods_shipped": "КАВА, СМАЖЕНА АБО НЕСМАЖЕНА, З КОФЕЇНОМ АБО БЕЗ КОФЕЇНУ; КАВОВА ШКАРАЛУПА ТА ОБОЛОНКИ ЗЕРЕН КАВИ; ЗАМІННИКИ КАВИ З ВМІСТОМ КАВИ В БУДЬ-ЯКІЙ ПРОПОРЦІЇ: - КАВА НЕСМАЖЕНА: - - З КОФЕЇНОМ: - - - ДЛЯ ПРОМИСЛОВОГО ВИРОБНИЦТВАКОМПОНЕНТІВ КАВОВИХ НАПОЇВ І КАВИ НАТУРАЛЬНОЇ, СМАЖЕНОЇ В ЗЕРНАХ, МЕЛЕНОЇ, РОЗЧИННОЇ,COFFEE ,  ROASTED OR UNROASTED ,  WHETHER OR NOT DECAFFEINED; COFFEE HUSKERS AND COFFEE BEANS; COFFEE SUBSTITUTES CONTAINING COFFEE IN ANY PROPORTION: - COFFEE ,  UNROASTED: - - DECAFFEINED: - - - FOR THE INDUSTRIAL MANUFACTURE OF COMPONENTS OF COFFEE BEVERAGES AND NATURAL COFFEE ,  ROASTED IN BEANS ,  GROUND ,  SOLUBLE",
+          "attributes": {
+            "Coffee_Variety": "Arabica",
+            "Processing_Method": "Natural",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "Screen 15"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9590776562690735,
+            "Processing_Method": 0.976760983467102,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.9533284902572632
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 3,
+            "total_attributes": 5,
+            "avg_similarity": 0.5778334259986877
+          },
+          "shipment_ids": [
+            "148c845761b0e88f2cdaa44c69a21b7a19cda933d90086d0d901eee18c7ffc71",
+            "666f62bca6beb16f51d4566860577b9f1f910187d70c837dfcbbf03d1ed3cae1",
+            "83137c9a62fe1c995e92a52d94edd8b7025d45746cb5c5a53700944359322b2a",
+            "ea6bc926d84460f7e2a7ea85284d7e010f6f205179567d0055ecb1c5e303bdd5",
+            "2f6f1fbabf94a83da7d386b6efd27a45750bc2666139af9c7fbd4eb73f18b6af",
+            "a5d2c16ff1bbc5de9c1ae554a0964b682364cf8af860977753c823f1db687f56",
+            "d346e4e6410b29ba44a5d41a655533fa5d4943fd9d1c396baa84393e9969d8ab",
+            "e1c39ac16ed65dda5fc81d5238fc21b4d5806c024f13262d5a9289a916abcb25"
+          ]
+        },
+        {
+          "goods_shipped": "КОФЕ НЕЖАРЕНЫЙ С КОФЕИНОМ: АРАБИКА (COFFEA ARABICA)",
+          "attributes": {
+            "Coffee_Variety": "Arabica",
+            "Processing_Method": "None",
+            "Origin_Country": "None",
+            "Quality_Grade": "None",
+            "Screen_Size": "None"
+          },
+          "similarity_scores": {
+            "Coffee_Variety": 0.9999786615371704,
+            "Processing_Method": 0.452562153339386,
+            "Origin_Country": 0.0,
+            "Quality_Grade": 0.0,
+            "Screen_Size": 0.015347547829151154
+          },
+          "method": "vector",
+          "metadata": {
+            "vector_matches": 1,
+            "total_attributes": 5,
+            "avg_similarity": 0.29357767254114153
+          },
+          "shipment_ids": [
+            "997d4ef5c466fd5f76fd3cc19c22a17bf8cf575a428e34b16215b7deb7dd59c2"
+          ]
+        }
+      ]
+    }
+  },
+  "token_usage": 6079,
+  "timestamp": "2025-12-11T19:04:50.326209",
+  "version": 2
+}

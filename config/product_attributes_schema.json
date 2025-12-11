@@ -168,5 +168,172 @@
   },
   "_generated_at": "2025-12-08T11:32:29.535008Z",
   "_source": "auto_inference",
-  "_classified_rows": 229
+  "_classified_rows": 229,
+  "9011": {
+    "version": "2025-12-08T11:32:29.534995Z",
+    "products": {
+      "Bulk Commodity Green Coffee": {
+        "attributes": {
+          "Coffee_Type": [
+            "Arabica",
+            "Robusta"
+          ],
+          "Processing_Method": [
+            "Washed",
+            "Natural",
+            "Fully Washed"
+          ],
+          "Origin_Country": [
+            "Tanzania",
+            "Uganda"
+          ],
+          "Coffee_Grade": [
+            "Aa-ab Plus",
+            "Aa-ab",
+            "Low Grade"
+          ],
+          "Screen_Size": [
+            "Screen 15",
+            "Screen 12",
+            "Screen 18",
+            "Sc 1500",
+            "Sc 1800",
+            "Sc 15",
+            "Sc 18",
+            "Screen 1800",
+            "Screen 1700",
+            "Sc15",
+            "Sc12"
+          ],
+          "Coffee_Form": [
+            "Beans"
+          ],
+          "Coffee_Color": [
+            "Black"
+          ]
+        }
+      },
+      "Specialty Green Coffee": {
+        "attributes": {
+          "Origin_Country": [
+            "Tanzania",
+            "Uganda"
+          ],
+          "Processing_Method": [
+            "Washed",
+            "Natural",
+            "Dried"
+          ],
+          "Coffee_Grade": [
+            "Aa",
+            "Ab",
+            "Plus"
+          ],
+          "Coffee_Type": [
+            "Arabica"
+          ],
+          "Certifications": [
+            "Rfa"
+          ]
+        }
+      },
+      "Finished Coffee Products": {
+        "attributes": {
+          "Flavor": [
+            "Black Raspberry",
+            "Coffee Almonds",
+            "Assorted"
+          ],
+          "Product_Form": [
+            "Beans"
+          ],
+          "Packaging_Type": [
+            "Bag",
+            "Box",
+            "Gift Box"
+          ],
+          "Net_Weight": [
+            "100 Grams",
+            "300 Grams",
+            "700 Grams",
+            "60 Kgs"
+          ],
+          "Brand": [
+            "Maison Gourmet"
+          ]
+        }
+      },
+      "Not a Coffee/Bean Product": {
+        "attributes": {
+          "Origin_Country": [
+            "Uganda",
+            "Brazil"
+          ],
+          "Destination_Country": [
+            "China",
+            "Kazakhstan",
+            "Albania",
+            "Kenya",
+            "Belgium",
+            "Australia",
+            "United States",
+            "Japan"
+          ],
+          "Product_Type": [
+            "Coffee",
+            "Compound Optical Microscopes",
+            "Stereoscopic Microscopes"
+          ]
+        }
+      }
+    },
+    "_product_categories": [
+      "Bulk Commodity Green Coffee",
+      "Specialty Green Coffee",
+      "Finished Coffee Products",
+      "Not a Coffee/Bean Product"
+    ],
+    "_generation_notes": {
+      "Bulk Commodity Green Coffee": {
+        "calls": 1,
+        "calls_meta": {
+          "call_1": {
+            "model_attribute_count": 7,
+            "fallback_attributes": [],
+            "final_attribute_count": 7
+          }
+        }
+      },
+      "Specialty Green Coffee": {
+        "calls": 1,
+        "calls_meta": {
+          "call_1": {
+            "model_attribute_count": 5,
+            "fallback_attributes": [],
+            "final_attribute_count": 5
+          }
+        }
+      },
+      "Finished Coffee Products": {
+        "calls": 1,
+        "calls_meta": {
+          "call_1": {
+            "model_attribute_count": 5,
+            "fallback_attributes": [],
+            "final_attribute_count": 5
+          }
+        }
+      },
+      "Not a Coffee/Bean Product": {
+        "calls": 1,
+        "calls_meta": {
+          "call_1": {
+            "model_attribute_count": 3,
+            "fallback_attributes": [],
+            "final_attribute_count": 3
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,0 +1,32 @@
+{
+  "comparison": {
+    "total_records": 55,
+    "total_attributes": 5,
+    "attribute_comparison": {},
+    "overall_agreement": 1.0,
+    "per_attribute_agreement": {
+      "attr_Coffee_Variety": {
+        "agreement_rate": 1.0,
+        "total_comparisons": 44,
+        "agreements": 44,
+        "disagreements": 0
+      },
+      "attr_Processing_Method": {
+        "agreement_rate": 1.0,
+        "total_comparisons": 5,
+        "agreements": 5,
+        "disagreements": 0
+      },
+      "attr_Screen_Size": {
+        "agreement_rate": 1.0,
+        "total_comparisons": 20,
+        "agreements": 20,
+        "disagreements": 0
+      }
+    },
+    "disagreements": []
+  },
+  "pinecone_stats": {},
+  "llm_stats": {},
+  "timestamp": "2025-12-11T19:04:54.125032"
+}

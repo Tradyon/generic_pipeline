@@ -5,12 +5,15 @@ description = "LLM-driven product and attribute classification pipeline."
 readme = "README.md"
 requires-python = ">=3.9"
 dependencies = [
-    "pandas",
-    "google-generativeai",
-    "openai",
-    "pydantic",
-    "tqdm",
-    "python-dotenv",
+    "pandas>=2.0.0",
+    "google-generativeai>=0.3.0",
+    "openai>=1.42.0",
+    "pydantic>=2.0.0",
+    "tqdm>=4.65.0",
+    "python-dotenv>=1.0.0",
+    "pinecone>=5.0.0",
+    "weaviate-client>=4.0.0",
+    "sentence-transformers>=2.2.0",
 ]
 
 [tool.uv]
